@@ -1,0 +1,331 @@
+.corp-brief {
+  --br-ink: #1c1c1c;
+  --br-line: rgb(28 28 28 / 0.14);
+  --br-tick: 12px;
+  padding: 3.2rem 0 3.4rem;
+  background: #ffffff;
+  scroll-margin-top: var(--header-height);
+}
+
+.corp-brief-shell {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+  gap: 1.6rem 2rem;
+  align-items: start;
+}
+
+.corp-brief-head .section-header {
+  max-width: 22rem;
+  margin: 0 0 1.15rem;
+}
+
+.corp-brief-head .section-title {
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  margin-bottom: 0.5rem;
+}
+
+.corp-brief-head .section-desc {
+  font-size: 0.92rem;
+}
+
+.corp-brief-facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 22rem;
+}
+
+.corp-brief-facts li {
+  display: grid;
+  grid-template-columns: 1.8rem 3.2rem minmax(0, 1fr);
+  gap: 0.45rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--br-line);
+}
+
+.corp-brief-facts li:last-child {
+  border-bottom: 1px solid var(--br-line);
+}
+
+.corp-brief-facts span,
+.corp-brief-facts strong {
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.corp-brief-facts span {
+  font-size: 0.95rem;
+  color: rgb(28 28 28 / 0.38);
+}
+
+.corp-brief-facts strong {
+  font-size: 0.95rem;
+  color: var(--br-ink);
+}
+
+.corp-brief-facts em {
+  font-style: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgb(28 28 28 / 0.55);
+}
+
+.corp-brief-frame {
+  position: relative;
+  background: #ffffff;
+}
+
+.corp-brief-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--br-line), var(--br-line)),
+    linear-gradient(var(--br-line), var(--br-line)),
+    linear-gradient(var(--br-line), var(--br-line)),
+    linear-gradient(var(--br-line), var(--br-line)),
+    linear-gradient(var(--br-ink), var(--br-ink)),
+    linear-gradient(var(--br-ink), var(--br-ink)),
+    linear-gradient(var(--br-ink), var(--br-ink)),
+    linear-gradient(var(--br-ink), var(--br-ink)),
+    linear-gradient(var(--br-ink), var(--br-ink)),
+    linear-gradient(var(--br-ink), var(--br-ink)),
+    linear-gradient(var(--br-ink), var(--br-ink)),
+    linear-gradient(var(--br-ink), var(--br-ink));
+  background-repeat: no-repeat;
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%,
+    var(--br-tick) 1px,
+    1px var(--br-tick),
+    var(--br-tick) 1px,
+    1px var(--br-tick),
+    var(--br-tick) 1px,
+    1px var(--br-tick),
+    var(--br-tick) 1px,
+    1px var(--br-tick);
+  background-position:
+    0 0,
+    0 100%,
+    0 0,
+    100% 0,
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    0 100%,
+    0 100%,
+    100% 100%,
+    100% 100%;
+}
+
+.corp-brief-panel form,
+.corp-brief-done {
+  position: relative;
+  z-index: 1;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.corp-brief-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15rem 1.1rem;
+}
+
+.corp-brief-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  padding: 0.4rem 0 0.15rem;
+}
+
+.corp-brief-field span {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(28 28 28 / 0.45);
+}
+
+.corp-brief-field input,
+.corp-brief-field select,
+.corp-brief-field textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.38rem 0 0.42rem;
+  border: 0;
+  border-bottom: 1px solid var(--br-line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--br-ink);
+  font: inherit;
+  font-size: 0.92rem;
+}
+
+.corp-brief-field input::placeholder,
+.corp-brief-field textarea::placeholder {
+  color: rgb(28 28 28 / 0.32);
+}
+
+.corp-brief-field input:focus,
+.corp-brief-field select:focus,
+.corp-brief-field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--br-ink);
+}
+
+.corp-brief-field select {
+  appearance: none;
+  padding-right: 1.2rem;
+  background-image: linear-gradient(45deg, transparent 50%, var(--br-ink) 50%),
+    linear-gradient(135deg, var(--br-ink) 50%, transparent 50%);
+  background-position:
+    calc(100% - 8px) 55%,
+    calc(100% - 4px) 55%;
+  background-size:
+    4px 4px,
+    4px 4px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.corp-brief-field--date {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 0.55rem);
+}
+
+.corp-brief-field--note {
+  margin-top: 0.15rem;
+}
+
+.corp-brief-field textarea {
+  min-height: 0;
+  resize: vertical;
+}
+
+.corp-brief-submit {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.95rem;
+}
+
+.corp-brief-submit p {
+  margin: 0;
+  max-width: 16rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: rgb(28 28 28 / 0.5);
+}
+
+.corp-brief-done h3 {
+  margin: 0.2rem 0 0.4rem;
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--br-ink);
+}
+
+.corp-brief-done > p {
+  max-width: 28rem;
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgb(28 28 28 / 0.65);
+}
+
+.corp-brief-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgb(28 28 28 / 0.55);
+}
+
+.corp-brief-node {
+  width: 7px;
+  height: 7px;
+  background: var(--br-ink);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 900px) {
+  .corp-brief-shell {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .corp-brief-head .section-header,
+  .corp-brief-facts {
+    max-width: none;
+  }
+
+  .corp-brief-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .corp-brief-facts li,
+  .corp-brief-facts li:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    padding: 0.15rem 0.7rem 0.15rem 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 1px solid var(--br-line);
+  }
+
+  .corp-brief-facts li:last-child {
+    border-right: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .corp-brief {
+    padding: 2.5rem 0 2.6rem;
+    scroll-margin-top: 64px;
+  }
+
+  .corp-brief-grid,
+  .corp-brief-field--date {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .corp-brief-field--date {
+    grid-column: auto;
+  }
+
+  .corp-brief-submit {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .corp-brief-submit .btn:has(> .btn__label) {
+    width: 100%;
+  }
+
+  .corp-brief-submit p {
+    max-width: none;
+  }
+
+  .corp-brief-facts li strong {
+    font-size: 0.85rem;
+  }
+}

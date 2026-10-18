@@ -1,0 +1,199 @@
+/* ==========================================================================
+   SCROLL REVEAL & UX ANIMATIONS (Himalayan Bungy Butter-Smooth Formula)
+   ========================================================================== */
+
+:root {
+  --hb-ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --hb-duration: 0.65s;
+}
+
+/* --------------------------------------------------------------------------
+   Top Scroll Progress Bar
+   -------------------------------------------------------------------------- */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FF4800, #FF7B00, #FFB703);
+  z-index: 10000;
+  pointer-events: none;
+  transition: width 0.08s ease-out;
+  box-shadow: 0 0 10px rgba(255, 72, 0, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   Core Scroll Reveal Elements (Silky Smooth Fade & Glide)
+   -------------------------------------------------------------------------- */
+.scroll-reveal,
+[data-reveal],
+.section-header,
+.quick-highlight-card,
+.package-card,
+.ride-card,
+.journey-step-card,
+.safety-rule-card,
+.safety-protocol-board,
+.safety-medical-box,
+.legacy-cert-pill,
+.legacy-banner-header,
+.legacy-ledger,
+.legacy-cert-strip,
+.faq-board,
+.location-anim-box,
+.insta-handle,
+.insta-strip,
+.booking-cta-content,
+.footer-mast,
+.footer-board,
+.activities-combo,
+.activities-lane-head,
+.activities-pass,
+.combos-hero-strip,
+.combos-lane-head,
+.combos-pass,
+.kids-hero-strip,
+.kids-lane-head,
+.kids-note,
+.kids-pass,
+.kids-arena-copy,
+.kids-arena-board,
+.reviews-score,
+.reviews-board,
+.corp-mix-head,
+.corp-mix-card,
+.corp-mix-pass,
+.corp-explore-head,
+.corp-explore-trail,
+.corp-explore-stage {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  will-change: opacity, transform;
+}
+
+/* --------------------------------------------------------------------------
+   Revealed State: Smooth, Natural Deceleration, Zero Pop
+   -------------------------------------------------------------------------- */
+.scroll-reveal.is-revealed,
+[data-reveal].is-revealed,
+.section-header.is-revealed,
+.quick-highlight-card.is-revealed,
+.package-card.is-revealed,
+.ride-card.is-revealed,
+.journey-step-card.is-revealed,
+.safety-rule-card.is-revealed,
+.safety-protocol-board.is-revealed,
+.safety-medical-box.is-revealed,
+.legacy-cert-pill.is-revealed,
+.legacy-banner-header.is-revealed,
+.legacy-ledger.is-revealed,
+.legacy-cert-strip.is-revealed,
+.faq-board.is-revealed,
+.location-anim-box.is-revealed,
+.insta-handle.is-revealed,
+.insta-strip.is-revealed,
+.booking-cta-content.is-revealed,
+.footer-mast.is-revealed,
+.footer-board.is-revealed,
+.activities-combo.is-revealed,
+.activities-lane-head.is-revealed,
+.activities-pass.is-revealed,
+.combos-hero-strip.is-revealed,
+.combos-lane-head.is-revealed,
+.combos-pass.is-revealed,
+.kids-hero-strip.is-revealed,
+.kids-lane-head.is-revealed,
+.kids-note.is-revealed,
+.kids-pass.is-revealed,
+.kids-arena-copy.is-revealed,
+.kids-arena-board.is-revealed,
+.reviews-score.is-revealed,
+.reviews-board.is-revealed,
+.corp-mix-head.is-revealed,
+.corp-mix-card.is-revealed,
+.corp-mix-pass.is-revealed,
+.corp-explore-head.is-revealed,
+.corp-explore-trail.is-revealed,
+.corp-explore-stage.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Micro-Hover Lifts (Active Once Revealed)
+   -------------------------------------------------------------------------- */
+.package-card.is-revealed:hover,
+.ride-card.is-revealed:hover,
+.corp-mix-card.is-revealed:hover {
+  transform: translateY(-5px) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.journey-step-card.is-revealed:hover {
+  transform: translateY(-4px) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.safety-rule-card.is-revealed:hover {
+  transform: translateY(-3px) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.quick-highlight-card.is-revealed:hover {
+  transform: translateY(-2px) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   Reduced Motion Accessibility
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-bar {
+    display: none;
+  }
+
+  .scroll-reveal,
+  [data-reveal],
+  .section-header,
+  .quick-highlight-card,
+  .package-card,
+  .ride-card,
+  .journey-step-card,
+  .safety-rule-card,
+  .safety-protocol-board,
+  .safety-medical-box,
+  .legacy-cert-pill,
+  .legacy-banner-header,
+  .legacy-ledger,
+  .legacy-cert-strip,
+  .faq-board,
+  .location-anim-box,
+  .reviews-score,
+  .reviews-board,
+  .review-card,
+  .insta-handle,
+  .insta-strip,
+  .booking-cta-content,
+  .footer-mast,
+  .footer-board,
+  .activities-combo,
+  .activities-lane-head,
+  .activities-pass,
+  .combos-hero-strip,
+  .combos-lane-head,
+  .combos-pass,
+  .kids-hero-strip,
+  .kids-lane-head,
+  .kids-note,
+  .kids-pass,
+  .kids-arena-copy,
+  .kids-arena-board {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

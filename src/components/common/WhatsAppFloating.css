@@ -1,0 +1,312 @@
+.whatsapp-float-btn {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: var(--z-floating-btn);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  isolation: isolate;
+  overflow: visible;
+  border: 1px solid #ffffff;
+  background: var(--color-whatsapp);
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.22s ease, background-color 0.22s ease;
+}
+
+.whatsapp-float-pulse {
+  position: absolute;
+  inset: -5px;
+  z-index: 0;
+  border: 1px solid rgb(255 255 255 / 0.45);
+  pointer-events: none;
+  animation: wa-pulse 2.4s ease-out infinite;
+}
+
+.whatsapp-float-icon {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.whatsapp-float-btn:hover {
+  background: var(--color-whatsapp-hover);
+  transform: translateY(-3px);
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 58px;
+  padding: 5px 10px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.whatsapp-float-btn:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes wa-pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.28);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.28);
+  }
+}
+
+.call-desk {
+  --call-ink: #fff5ee;
+  --call-line: rgb(255 245 238 / 0.2);
+  --call-tick: 10px;
+  position: fixed;
+  left: 22px;
+  bottom: 22px;
+  z-index: 1500;
+  width: min(16.75rem, calc(100vw - 6.25rem));
+  transform: translate3d(-1.25rem, 1.1rem, 0) rotate(-6deg);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease;
+}
+
+.call-desk.is-in {
+  transform: translate3d(0, 0, 0) rotate(-2.5deg);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.call-desk-slash {
+  position: absolute;
+  top: 14px;
+  right: -8px;
+  z-index: 0;
+  width: 42%;
+  height: 6px;
+  background: var(--color-primary);
+  opacity: 0.28;
+  transform: skewX(-34deg);
+  pointer-events: none;
+}
+
+.call-desk-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  padding: 0.65rem 1.85rem 0.7rem 0.75rem;
+  background: #0c1018;
+  color: var(--call-ink);
+  text-decoration: none;
+}
+
+.call-desk-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--call-line), var(--call-line)),
+    linear-gradient(var(--call-line), var(--call-line)),
+    linear-gradient(var(--call-line), var(--call-line)),
+    linear-gradient(var(--call-line), var(--call-line)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary));
+  background-repeat: no-repeat;
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%,
+    var(--call-tick) 1px,
+    1px var(--call-tick),
+    var(--call-tick) 1px,
+    1px var(--call-tick),
+    var(--call-tick) 1px,
+    1px var(--call-tick),
+    var(--call-tick) 1px,
+    1px var(--call-tick);
+  background-position:
+    0 0,
+    0 100%,
+    0 0,
+    100% 0,
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    0 100%,
+    0 100%,
+    100% 100%,
+    100% 100%;
+}
+
+.call-desk-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-family-display);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--call-ink);
+}
+
+.call-desk-node {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  background: var(--color-primary);
+  transform: rotate(45deg);
+  animation: call-desk-pulse 1.8s ease-out infinite;
+}
+
+.call-desk-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.call-desk-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: #fff5ee;
+}
+
+.call-desk-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.06rem;
+  min-width: 0;
+}
+
+.call-desk-copy strong {
+  font-family: var(--font-family-display);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.call-desk-copy em {
+  font-style: normal;
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: rgb(255 245 238 / 0.7);
+}
+
+.call-desk-dismiss {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgb(255 245 238 / 0.22);
+  background: #0c1018;
+  color: #fff5ee;
+  cursor: pointer;
+}
+
+.call-desk-dismiss:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+@keyframes call-desk-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255 72 0 / 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgb(255 72 0 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(255 72 0 / 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float-btn {
+    right: 14px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .whatsapp-float-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .call-desk {
+    left: 12px;
+    bottom: 16px;
+    width: min(15.25rem, calc(100vw - 5rem));
+  }
+
+  .call-desk.is-in {
+    transform: translate3d(0, 0, 0) rotate(-1.5deg);
+  }
+
+  .call-desk-card {
+    padding: 0.58rem 1.65rem 0.62rem 0.65rem;
+  }
+
+  .call-desk-copy strong {
+    font-size: 0.92rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .call-desk,
+  .call-desk.is-in {
+    transform: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .call-desk-node,
+  .whatsapp-float-pulse {
+    animation: none;
+  }
+}

@@ -1,0 +1,345 @@
+.kids-arena {
+  --kids-ink: #fff5ee;
+  --kids-line: rgb(255 245 238 / 0.18);
+  --kids-tick: 14px;
+  position: relative;
+  padding: 4.75rem 0 5rem;
+  background-color: #0c1018;
+  color: var(--kids-ink);
+  clip-path: inset(0);
+}
+
+.kids-arena-photo {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.46;
+  background-image: url('/images/Background-overlay-image-thrill.webp');
+  background-size: cover;
+  background-position: 68% 38%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.kids-arena-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(108deg, rgb(8 10 16 / 0.9) 0%, rgb(8 10 16 / 0.62) 38%, rgb(8 10 16 / 0.28) 72%, rgb(8 10 16 / 0.45) 100%),
+    linear-gradient(180deg, rgb(8 10 16 / 0.12) 0%, rgb(8 10 16 / 0.5) 100%);
+}
+
+.kids-arena-slash {
+  position: absolute;
+  z-index: 1;
+  height: 10px;
+  background: var(--color-primary);
+  transform: skewX(-34deg);
+  pointer-events: none;
+}
+
+.kids-arena-slash--a {
+  width: 16%;
+  right: 6%;
+  top: 18%;
+  opacity: 0.2;
+}
+
+.kids-arena-slash--b {
+  width: 8%;
+  right: 18%;
+  top: 12%;
+  opacity: 0.36;
+}
+
+.kids-arena-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.kids-arena-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+  font-family: var(--font-family-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kids-ink);
+}
+
+.kids-arena-node {
+  width: 7px;
+  height: 7px;
+  background: var(--color-primary);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.kids-arena-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.5rem, 5.4vw, 4.1rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 1rem;
+}
+
+.kids-arena-title span {
+  display: block;
+  color: var(--color-primary);
+}
+
+.kids-arena-rule {
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  margin-bottom: 1.15rem;
+  background: var(--color-primary);
+  transform: skewX(-34deg) translateX(5px);
+}
+
+.kids-arena-lead {
+  max-width: 34rem;
+  margin: 0 0 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgb(255 245 238 / 0.78);
+}
+
+.kids-arena-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.kids-arena-board {
+  position: relative;
+  padding: 1.35rem 1.35rem 1.2rem;
+}
+
+.kids-arena-board::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background-image:
+    linear-gradient(var(--kids-line), var(--kids-line)),
+    linear-gradient(var(--kids-line), var(--kids-line)),
+    linear-gradient(var(--kids-line), var(--kids-line)),
+    linear-gradient(var(--kids-line), var(--kids-line)),
+    linear-gradient(var(--kids-ink), var(--kids-ink)),
+    linear-gradient(var(--kids-ink), var(--kids-ink)),
+    linear-gradient(var(--kids-ink), var(--kids-ink)),
+    linear-gradient(var(--kids-ink), var(--kids-ink)),
+    linear-gradient(var(--kids-ink), var(--kids-ink)),
+    linear-gradient(var(--kids-ink), var(--kids-ink)),
+    linear-gradient(var(--kids-ink), var(--kids-ink)),
+    linear-gradient(var(--kids-ink), var(--kids-ink));
+  background-repeat: no-repeat;
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%,
+    var(--kids-tick) 1px,
+    1px var(--kids-tick),
+    var(--kids-tick) 1px,
+    1px var(--kids-tick),
+    var(--kids-tick) 1px,
+    1px var(--kids-tick),
+    var(--kids-tick) 1px,
+    1px var(--kids-tick);
+  background-position:
+    0 0,
+    0 100%,
+    0 0,
+    100% 0,
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    0 100%,
+    0 100%,
+    100% 100%,
+    100% 100%;
+}
+
+.kids-arena-board::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgb(8 10 16 / 0.42);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  pointer-events: none;
+}
+
+.kids-arena-board-label,
+.kids-arena-list,
+.kids-arena-safety {
+  position: relative;
+  z-index: 1;
+}
+
+.kids-arena-board-label {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-family-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgb(255 245 238 / 0.62);
+}
+
+.kids-arena-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.kids-arena-ride {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+  gap: 0.7rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.85rem 0.15rem;
+  overflow: hidden;
+  border: 0;
+  border-bottom: 1px solid rgb(255 245 238 / 0.12);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.kids-arena-list li:last-child .kids-arena-ride {
+  border-bottom: 0;
+}
+
+.kids-arena-ride-fill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgb(255 72 0 / 0.14);
+  transform: translate3d(-101%, 0, 0);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.kids-arena-ride:hover .kids-arena-ride-fill,
+.kids-arena-ride:focus-visible .kids-arena-ride-fill {
+  transform: translate3d(0, 0, 0);
+}
+
+.kids-arena-ride-idx {
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+
+.kids-arena-ride-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.kids-arena-ride-title {
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.kids-arena-ride-sub {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(255 245 238 / 0.55);
+}
+
+.kids-arena-ride-price {
+  font-family: var(--font-family-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+}
+
+.kids-arena-safety {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin-top: 1rem;
+  color: rgb(255 245 238 / 0.72);
+}
+
+.kids-arena-safety svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--kids-ink);
+}
+
+.kids-arena-safety p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: inherit;
+}
+
+@media (max-width: 900px) {
+  .kids-arena {
+    padding: 3.25rem 0 3.5rem;
+  }
+
+  .kids-arena-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .kids-arena-photo {
+    position: absolute;
+    height: 100%;
+    background-position: 70% 30%;
+    background-attachment: scroll;
+    opacity: 0.38;
+  }
+
+  .kids-arena-title {
+    font-size: clamp(2.2rem, 10vw, 3.1rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kids-arena-ride-fill {
+    transition: none;
+  }
+
+  .kids-arena-photo {
+    position: absolute;
+    height: 100%;
+    background-attachment: scroll;
+  }
+}

@@ -1,0 +1,84 @@
+/* ==========================================================================
+   ADRENALINE INFINITE TICKER MARQUEE BANNER (okGhumo Aesthetic)
+   ========================================================================== */
+
+.adrenaline-ticker {
+  width: 100%;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  border-top: 1px solid rgba(255, 77, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 77, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  padding: 14px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+}
+
+.adrenaline-ticker-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: tickerScroll 38s linear infinite;
+}
+
+.adrenaline-ticker:hover .adrenaline-ticker-track {
+  animation-play-state: paused;
+}
+
+.adrenaline-ticker-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
+  flex-shrink: 0;
+}
+
+.ticker-item {
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.ticker-item:hover {
+  color: var(--color-primary);
+}
+
+.ticker-dot {
+  color: var(--color-primary);
+  font-size: 10px;
+  opacity: 0.85;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+@keyframes tickerScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .adrenaline-ticker {
+    padding: 10px 0;
+  }
+
+  .ticker-item {
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+  }
+
+  .adrenaline-ticker-group {
+    gap: 16px;
+    padding-right: 16px;
+  }
+}

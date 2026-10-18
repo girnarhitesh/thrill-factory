@@ -1,0 +1,453 @@
+/* ==========================================================================
+   SAFETY OVERVIEW & JUMP JOURNEY — editorial plates
+   ========================================================================== */
+
+.journey-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-2xl) auto;
+}
+
+.journey-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  margin-bottom: var(--space-4xl);
+}
+
+.journey-step-card,
+.safety-protocol-board,
+.safety-medical-box {
+  --so-ink: #1c1c1c;
+  --so-line: rgb(28 28 28 / 0.16);
+  --so-tick: 12px;
+  position: relative;
+  isolation: isolate;
+  background: #ffffff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.journey-step-card::before,
+.safety-protocol-board::before,
+.safety-medical-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background-image:
+    linear-gradient(var(--so-line), var(--so-line)),
+    linear-gradient(var(--so-line), var(--so-line)),
+    linear-gradient(var(--so-line), var(--so-line)),
+    linear-gradient(var(--so-line), var(--so-line)),
+    linear-gradient(var(--so-ink), var(--so-ink)),
+    linear-gradient(var(--so-ink), var(--so-ink)),
+    linear-gradient(var(--so-ink), var(--so-ink)),
+    linear-gradient(var(--so-ink), var(--so-ink)),
+    linear-gradient(var(--so-ink), var(--so-ink)),
+    linear-gradient(var(--so-ink), var(--so-ink)),
+    linear-gradient(var(--so-ink), var(--so-ink)),
+    linear-gradient(var(--so-ink), var(--so-ink));
+  background-repeat: no-repeat;
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%,
+    var(--so-tick) 1px,
+    1px var(--so-tick),
+    var(--so-tick) 1px,
+    1px var(--so-tick),
+    var(--so-tick) 1px,
+    1px var(--so-tick),
+    var(--so-tick) 1px,
+    1px var(--so-tick);
+  background-position:
+    0 0,
+    0 100%,
+    0 0,
+    100% 0,
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    0 100%,
+    0 100%,
+    100% 100%,
+    100% 100%;
+}
+
+.journey-step-card {
+  overflow: hidden;
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.journey-step-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 80%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.journey-step-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% 42%;
+  opacity: 0.48;
+  -webkit-mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(0 0 0 / 0.18) 22%,
+      rgb(0 0 0 / 0.55) 52%,
+      rgb(0 0 0 / 0.85) 78%,
+      #000 100%
+    ),
+    linear-gradient(
+      180deg,
+      #000 0%,
+      #000 80%,
+      rgb(0 0 0 / 0.4) 90%,
+      transparent 100%
+    );
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(0 0 0 / 0.18) 22%,
+      rgb(0 0 0 / 0.55) 52%,
+      rgb(0 0 0 / 0.85) 78%,
+      #000 100%
+    ),
+    linear-gradient(
+      180deg,
+      #000 0%,
+      #000 80%,
+      rgb(0 0 0 / 0.4) 90%,
+      transparent 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.journey-step-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      rgb(255 255 255 / 0.82) 18%,
+      rgb(255 255 255 / 0.42) 46%,
+      rgb(255 255 255 / 0.12) 72%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(255 255 255 / 0.2) 0%,
+      transparent 24%,
+      transparent 80%,
+      rgb(255 255 255 / 0.55) 100%
+    );
+}
+
+.journey-step-number-pill,
+.journey-step-icon-wrap,
+.journey-step-title,
+.journey-step-desc {
+  position: relative;
+  z-index: 1;
+}
+
+.journey-step-number-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  font-family: var(--font-family-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.journey-step-number-pill span {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgb(28 28 28 / 0.55);
+}
+
+.journey-step-icon-wrap {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--so-ink);
+  background: transparent;
+  border-radius: 0;
+}
+
+.journey-step-title {
+  font-family: var(--font-family-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.journey-step-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.safety-protocol-board {
+  margin-bottom: var(--space-2xl);
+  padding: 0.35rem 0.2rem;
+}
+
+.safety-protocol-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.safety-protocol-row {
+  display: grid;
+  grid-template-columns: 2.15rem minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
+  padding: 0.85rem 1.1rem 0.9rem;
+  border-bottom: 1px solid rgb(28 28 28 / 0.1);
+}
+
+.safety-protocol-row:nth-child(odd) {
+  border-right: 1px solid rgb(28 28 28 / 0.1);
+}
+
+.safety-protocol-row:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.safety-protocol-idx {
+  font-family: var(--font-family-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  color: var(--color-primary);
+  padding-top: 1px;
+}
+
+.safety-protocol-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0 0 4px;
+  font-family: var(--font-family-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.safety-protocol-title svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--so-ink, #1c1c1c);
+}
+
+.safety-protocol-desc {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.safety-medical-box {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.safety-medical-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.safety-medical-header svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.safety-medical-title {
+  font-family: var(--font-family-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.safety-medical-lead {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.safety-medical-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.safety-medical-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.safety-medical-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 5px;
+  background: var(--color-primary);
+  transform: rotate(45deg);
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.safety-medical-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  width: fit-content;
+  font-family: var(--font-family-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.safety-medical-link svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .journey-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .journey-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .journey-step-card {
+    padding: 20px 18px 18px;
+  }
+
+  .journey-step-number-pill {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .journey-step-icon-wrap {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .journey-step-title {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+  }
+
+  .journey-step-desc {
+    font-size: 12.5px;
+  }
+
+  .safety-protocol-board {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .safety-protocol-list {
+    grid-template-columns: 1fr;
+  }
+
+  .safety-protocol-row {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .safety-protocol-row:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .safety-protocol-row:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgb(28 28 28 / 0.1);
+  }
+
+  .safety-protocol-row:last-child {
+    border-bottom: 0;
+  }
+
+  .safety-protocol-title {
+    font-size: 1rem;
+  }
+
+  .safety-medical-box {
+    padding: 20px 18px;
+  }
+
+  .safety-medical-title {
+    font-size: 1.15rem;
+  }
+
+  .safety-medical-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+

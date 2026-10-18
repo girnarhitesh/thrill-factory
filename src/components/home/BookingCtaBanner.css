@@ -1,0 +1,244 @@
+.cta-banner {
+  --cta-ink: #1c1c1c;
+  --cta-line: rgb(28 28 28 / 0.16);
+  --cta-tick: 12px;
+  position: relative;
+  overflow: hidden;
+  padding: 2.6rem 0 2.75rem;
+  background: #fff7f2;
+}
+
+.cta-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(240px, 0.95fr);
+  gap: 1.4rem 1.75rem;
+  align-items: center;
+  position: relative;
+  padding: 1.15rem 1.2rem;
+}
+
+.cta-board::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--cta-line), var(--cta-line)),
+    linear-gradient(var(--cta-line), var(--cta-line)),
+    linear-gradient(var(--cta-line), var(--cta-line)),
+    linear-gradient(var(--cta-line), var(--cta-line)),
+    linear-gradient(var(--cta-ink), var(--cta-ink)),
+    linear-gradient(var(--cta-ink), var(--cta-ink)),
+    linear-gradient(var(--cta-ink), var(--cta-ink)),
+    linear-gradient(var(--cta-ink), var(--cta-ink)),
+    linear-gradient(var(--cta-ink), var(--cta-ink)),
+    linear-gradient(var(--cta-ink), var(--cta-ink)),
+    linear-gradient(var(--cta-ink), var(--cta-ink)),
+    linear-gradient(var(--cta-ink), var(--cta-ink));
+  background-repeat: no-repeat;
+  background-size:
+    100% 1px,
+    100% 1px,
+    1px 100%,
+    1px 100%,
+    var(--cta-tick) 1px,
+    1px var(--cta-tick),
+    var(--cta-tick) 1px,
+    1px var(--cta-tick),
+    var(--cta-tick) 1px,
+    1px var(--cta-tick),
+    var(--cta-tick) 1px,
+    1px var(--cta-tick);
+  background-position:
+    0 0,
+    0 100%,
+    0 0,
+    100% 0,
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    0 100%,
+    0 100%,
+    100% 100%,
+    100% 100%;
+}
+
+.cta-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.cta-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-family-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cta-ink);
+}
+
+.cta-stamp-node {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  background: var(--color-primary);
+  transform: rotate(45deg);
+}
+
+.cta-title {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: clamp(1.7rem, 3.4vw, 2.45rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.06;
+  text-transform: uppercase;
+  color: var(--cta-ink);
+}
+
+.cta-title span {
+  color: var(--color-primary);
+}
+
+.cta-lead {
+  margin: 0 0 0.2rem;
+  max-width: 36rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgb(28 28 28 / 0.62);
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.cta-mosaic {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 6.8rem 6.8rem;
+  gap: 5px;
+  padding: 8px 2px;
+}
+
+.cta-shot {
+  margin: 0;
+  overflow: hidden;
+  background: #ece7e1;
+}
+
+.cta-shot--1,
+.cta-shot--3,
+.cta-shot--5 {
+  transform: translateY(-7px);
+}
+
+.cta-shot--2,
+.cta-shot--4,
+.cta-shot--6 {
+  transform: translateY(7px);
+}
+
+.cta-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  animation: cta-drift 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+.cta-shot--1 img {
+  object-position: center 18%;
+  animation-duration: 16s;
+}
+
+.cta-shot--2 img {
+  object-position: center 30%;
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+
+.cta-shot--3 img {
+  animation-direction: reverse;
+  animation-delay: -6s;
+  animation-duration: 15s;
+}
+
+.cta-shot--4 img {
+  animation-delay: -8s;
+  animation-duration: 13s;
+}
+
+.cta-shot--5 img {
+  animation-delay: -4s;
+  animation-duration: 17s;
+  animation-direction: reverse;
+}
+
+.cta-shot--6 img {
+  object-position: center 40%;
+  animation-delay: -9s;
+  animation-duration: 15s;
+}
+
+@keyframes cta-drift {
+  0%,
+  100% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.14) translate3d(-3%, 2%, 0);
+  }
+}
+
+@media (max-width: 860px) {
+  .cta-board {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .cta-mosaic {
+    grid-template-rows: 5.8rem 5.8rem;
+  }
+
+  .cta-shot--1,
+  .cta-shot--3,
+  .cta-shot--5,
+  .cta-shot--2,
+  .cta-shot--4,
+  .cta-shot--6 {
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .cta-banner {
+    padding: 2.15rem 0 2.3rem;
+  }
+
+  .cta-actions .btn {
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-shot img {
+    animation: none;
+    transform: none;
+  }
+}

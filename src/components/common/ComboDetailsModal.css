@@ -1,0 +1,615 @@
+/* ==========================================================================
+   COMBO DETAILS MODAL - THE SHIVPURI THRILL FACTORY
+   Clean, Uncluttered, Premium E-Commerce Layout with Full Verbatim Content
+   ========================================================================== */
+
+.combo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  overflow-y: auto;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.combo-modal-container {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-2xl);
+  width: 100%;
+  max-width: 920px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+  animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(16px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal Top Bar */
+.combo-modal-header {
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAFAFA;
+}
+
+.combo-modal-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.combo-modal-close-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.combo-modal-close-btn:hover {
+  background-color: #E2E8F0;
+  color: var(--color-text-primary);
+}
+
+/* Modal Scrollable Body */
+.combo-modal-body {
+  padding: 24px 32px 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+
+.combo-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.combo-modal-body::-webkit-scrollbar-thumb {
+  background-color: #CBD5E1;
+  border-radius: 4px;
+}
+
+/* Title & Price Top Row (Clean & Spacious) */
+.combo-header-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.combo-header-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.combo-modal-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.combo-modal-formula-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.combo-formula-tag {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  background-color: #FFF5EE;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Pricing Block (Guaranteed Single-Line, Never Cluttered) */
+.combo-header-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.combo-price-main-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.combo-price-val {
+  font-family: var(--font-family-display);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.combo-price-original {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  white-space: nowrap;
+}
+
+.combo-price-savings-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #15803D;
+  background-color: #DCFCE7;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+/* Two-Column Mid Section: Gallery on Left, Inclusions & Specs on Right */
+.combo-mid-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .combo-mid-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Photo Gallery */
+.combo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.combo-gallery-main {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: #0F172A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.combo-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.combo-gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.combo-gallery-thumb {
+  position: relative;
+  width: 72px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  background-color: #E2E8F0;
+}
+
+.combo-gallery-thumb.active {
+  border-color: var(--color-primary);
+  transform: scale(1.04);
+}
+
+.combo-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side: Inclusions & Specs */
+.combo-mid-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.combo-inclusions-box {
+  background-color: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 16px 20px;
+}
+
+.combo-inclusions-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.combo-inclusions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.combo-inclusion-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.combo-inclusion-row svg {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+/* Specifications Grid */
+.combo-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.combo-spec-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+}
+
+.combo-spec-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.combo-spec-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* Ride Experience Deep Dive (Full Verbatim Text from thrillfactory.in) */
+.combo-rides-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.combo-section-title {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.combo-ride-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.combo-ride-detail-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: border-color var(--transition-fast);
+}
+
+.combo-ride-detail-card:hover {
+  border-color: #CBD5E1;
+}
+
+.combo-ride-detail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.combo-ride-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.combo-ride-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: #FFF5EE;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.combo-ride-full-text {
+  font-size: 13.5px;
+  line-height: 1.68;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Safety & Protocol Banner */
+.combo-protocol-banner {
+  padding: 16px 20px;
+  background-color: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.combo-protocol-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 3px;
+}
+
+.combo-protocol-desc {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Modal Bottom Sticky Action Bar */
+.combo-modal-footer {
+  padding: 16px 32px;
+  border-top: 1px solid var(--color-border);
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.combo-modal-footer-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.combo-footer-price-main {
+  font-family: var(--font-family-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.combo-footer-price-sub {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.combo-modal-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (Phone <= 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .combo-modal-overlay {
+    padding: 8px;
+    align-items: center;
+  }
+
+  .combo-modal-container {
+    max-height: 94vh;
+    border-radius: var(--radius-xl);
+    width: 100%;
+  }
+
+  .combo-modal-header {
+    padding: 12px 16px;
+  }
+
+  .combo-modal-header-badges {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .combo-modal-close-btn {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .combo-modal-body {
+    padding: 16px 16px 20px;
+    gap: 16px;
+  }
+
+  .combo-header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+
+  .combo-header-left {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .combo-modal-title {
+    font-size: 1.3rem;
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+
+  .combo-modal-formula-banner {
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+
+  .combo-header-pricing {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .combo-price-val {
+    font-size: 1.55rem;
+  }
+
+  .combo-gallery-main {
+    height: 190px;
+    border-radius: var(--radius-lg);
+  }
+
+  .combo-gallery-thumb {
+    width: 60px;
+    height: 42px;
+  }
+
+  .combo-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .combo-spec-card {
+    padding: 10px 12px;
+  }
+
+  .combo-spec-label {
+    font-size: 10.5px;
+  }
+
+  .combo-spec-val {
+    font-size: 12px;
+  }
+
+  .combo-ride-detail-card {
+    padding: 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .combo-ride-card-title {
+    font-size: 14px;
+  }
+
+  .combo-ride-full-text {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .combo-protocol-banner {
+    padding: 12px 14px;
+  }
+
+  .combo-modal-footer {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .combo-modal-footer-price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .combo-footer-price-main {
+    font-size: 1.45rem;
+  }
+
+  .combo-modal-footer-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .combo-modal-footer-actions .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+

@@ -1,0 +1,395 @@
+/* ==========================================================================
+   CINEMATIC EDITORIAL HERO
+   Full-bleed rotating backdrop with left-aligned copy and typographic stats
+   ========================================================================== */
+
+.hero-adventure-banner {
+  position: relative;
+  min-height: 100svh;
+  margin-top: calc(var(--header-height) * -1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-color: #0B1120;
+  color: #FFFFFF;
+}
+
+.hero-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-banner-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.04);
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 12, 24, 0.78) 0%,
+      rgba(8, 12, 24, 0.4) 52%,
+      rgba(8, 12, 24, 0.16) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 12, 24, 0.18) 0%,
+      rgba(8, 12, 24, 0.12) 36%,
+      rgba(8, 12, 24, 0.78) 100%
+    );
+  pointer-events: none;
+}
+
+.hero-banner-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: clamp(4rem, 10vh, 7rem);
+  padding-bottom: clamp(2.75rem, 7vh, 4.5rem);
+}
+
+.hero-banner-copy {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-adventure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+  color: rgba(255, 214, 186, 0.92);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-badge-pulse {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 0 rgba(255, 72, 0, 0.55);
+  animation: pulseDot 2s infinite ease-out;
+}
+
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(255, 72, 0, 0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 72, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 72, 0, 0); }
+}
+
+.hero-adventure-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.04em;
+  margin: 0 0 1.2rem;
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.hero-title-kicker,
+.hero-title-highlight {
+  display: block;
+  font-size: clamp(2.6rem, 6.4vw, 5.6rem);
+  letter-spacing: 0.04em;
+}
+
+.hero-title-kicker {
+  color: #FFFFFF;
+  text-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+.hero-title-highlight {
+  background: linear-gradient(135deg, #FF8A3D 0%, #FF4800 55%, #FF2D00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 10px 28px rgba(255, 72, 0, 0.28));
+}
+
+.hero-adventure-subtitle {
+  max-width: 34rem;
+  margin: 0 0 1.85rem;
+  font-family: var(--font-family-sans);
+  font-size: clamp(0.98rem, 1.4vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(226, 232, 240, 0.88);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.hero-adventure-ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 2.15rem;
+}
+
+.hero-floating-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  max-width: 640px;
+  padding-top: 1.35rem;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hero-glass-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1.15rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-glass-stat:first-child {
+  padding-left: 0;
+}
+
+.hero-glass-stat:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.glass-stat-value {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-family-display);
+  font-size: clamp(1.65rem, 2.3vw, 2.05rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-stat-google {
+  width: 1.05em;
+  height: 1.05em;
+  flex-shrink: 0;
+  display: block;
+  overflow: visible;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.35));
+}
+
+.glass-stat-google.google-g-live {
+  --google-g-cycle: 2s;
+}
+
+.glass-stat-label {
+  font-family: var(--font-family-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(203, 213, 225, 0.72);
+  white-space: nowrap;
+}
+
+.hero-footer-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.hero-slide-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-slide-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.32);
+  cursor: pointer;
+  transition: width var(--transition-smooth), background var(--transition-smooth);
+}
+
+.hero-slide-dot.is-active {
+  width: 26px;
+  background: var(--color-primary);
+}
+
+.hero-scroll-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(241, 245, 249, 0.72);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.hero-scroll-indicator:hover {
+  color: #FFFFFF;
+}
+
+.hero-scroll-text {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-scroll-chevron {
+  display: flex;
+  animation: scrollBounce 1.8s infinite ease-in-out;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (max-width: 768px) {
+  .hero-adventure-banner {
+    min-height: 100svh;
+    min-height: 100dvh;
+    margin-top: -60px;
+  }
+
+  .hero-banner-slide {
+    object-position: center 22%;
+    transform: none;
+  }
+
+  .hero-banner-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 12, 24, 0.42) 0%,
+        rgba(8, 12, 24, 0.26) 16%,
+        rgba(8, 12, 24, 0.1) 34%,
+        rgba(8, 12, 24, 0.04) 50%,
+        rgba(8, 12, 24, 0.76) 100%
+      );
+  }
+
+  .hero-banner-container {
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-banner-copy {
+    max-width: none;
+  }
+
+  .hero-adventure-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.55rem;
+  }
+
+  .hero-adventure-title {
+    margin-bottom: 0.7rem;
+  }
+
+  .hero-title-kicker,
+  .hero-title-highlight {
+    font-size: clamp(2.05rem, 10.4vw, 2.85rem);
+  }
+
+  .hero-adventure-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .hero-adventure-ctas {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-adventure-ctas .btn {
+    width: 100%;
+  }
+
+  .hero-adventure-banner .hero-cta-reels {
+    display: none !important;
+  }
+
+  .hero-floating-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem 0;
+    max-width: none;
+    padding-top: 0.95rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-glass-stat {
+    padding: 0;
+    border-right: none;
+  }
+
+  .hero-glass-stat:nth-child(odd) {
+    padding-right: 0.85rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .hero-glass-stat:nth-child(even) {
+    padding-left: 0.85rem;
+  }
+
+  .hero-glass-stat:nth-child(-n + 2) {
+    padding-bottom: 0.7rem;
+  }
+
+  .glass-stat-value {
+    font-size: 1.4rem;
+    margin-bottom: 0.28rem;
+  }
+
+  .glass-stat-label {
+    font-size: 0.6rem;
+    white-space: normal;
+  }
+
+  .hero-footer-controls {
+    gap: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-badge-pulse,
+  .hero-scroll-chevron,
+  .hero-banner-slide {
+    animation: none;
+    transition: none;
+  }
+}
