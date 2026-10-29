@@ -128,7 +128,7 @@ export const CorporateExplore: React.FC = () => {
             tag="Beyond the venue"
             title="Explore Rishikesh"
             highlightWord="Add-ons"
-            description="Easy extras from Shivpuri — short drives, short walks, no extra venue. Pick a stop, see how long it takes, slot it around the jumps."
+            description="Easy extras from Shivpuri — short drives, short walks, no extra venue. Pick a stop and place it around the day’s activities."
           />
         </div>
 

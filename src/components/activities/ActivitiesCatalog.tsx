@@ -129,7 +129,7 @@ export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, on
             tag="The Shivpuri Thrill Factory"
             title="Adventures &"
             highlightWord="Attractions"
-            description="Every ride on the Shivpuri strip — extreme drops, aerial park, entertainment arena, kids zone, and VR lab — listed by lane so you can jump to what you came for."
+            description="Every lane on the Shivpuri strip — extreme drops, aerial park, entertainment arena, kids zone, and VR lab — so you can open the one you came for."
           />
 
           <div className="activities-combo">

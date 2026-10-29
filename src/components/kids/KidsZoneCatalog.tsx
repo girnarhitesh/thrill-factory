@@ -128,7 +128,7 @@ export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDeta
             tag="The Shivpuri Thrill Factory"
             title="Kids Zone &"
             highlightWord="Family Fun"
-            description="Padded soft play, electric rides, climbing, and supervised trampolines — sessions start at ₹100 while the rest of the group takes the tower."
+            description="Padded soft play, electric rides, climbing, and supervised trampolines from ₹100, on the same Shivpuri day as the rest of the park."
           />
 
           <div className="kids-hero-strip">
@@ -136,7 +136,7 @@ export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDeta
               <span className="kids-node" aria-hidden="true" />
               Family deck
             </span>
-            <p>Looking for adult jumps and combo packs on the same visit?</p>
+            <p>Looking for the other lanes and combo packs on the same visit?</p>
             <ThemeButton href="/activities" size="sm" variant="ghost" tone="on-dark" arrow>
               View Adventures
             </ThemeButton>

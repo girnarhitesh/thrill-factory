@@ -53,10 +53,10 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
     <section id="activities" className="ag-section bg-architectural-grid">
       <div className="ag-container">
         <SectionHeader
-          tag="Extreme Adrenaline"
+          tag="The Full Park"
           title="World-Class Adventure"
           highlightWord="In Shivpuri"
-          description="Choose from individual high-altitude rides engineered to international safety standards. Every dive is supervised by veteran Jump Masters."
+          description="Extreme drops, aerial rides, ground games, a kids zone, and VR. One destination, every kind of day."
         />
 
         <div className="ag-tabs" role="tablist" aria-label="Activity categories">

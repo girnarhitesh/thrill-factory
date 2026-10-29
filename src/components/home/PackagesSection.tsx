@@ -32,7 +32,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onBook }) => {
           tag="Save More Combos"
           title="Save More with"
           highlightWord="Thrill Combos"
-          description="Bundle your favorite extreme gravity rides and signature jumps at The Shivpuri Thrill Factory to save big compared to individual tickets."
+          description="Pair an extreme ride with a swing, a zip line, or a ground game, and pay less than booking each ticket alone."
         />
 
         <div className="packages-grid-4">

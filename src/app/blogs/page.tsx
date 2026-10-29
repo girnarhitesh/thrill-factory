@@ -52,7 +52,7 @@ export default function BlogsPage() {
             tag="The Thrill Factory Journal"
             title="Adventure Guides &"
             highlightWord="Rishikesh Stories"
-            description="Expert rigging insights, freefall physics, traveler guides, and safety analyses written directly by our certified jump masters and mountain coordinators."
+            description="Park guides, safety notes, and Shivpuri travel briefs from the Thrill Factory desk."
           />
 
           {/* Category Filter Pills */}
@@ -352,7 +352,7 @@ export default function BlogsPage() {
                 </h3>
               </div>
               <p style={{ fontSize: '14px', maxWidth: '640px', color: 'var(--color-text-secondary)', margin: 0 }}>
-                Experience India’s premier 165 FT Bungee Jump, 180 FT Reverse Bungee, and curated adventure combos in Shivpuri, Rishikesh.
+                Extreme rides, aerial thrills, ground games, VR, and a kids zone — one destination in Shivpuri, Rishikesh.
               </p>
             </div>
 

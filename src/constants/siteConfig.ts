@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
   brandName: 'The Shivpuri Thrill Factory',
   shortName: 'Thrill Factory',
-  tagline: 'Best Bungee Jumping & Extreme Adventure in Rishikesh',
-  description: 'Experience India’s premier bungee jumping, 180ft reverse bungee, SCAD jump, and giant swing nestled in the Himalayan valley of Shivpuri, Rishikesh.',
+  tagline: 'India’s Only Adventure and Entertainment Destination',
+  description: 'The Shivpuri Thrill Factory is India’s only adventure and entertainment destination — extreme rides, aerial thrills, ground games, VR, and a kids zone in Rishikesh.',
   domain: 'https://thrillfactory.in',
   
   // Contact & Booking Info

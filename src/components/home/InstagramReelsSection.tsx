@@ -126,7 +126,7 @@ export const InstagramReelsSection: React.FC = () => {
           tag="Official Reels"
           title="Visit Our"
           highlightWord="Instagram"
-          description="Raw screams and Himalayan leaps, filmed on the 165 FT deck."
+          description="Extreme rides, giant swings, zip lines, VR, and the kids zone — the whole Shivpuri park, on film."
         />
 
         <div className="insta-handle">

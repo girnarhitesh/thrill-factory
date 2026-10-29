@@ -303,7 +303,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
           <div className="hero-band-head">
             <p className="hero-adventure-badge">
               <span className="hero-badge-line" aria-hidden="true" />
-              <span>India’s Premier 165 FT Bungee · Shivpuri, Rishikesh</span>
+              <span>Adventure & Entertainment · Shivpuri, Rishikesh</span>
             </p>
 
             <h1 className="hero-adventure-title">

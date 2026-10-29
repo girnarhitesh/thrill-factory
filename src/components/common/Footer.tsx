@@ -85,8 +85,8 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p className="footer-desc">
-              Home to India&apos;s 165 FT bungee, 180 FT reverse bungee, SCAD jump, giant swing,
-              and a full family adventure zone over the Himalayan valley.
+              India&apos;s only adventure and entertainment destination — extreme rides, aerial thrills,
+              ground games, VR, and a kids zone over the Shivpuri valley.
             </p>
             <a
               href={INSTAGRAM_URL}
@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
 
           <div className="footer-cta">
             <ThemeButton href={`tel:${SITE_CONFIG.phones[0].raw}`} tone="on-dark" variant="solid" size="sm" arrow>
-              Call Jump Desk
+              Call the Desk
             </ThemeButton>
             <ThemeButton
               href={WHATSAPP_URL}

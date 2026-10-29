@@ -33,10 +33,10 @@ export const BookingCtaBanner: React.FC<BookingCtaBannerProps> = ({ onOpenBookin
               Lock Your Slot
             </span>
             <h2 className="cta-title">
-              Ready to take the leap <span>over the Himalayas?</span>
+              Ready for a full day <span>in Shivpuri?</span>
             </h2>
             <p className="cta-lead">
-              Book direct for web discounts, priority platform clearance, and complimentary 4K DSLR footage.
+              Extreme rides, aerial thrills, ground games, VR, and a kids zone — book direct and the desk confirms your slot.
             </p>
             <div className="cta-actions">
               <ThemeButton variant="solid" arrow onClick={onOpenBooking}>
@@ -48,7 +48,7 @@ export const BookingCtaBanner: React.FC<BookingCtaBannerProps> = ({ onOpenBookin
                 rel="noopener noreferrer"
                 variant="ghost"
               >
-                Chat with Jump Master
+                Talk to the Desk
               </ThemeButton>
             </div>
           </div>

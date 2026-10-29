@@ -50,9 +50,20 @@ export const ReviewsSection: React.FC = () => {
   const lightboxRef = useRef<string | null>(null);
   const [offset, setOffset] = useState(0);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
-  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ photos: string[]; index: number } | null>(null);
 
-  lightboxRef.current = lightboxImg;
+  lightboxRef.current = lightbox ? 'open' : null;
+
+  const lightboxSrc = lightbox?.photos[lightbox.index] ?? null;
+
+  const stepLightbox = (direction: number) => {
+    setLightbox((current) => {
+      if (!current || current.photos.length < 2) return current;
+      const count = current.photos.length;
+      const index = (current.index + direction + count) % count;
+      return { ...current, index };
+    });
+  };
 
   const getStep = () => {
     const root = scrollerRef.current;
@@ -75,6 +86,17 @@ export const ReviewsSection: React.FC = () => {
     const max = getMaxOffset();
     setOffset((prev) => Math.max(0, Math.min(max, prev + direction * step)));
   };
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setLightbox(null);
+      if (event.key === 'ArrowRight') stepLightbox(1);
+      if (event.key === 'ArrowLeft') stepLightbox(-1);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightbox]);
 
   useEffect(() => {
     const onResize = () => {
@@ -133,19 +155,25 @@ export const ReviewsSection: React.FC = () => {
           tag="Google Reviews"
           title="Customer Stories"
           highlightWord="& Feedback"
-          description="Verified jumps, real names, and the footage they took home from the 165 FT deck."
+          description="Guests from every lane — the tower, the swing, the arena, the cafe, and the kids zone."
         />
 
         <div className="reviews-score">
           <div className="reviews-score-copy">
             <GoogleGLogo className="reviews-score-g google-g-live" />
-            <span className="reviews-score-num">4.9</span>
-            <span className="reviews-score-stars" aria-hidden="true">
+            <span className="reviews-score-num">4.5</span>
+            <span className="reviews-score-stars" aria-label="4.5 out of 5">
               {Array.from({ length: 5 }).map((_, index) => (
-                <Star key={index} size={13} fill="currentColor" strokeWidth={0} />
+                <Star
+                  key={index}
+                  size={13}
+                  fill="currentColor"
+                  strokeWidth={0}
+                  className={index === 4 ? 'is-half' : undefined}
+                />
               ))}
             </span>
-            <span className="reviews-score-meta">2,700+ verified jumpers</span>
+            <span className="reviews-score-meta">3,238 Google reviews</span>
           </div>
           <ThemeButton
             href={GOOGLE_REVIEWS_URL}
@@ -233,7 +261,9 @@ export const ReviewsSection: React.FC = () => {
                             key={photoUrl}
                             type="button"
                             className="review-card-photo"
-                            onClick={() => setLightboxImg(photoUrl)}
+                            onClick={() =>
+                              setLightbox({ photos: rev.photos ?? [], index: photoIdx })
+                            }
                             aria-label={`View photo ${photoIdx + 1} from ${rev.name}`}
                           >
                             <Image
@@ -291,10 +321,10 @@ export const ReviewsSection: React.FC = () => {
         </div>
       </div>
 
-      {lightboxImg ? (
+      {lightbox && lightboxSrc ? (
         <div
           className="review-lightbox"
-          onClick={() => setLightboxImg(null)}
+          onClick={() => setLightbox(null)}
           role="dialog"
           aria-modal="true"
           aria-label="Enlarged review photo"
@@ -302,19 +332,50 @@ export const ReviewsSection: React.FC = () => {
           <button
             type="button"
             className="review-lightbox-close"
-            onClick={() => setLightboxImg(null)}
+            onClick={() => setLightbox(null)}
             aria-label="Close enlarged photo"
           >
             <X size={22} strokeWidth={1.75} />
           </button>
+          {lightbox.photos.length > 1 ? (
+            <button
+              type="button"
+              className="review-lightbox-nav review-lightbox-nav--prev"
+              onClick={(event) => {
+                event.stopPropagation();
+                stepLightbox(-1);
+              }}
+              aria-label="Previous photo"
+            >
+              <ChevronLeft size={22} strokeWidth={1.75} />
+            </button>
+          ) : null}
           <Image
-            src={lightboxImg}
+            src={lightboxSrc}
             alt=""
             width={900}
             height={900}
             className="review-lightbox-img"
             onClick={(event) => event.stopPropagation()}
           />
+          {lightbox.photos.length > 1 ? (
+            <button
+              type="button"
+              className="review-lightbox-nav review-lightbox-nav--next"
+              onClick={(event) => {
+                event.stopPropagation();
+                stepLightbox(1);
+              }}
+              aria-label="Next photo"
+            >
+              <ChevronRight size={22} strokeWidth={1.75} />
+            </button>
+          ) : null}
+          {lightbox.photos.length > 1 ? (
+            <span className="review-lightbox-count">
+              {lightbox.index + 1} / {lightbox.photos.length}
+            </span>
+          ) : null}
         </div>
       ) : null}
     </section>

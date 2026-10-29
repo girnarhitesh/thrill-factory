@@ -22,7 +22,7 @@ export default function SafetyPage() {
             tag="Zero Compromise"
             title="Technical Safety &"
             highlightWord="Operating Protocols"
-            description="At Thrill Factory, safety is our foundational discipline. We maintain an impeccable 100% safety record across 50,000+ completed jumps."
+            description="Safety runs every lane at Thrill Factory — extreme rides, aerial lines, ground games, and the kids zone — with a 100% record across 50,000+ completed activities."
           />
 
           {/* Key Standards Grid */}

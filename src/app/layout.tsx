@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import '@/styles/variables.css';
 import '@/styles/globals.css';
 import '@/styles/components.css';
@@ -24,21 +24,39 @@ import '@/components/corporate/CorporateExplore.css';
 import '@/components/common/ComboDetailsModal.css';
 import '@/styles/animations.css';
 import { ScrollRevealObserver } from '@/components/common/ScrollRevealObserver';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { SITE_CONFIG } from '@/constants/siteConfig';
+import { siteSchema } from '@/seo/schema';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#282828',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
-  title: `${SITE_CONFIG.tagline} | ${SITE_CONFIG.brandName}`,
+  title: {
+    default: `${SITE_CONFIG.tagline} | ${SITE_CONFIG.brandName}`,
+    template: `%s | ${SITE_CONFIG.shortName}`,
+  },
   description: SITE_CONFIG.description,
+  applicationName: SITE_CONFIG.shortName,
+  alternates: {
+    canonical: './',
+  },
+  formatDetection: {
+    telephone: false,
+  },
   keywords: [
+    'thrill factory rishikesh',
+    'shivpuri adventure park',
+    'adventure and entertainment destination',
     'bungee jumping rishikesh',
-    'shivpuri thrill factory',
-    'bungee jumping price rishikesh',
-    'reverse bungee rishikesh',
-    'scad jump rishikesh',
     'giant swing rishikesh',
-    'kids adventure zone rishikesh',
-    'thrill factory shivpuri',
+    'zip line rishikesh',
+    'kids zone rishikesh',
+    'vr adventure rishikesh',
     'extreme sports uttarakhand',
   ],
   authors: [{ name: SITE_CONFIG.brandName }],
@@ -53,16 +71,16 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: `${SITE_CONFIG.brandName} - Best Bungee Jumping in Rishikesh`,
+    title: `${SITE_CONFIG.tagline} | ${SITE_CONFIG.brandName}`,
     description: SITE_CONFIG.description,
-    url: SITE_CONFIG.domain,
-    siteName: SITE_CONFIG.brandName,
+    url: './',
+    siteName: SITE_CONFIG.shortName,
     images: [
       {
         url: '/images/tf-og-share.jpg',
         width: 1600,
         height: 900,
-        alt: 'Bungee Jumping at The Shivpuri Thrill Factory Rishikesh',
+        alt: 'The Shivpuri Thrill Factory, adventure and entertainment in Rishikesh',
       },
     ],
     locale: 'en_IN',
@@ -70,7 +88,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_CONFIG.brandName} - Bungee Jumping Rishikesh`,
+    title: `${SITE_CONFIG.tagline} | ${SITE_CONFIG.brandName}`,
     description: SITE_CONFIG.description,
     images: ['/images/tf-og-share.jpg'],
   },
@@ -98,6 +116,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <JsonLd data={siteSchema} />
         <ScrollRevealObserver />
         {children}
       </body>

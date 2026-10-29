@@ -53,8 +53,8 @@ export const SafetyOverview: React.FC = () => {
         <SectionHeader
           tag="The Experience"
           title="How It Works:"
-          highlightWord="Your Jump Journey"
-          description="From check-in to your 165 FT leap, experience seamless hospitality and zero-compromise safety at every stage."
+          highlightWord="The Extreme Path"
+          description="One way through the tower: check in, gear up, walk the deck, and take the leap. Aerial rides, ground games, and the kids zone each run their own briefing."
         />
 
         {/* 4-Step Customer Jump Journey */}

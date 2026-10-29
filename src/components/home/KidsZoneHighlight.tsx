@@ -40,8 +40,7 @@ export const KidsZoneHighlight: React.FC<KidsZoneHighlightProps> = ({ onBook }) 
           <span className="kids-arena-rule" aria-hidden="true" />
 
           <p className="kids-arena-lead">
-            While the big jumps fly, little explorers have a supervised, cushioned park of their own.
-            Sessions start at ₹100.
+            A supervised park of its own — soft play, rides, and trampolines from ₹100, inside the same Shivpuri destination.
           </p>
 
           <div className="kids-arena-actions">

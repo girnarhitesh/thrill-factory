@@ -10,6 +10,8 @@ import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
 import { BookingModal } from '@/components/common/BookingModal';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { BLOG_POSTS, BlogPost } from '@/data/blogs';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { blogPostingSchema } from '@/seo/schema';
 import {
   Calendar,
   Clock,
@@ -36,10 +38,13 @@ export default function BlogPostPage({
     notFound();
   }
 
+  const articleSchema = blogPostingSchema(post);
+
   const relatedPosts = BLOG_POSTS.filter((p) => p.id !== post.id).slice(0, 3);
 
   return (
     <>
+      <JsonLd data={articleSchema} />
       <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
 
       <main style={{ paddingTop: 'var(--space-2xl)', paddingBottom: 'var(--space-4xl)', backgroundColor: '#FFFFFF' }}>

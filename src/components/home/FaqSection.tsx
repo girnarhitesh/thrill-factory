@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { FAQS_DATA } from '@/data/faqs';
 import { SectionHeader } from '@/components/common/SectionHeader';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { faqSchema } from '@/seo/schema';
 import './FaqSection.css';
 
 export const FaqSection: React.FC = () => {
@@ -15,6 +17,7 @@ export const FaqSection: React.FC = () => {
 
   return (
     <section id="faqs" className="faq-section" aria-label="Frequently asked questions">
+      <JsonLd data={faqSchema} />
       <div className="container">
         <SectionHeader
           tag="Got Questions?"

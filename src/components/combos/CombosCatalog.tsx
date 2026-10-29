@@ -105,7 +105,7 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
             tag="The Shivpuri Thrill Factory"
             title="Save More with"
             highlightWord="Combos"
-            description="Bundle your favorite extreme gravity rides and signature jumps at The Shivpuri Thrill Factory — listed by lane so you can lock a pack instead of single tickets."
+            description="Extreme packs and indoor game packs, listed by lane, so a full day costs less than buying each ticket alone."
           />
 
           <div className="combos-hero-strip">
