@@ -12,22 +12,23 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "height": "165 Feet",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ years",
-    "weightLimit": "Minimum 40kg",
-    "shortDesc": "Experience India's premier 165 FT fixed platform leap with optional water splash and complimentary 4K DSLR footage.",
-    "fullDesc": "India's highest fixed bungee jumping platform standing 165 feet above the Himalayan river valley in Shivpuri, Rishikesh. Featuring full AS/NZS 5848 safety certification and complimentary 4K jump recording.",
+    "weightLimit": "Solo 40–120kg | Tandem up to 180kg",
+    "shortDesc": "Including free DSLR Video, Genuine 165 Feet, With Water Splash and Air Bag Safety Bungee Jumping In Rishikesh (165 ft)",
+    "fullDesc": "Bungee jumping in Rishikesh is a heart-pounding leap from India's highest fixed platform at Thrill Factory, Shivpuri. Free DSLR video, water splash option, and air bag safety are included.",
     "features": [
-      "165 FT India's Highest Fixed Platform Leap",
-      "Complimentary 4K DSLR Video & Certificate Included",
-      "AS/NZS 5848 Certified Jump Masters & Redundant Rigging",
-      "Optional Water Splash Touchdown Available",
-      "Weight: Solo 40kg–120kg | Tandem up to 180kg"
+      "Genuine 165 ft jump from India's highest fixed platform",
+      "Free DSLR video included",
+      "Water splash bungee and air bag safety available",
+      "Jump platforms designed by a UK team with Mark Charles",
+      "Technically qualified Jump Masters",
+      "Age 12+ | Solo 40–120kg | Tandem up to 180kg",
+      "Timings 10:00 AM to 9:00 PM, Shivpuri"
     ],
     "paragraphs": [
-      "Including free DSLR Video, Genuine 165 Feet, With Water Splash and Air Bag Safety",
-      "Weight: Solo- Minimum 40kg and Maximum 120kg and Tandem Bungee- Maximum 180kg with harness",
-      "Bungee jumping in Rishikesh is a heart-pounding activity that allows you to conquer your fears and experience an exhilarating freefall. At Thrill Factory, you'll have the opportunity to take a leap from India's highest fixed platform, standing at a staggering height. As you prepare to jump, the adrenaline coursing through your veins, you'll be rewarded with breathtaking views of the surrounding natural beauty. The rush of adrenaline and the feeling of weightlessness during the descent make bungee jumping an unforgettable adventure.",
-      "Safety and Professionalism: When it comes to bungee jumping, safety is paramount, and Thrill",
-      "Factory ensures that every precaution is taken to provide a secure and thrilling experience to ensure highest level of adrenline rush. The highly trained staff and state-of-the-art equipment adhere to strict safety standards, ensuring that your bungee jumping experience in Rishikesh is both thrilling and safe. From thorough safety briefings to expert harnessing and jump supervision, you can trust that your adventure at Thrill Factory will be in capable hands.",
+      "Including free DSLR Video, Genuine 165 Feet, With Water Splash and Air Bag Safety Bungee Jumping In Rishikesh (165 ft)",
+      "Bungee jumping in Rishikesh is a heart-pounding activity that lets you conquer your fears and experience an exhilarating freefall. At Thrill Factory you leap from India's highest fixed platform, with panoramic views of Shivpuri as the adrenaline builds.",
+      "The rush of adrenaline and the feeling of weightlessness during the descent make bungee jumping an unforgettable adventure.",
+      "Safety is paramount at Thrill Factory. Trained staff and state-of-the-art equipment follow strict standards, with safety briefings, expert harnessing, and jump supervision on every leap.",
       "Thrill Factory Bungee Jumping in Shivpuri is meticulously designed and constructed by Mark Charles with a team of expert professionals from United Kingdom.",
       "We prioritize your safety and provide you with appropriate safety equipment to ensure a secure bungee jumping experience. Throughout the activity, experienced and well-trained professionals will guide you every step of the way.",
       "To ensure your safety, the rope used for the bungee jump will be adjusted based on your weight. Our trained staff will ensure that your chest and ankles are securely fastened with the safety rope. Before taking the leap, our trainers will provide you with proper guidance and instructions to ensure you are well-prepared for the jump.",
@@ -54,23 +55,23 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "title": "Giant Swing in Rishikesh",
     "price": 1500,
     "category": "extreme",
-    "tag": "140 FT Canyon Arc",
+    "tag": "45m Pendulum",
     "image": "/images/activities/giant-swing.jpg",
     "height": "45m",
     "duration": "15 - 30 mins",
     "ageLimit": "12 years and above",
-    "weightLimit": "Minimum 40 kgs",
-    "shortDesc": "Launch into a massive 140 FT canyon pendulum arc over the pristine river valley with solo or tandem flight options.",
-    "fullDesc": "One of India's tallest giant swings at a height of 45m (140 ft), combining high-speed freefall with a breathtaking pendulum arc over the Shivpuri river valley.",
+    "weightLimit": "40–100kg | 100–120kg single ride",
+    "shortDesc": "Giant Swing in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Age: 12 years and above Weight: Minimum",
+    "fullDesc": "Giant Swing in Rishikesh combines the thrill of a swing with freefall from one of India's tallest setups at 45m. Solo, couple, and triple rides are available.",
     "features": [
-      "140 FT Massive Canyon Arc with 3G Acceleration",
-      "Solo & Tandem High-Altitude Flight Options",
-      "Dual Independent Carabiner Safety Harness",
-      "Operating Hours: 10:00 AM to 9:00 PM Daily",
-      "Weight: Minimum 40kg | Maximum 120kg"
+      "One of India's tallest giant swings at 45m",
+      "State-of-the-art equipment and qualified Swing Masters",
+      "Solo, couple, and triple ride options",
+      "Age 12+ | Weight 40–100kg, 100–120kg single ride",
+      "Timings 10:00 AM to 9:00 PM, Shivpuri"
     ],
     "paragraphs": [
-      "Weight: Minimum 40 kgs and Maximum 100 kgs, 100Kgs to 120kgs Single Ride.",
+      "Giant Swing in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Age: 12 years and above Weight: Minimum",
       "One of India's tallest giant swing at a height of 45m will not only thrill you but also give u a view of the scenic beauty of hills and nature of Rishikesh.",
       "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure.",
       "When it comes to the giant swing, safety is of utmost importance at Thrill Factory. Our highly trained staff and state-of-the-art equipment strictly adhere to rigorous safety standards, ensuring a secure and thrilling experience. From thorough safety briefings to expert harnessing and constant supervision, your safety and enjoyment are our top priorities. You can trust in our professionals to provide a safe and memorable giant swing experience in Rishikesh.",
@@ -97,36 +98,27 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "title": "Rope Bungee in Rishikesh",
     "price": 1500,
     "category": "extreme",
-    "tag": "165 FT Freefall",
+    "tag": "160 FT Pendulum",
     "image": "/images/activities/rope-bungee.jpg",
     "height": "160 Feet",
     "duration": "15 - 30 mins",
-    "ageLimit": "12 to 18 years",
-    "weightLimit": "Minimum 40 kg",
-    "shortDesc": "160 Feet, including free DSLR Video Experience the Rush of Rope Bungee in Rishikesh",
-    "fullDesc": "160 Feet, including free DSLR Video\n\nExperience the Rush of Rope Bungee in Rishikesh\n\nRope Bungee Participation Guidelines:",
+    "ageLimit": "12–55 years",
+    "weightLimit": "40–85kg including harness",
+    "shortDesc": "160 Feet, including free DSLR Video Experience the Rush of Rope Bungee in Rishikesh Rope Bungee Participation Guidelines: Age: Minimum",
+    "fullDesc": "Rope Bungee at Thrill Factory drops you from 160 feet on dynamic ropes into a massive pendulum swing. Unlike a vertical bungee bounce, this ride flies you forward through the air.",
     "features": [
-      "160 Feet, including free DSLR Video",
-      "Experience the Rush of Rope Bungee in Rishikesh",
-      "Rope Bungee Participation Guidelines:",
-      "Age: Minimum 12 to 18 years and Maximum 55 years",
-      "Height: Minimum 4.5 feet (must meet harness fitment requirements)",
-      "Body Weight: Minimum 40 kg and Maximum 85 kg (including harness)",
-      "Shoes: Not mandatory, but closed footwear is recommended for comfort",
-      "Accessories: Avoid wearing loose or hard articles such as watches, chains, sandals, specs, etc. during the ride."
+      "160 ft rope pendulum with free DSLR video",
+      "Full-body harness fitted for each jumper",
+      "Age 12–55 | Height min 4.5 ft | Weight 40–85kg",
+      "Closed footwear recommended",
+      "Avoid loose accessories such as watches, chains, and specs"
     ],
     "paragraphs": [
-      "Height: Minimum 4.5 feet (must meet harness fitment requirements)",
-      "Body Weight: Minimum 40 kg and Maximum 85 kg (including harness)",
-      "Shoes: Not mandatory, but closed footwear is recommended for comfort",
-      "Accessories: Avoid wearing loose or hard articles such as watches, chains, sandals, specs, etc. during the ride.",
-      "If freefall is your kind of thrill but you're looking for a swing with a twist, then Rope Bungee at Thrill Factory is the ride for you. This extreme adventure lets you jump from a height while being safely harnessed to dynamic ropes, creating a massive pendulum swing that sends you soaring through the air. It’s fast, fierce, and unforgettable.",
-      "Rope Bungee offers a unique adrenaline rush as you drop from the platform and swing in a wide arc, picking up serious speed in the process. Unlike bungee jumping, where you bounce vertically, this ride gives you the feeling of flying forward like a human pendulum. It’s pure power, gravity, and momentum combined.",
-      "This activity is conducted under the supervision of highly trained professionals and follows strict safety protocols. Our full-body harness system is fitted precisely for each participant, and every jump is thoroughly checked and monitored by certified instructors.",
-      "Whether you’re a thrill-seeker or a first-time adventurer, Rope Bungee is a must-try experience at Thrill Factory.",
-      "Our expert team ensures that every aspect of your safety is taken care of, from equipment checks to briefing sessions before the jump. So all you need to bring is your courage and excitement.",
-      "Rope Bungee at Thrill Factory is not just a ride — it's a full-body adrenaline experience you'll never forget.",
-      "Ready to take the swing of your life? Book now and feel the drop."
+      "160 Feet, including free DSLR Video Experience the Rush of Rope Bungee in Rishikesh Rope Bungee Participation Guidelines: Age: Minimum",
+      "It is fast, fierce, and unforgettable. Unlike bungee jumping, this ride gives the feeling of flying forward: power, gravity, and momentum combined.",
+      "The activity is run by trained professionals with a full-body harness fitted for each guest. Every jump is checked and monitored by certified instructors.",
+      "Age 12 to 55 years. Minimum height 4.5 feet. Weight 40–85kg including harness. Closed footwear is recommended. Avoid watches, chains, sandals, and specs on the ride.",
+      "Free DSLR video is included. Bring courage — the team handles the rest."
     ],
     "includesDSLRVideo": true
   },
@@ -136,62 +128,54 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "title": "Free Style Bungee in Rishikesh",
     "price": 2500,
     "category": "extreme",
-    "tag": "165 FT Freefall",
+    "tag": "160 FT Freestyle",
     "image": "/images/activities/free-style-bungee.jpg",
-    "height": "5 feet",
+    "height": "160 Feet",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ years",
-    "weightLimit": "Minimum  40kg",
-    "shortDesc": "Admire the panoramic views of the surroundings Age: 12+ years",
-    "fullDesc": "Admire the panoramic views of the surroundings\n\nAge: 12+ years\n\nWeight: Minimum  40kg and Maximum 100kg(with harness)",
+    "weightLimit": "40–100kg with harness",
+    "shortDesc": "Admire the panoramic views of the surroundings Age: 12+ years Weight: Minimum 40kg and Maximum 100kg (with harness) Height: Minimum 4.5 feet (must meet",
+    "fullDesc": "Freestyle Bungee at Thrill Factory is a 160 ft jump in a full-body harness that lets you move in mid-air. Unlike a standard ankle bungee, you can flip, dive, or pose on the way down.",
     "features": [
-      "Admire the panoramic views of the surroundings",
-      "Age: 12+ years",
-      "Weight: Minimum  40kg and Maximum 100kg(with harness)",
-      "Height: Minimum 4.5 feet (must meet harness fit requirement)",
-      "Free Style Bungee Jumping Charges in Rishikesh: 2500 Per Person",
-      "Note: Free Drone Video Included in the package.",
-      "Freestyle Bungee Jumping at Thrill Factory is not just a fall. It is a full-blown flight of freedom. With a 160 ft jump height and a full-body harness, this experience gives you the ability to flip, dive, or freefall in your own unique style. Unlike traditional bungee jumping, freestyle allows greater mobility in mid-air, turning your adrenaline rush into a personal performance.",
-      "Whether you're a first-timer looking to conquer your fears or a seasoned jumper chasing your next thrill, our freestyle bungee offers the perfect mix of safety, intensity and fun. Every second of the drop is heart-racing and unforgettable."
+      "160 ft jump with full-body harness for mid-air movement",
+      "Free drone video included",
+      "Designed with Mark Charles and UK-based experts",
+      "Age 12+ | Height min 4.5 ft | Weight 40–100kg",
+      "Qualified Jump Masters, weight-adjusted setup"
     ],
     "paragraphs": [
-      "Weight: Minimum  40kg and Maximum 100kg(with harness)",
-      "Height: Minimum 4.5 feet (must meet harness fit requirement)",
-      "Free Style Bungee Jumping Charges in Rishikesh: 2500 Per Person",
-      "Freestyle Bungee Jumping at Thrill Factory is not just a fall. It is a full-blown flight of freedom. With a 160 ft jump height and a full-body harness, this experience gives you the ability to flip, dive, or freefall in your own unique style. Unlike traditional bungee jumping, freestyle allows greater mobility in mid-air, turning your adrenaline rush into a personal performance.",
-      "Whether you're a first-timer looking to conquer your fears or a seasoned jumper chasing your next thrill, our freestyle bungee offers the perfect mix of safety, intensity and fun. Every second of the drop is heart-racing and unforgettable.",
-      "We have designed this experience with the same level of precision and safety as our flagship jump platform.",
-      "The entire setup has been constructed under the guidance of Mark Charles and a team of UK-based experts, ensuring you get one of the safest and most exhilarating experiences in the country.",
-      "Our experienced team provides a detailed safety briefing before every jump. You will be securely fitted into a specially designed full-body harness that allows for movement mid-air. Whether you want to spread your arms wide, flip backwards, or strike the perfect pose, freestyle bungee gives you the freedom to do it your way.",
-      "The jump height is 160 feet, and the activity is operated by qualified Jump Masters trained to international safety standards. Each jump is adjusted according to your body weight and comfort, and our team is there to support and guide you at every stage.",
-      "If you are looking for a next-level adventure in Rishikesh, freestyle bungee jumping at Thrill Factory is the experience you have been waiting for."
+      "Admire the panoramic views of the surroundings Age: 12+ years Weight: Minimum 40kg and Maximum 100kg (with harness) Height: Minimum 4.5 feet (must meet",
+      "Unlike traditional bungee, freestyle gives more movement in mid-air. First-timers and seasoned jumpers both get the same mix of safety, intensity, and fun.",
+      "The setup was built under Mark Charles and UK-based experts, to the same standard as the flagship jump platform.",
+      "You get a full safety briefing and a harness that allows mid-air movement. Jump Masters adjust the setup to your weight. Free drone video is included.",
+      "Age 12+. Minimum height 4.5 feet. Weight 40–100kg with harness."
     ],
     "includesDSLRVideo": true
   },
   {
     "id": "scad-jumping-in-rishikesh",
     "slug": "scad-jumping-in-rishikesh",
-    "title": "SCAD Jump",
+    "title": "SCAD Jump from Germany! Next-level of bungee jumping-no rope, no bungee cord.",
     "price": 2500,
     "originalPrice": 4500,
     "category": "extreme",
-    "tag": "Zero Harness Drop",
+    "tag": "150 FT Free Fall",
     "image": "/images/activities/scad-jumping-in-rishikesh.jpg",
-    "height": "150ft",
-    "duration": "15 - 30 mins",
+    "height": "150 Feet",
+    "duration": "1 – 1.5 hours",
     "ageLimit": "12 years and above",
-    "weightLimit": "Minimum 40 kgs",
-    "shortDesc": "Experience pure zero-gravity unattached freefall from 150 FT directly into a suspended high-tension German safety net.",
-    "fullDesc": "Asia's first and only SCAD (Suspended Catch Air Device) jump imported from Montec Germany. Freefall 150 feet without cords or harnesses into a specialized multi-layer deceleration net.",
+    "weightLimit": "40–100kg",
+    "shortDesc": "SCAD Jumping in Rishikesh – Experience a 150-Ft Free Fall at Thrill Factory SCAD Jumping in Rishikesh Overview Activity Location:",
+    "fullDesc": "SCAD Jumping at Thrill Factory is a 150-ft free-fall adventure using German SCAD technology from MONTE. Unlike bungee, there is no traditional cord on the jumper — you are caught in a suspended landing device.",
     "features": [
-      "150 FT Pure Freefall Without Bungee Cord",
-      "Asia's First SCAD Jump by Montec Germany",
-      "Multi-Layer Suspended High-Tension Safety Catch",
-      "Supervised by New Zealand Certified Riggers",
-      "Weight: Minimum 40kg | Maximum 100kg"
+      "150-ft SCAD jump at Thrill Factory, Shivpuri",
+      "German SCAD technology — no conventional bungee cord",
+      "Specialist equipment and trained jump masters",
+      "Safety briefing and equipment check before the jump",
+      "Age 12+ | Weight 40–100kg | 10:00 AM to 9:00 PM"
     ],
     "paragraphs": [
-      "Specialty: Asia's First Scad Jump straight from Germany",
+      "SCAD Jumping in Rishikesh – Experience a 150-Ft Free Fall at Thrill Factory SCAD Jumping in Rishikesh Overview Activity Location:",
       "First in Asia From Montec Germany, SCAD jumping in Rishikesh offers an adrenaline-pumping adventure that will push your limits and leave you with an unforgettable experience. At Thrill Factory, you'll have the chance to engage in SCAD jumping, a unique and thrilling activity that will have you soaring through the air. Prepare yourself for an extraordinary leap from India's highest fixed platform, standing at an astounding height. As you prepare for the jump, your heart pounding with excitement, the breathtaking views of the surrounding natural beauty will further enhance the thrill. The incredible rush of adrenaline and the sensation of weightlessness during the descent make SCAD jumping a truly remarkable adventure.",
       "Thrill Factory prioritizes safety above all else when it comes to SCAD jumping. Every necessary precaution is taken to ensure a secure and exhilarating experience. The highly trained staff and state-of-the-art equipment strictly adhere to safety standards, providing you with peace of mind during your SCAD jumping experience in Rishikesh. Thorough safety briefings, expert harnessing, and constant jump supervision by experienced professionals are all part of the comprehensive safety measures in place. You can trust that your adventure at Thrill Factory will be guided by capable hands, ensuring your safety and enjoyment throughout the entire experience.",
       "SCAD Jumping at Thrill Factory in Shivpuri has been meticulously designed and constructed by a team of expert professionals from New Zealand. Our priority is to provide you with a secure SCAD jumping experience. Our trained professionals will adjust the equipment based on your weight and ensure your chest and ankles are securely fastened before the jump. Prior to taking the leap, our trainers will provide you with proper guidance and instructions to ensure you feel confident and prepared.",
@@ -218,26 +202,23 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "title": "Zip Lining in Rishikesh",
     "price": 2000,
     "category": "extreme",
-    "tag": "Extreme Adventure",
+    "tag": "800m Ganga Line",
     "image": "/images/activities/zip-lining-in-rishikesh.jpg",
-    "height": "800 Meters",
-    "duration": "15 - 30 mins",
+    "height": "800 Metres",
+    "duration": "1 hour (approx)",
     "ageLimit": "12+ Years",
-    "weightLimit": "Min 40kg, Max 110kg",
-    "shortDesc": "800 Meters Long Zip Lining in Shivpuri, Rishikesh Activity Location: Shivpuri, Rishikesh",
-    "fullDesc": "800 Meters Long Zip Lining in Shivpuri, Rishikesh\n\nActivity Location: Shivpuri, Rishikesh\n\nActivity Timing: Between 10:00 AM to 7:00 PM",
+    "weightLimit": "Adjusted to rider weight",
+    "shortDesc": "800 Meters Long Zip Lining in Shivpuri, Rishikesh Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 7:00 PM Activity Duration: 1",
+    "fullDesc": "Zip lining at Thrill Factory is an 800-metre ride over the River Ganga. The line was designed by a New Zealand team and is run by technically qualified staff.",
     "features": [
-      "800 Meters Long Zip Lining in Shivpuri, Rishikesh",
-      "Activity Location: Shivpuri, Rishikesh",
-      "Activity Timing: Between 10:00 AM to 7:00 PM",
-      "Activity Duration: 1 hours (Approx)",
-      "Adult: Rs. 2000",
-      "Student (With id): Rs. 1800",
-      "Zip Lining in Rishikesh Overview",
-      "Activity Location: Shivpuri, Rishikesh"
+      "800-metre zip line over the River Ganga",
+      "Equipment designed by a New Zealand team",
+      "Technically qualified staff, run by ex-Army officers",
+      "More than 10,000 rides, rated 5/5 by guests",
+      "Timings 10:00 AM to 7:00 PM | Duration about 1 hour"
     ],
     "paragraphs": [
-      "Zip lining over the majestic River Ganga in Rishikesh takes the thrill to unparalleled heights, offering an extraordinary adventure that allows you to defy gravity in an exhilarating way. At Thrill Factory, prepare for an awe-inspiring experience as you ascend to remarkable heights and launch yourself into the air, soaring above the shimmering waters of the Ganges. Feel the surge of anticipation as your heart races, and immerse yourself in the breathtaking vistas of the enchanting landscape that unfolds beneath you. The sensation of gliding through the air and defying gravity while admiring the scenic beauty of the River Ganga will leave an indelible mark on your memory, pushing the boundaries of adventure and creating an unforgettable escapade.",
+      "800 Meters Long Zip Lining in Shivpuri, Rishikesh Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 7:00 PM Activity Duration: 1",
       "Safety and Professionalism: At Thrill Factory, your safety is our top priority during zip lining adventures. We provide a secure and professional experience, backed by a highly trained staff and cutting-edge equipment. Our strict adherence to safety standards ensures a thrilling yet safe zip lining adventure in Rishikesh. From comprehensive safety briefings to expert harnessing and vigilant supervision, your journey with us is in capable hands. That's why we have already crossed more than 10K zip lining and rated 5/5 by our customers.",
       "Thrill Factory's Zip Lining facility in Shivpuri is meticulously designed and constructed by expert professionals from New Zealand. We go above and beyond to ensure your safety by providing top-quality safety equipment that meets rigorous standards. Throughout the activity, experienced professionals will accompany you, guiding you every step of the way.",
       "To guarantee your safety, we adjust the equipment based on your weight, securely fastening your chest and ankles with the necessary ropes. Our trainers will also provide detailed guidance and instructions to ensure you're well-prepared for the thrilling Zip Lining experience.",
@@ -262,27 +243,26 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
   {
     "id": "reverse-bungee",
     "slug": "reverse-bungee",
-    "title": "Reverse Bungee in Rishikesh",
+    "title": "Reverse Bungee in Rishikesh | Only one in India",
     "price": 2000,
     "category": "extreme",
-    "tag": "165 FT Freefall",
+    "tag": "180 FT Launch",
     "image": "/images/activities/reverse-bungee.jpg",
-    "height": "180 feet",
+    "height": "180 Feet",
     "duration": "15 - 30 mins",
     "ageLimit": "12 years and above",
-    "weightLimit": "Minimum 40 kgs",
-    "shortDesc": "Catapult 180 FT into the sky in under 2 seconds inside Asia's only imported Italian reverse slingshot cage.",
-    "fullDesc": "Asia's only imported Italian reverse bungee catapults you 180 feet into the air at 3G acceleration inside a spherical high-tensile safety cage.",
+    "weightLimit": "40–120kg",
+    "shortDesc": "Reverse Bungee in Rishikesh – Experience a 180-Ft Launch at Thrill Factory Reverse Bungee Jumping in Rishikesh Overview Activity Location:",
+    "fullDesc": "Reverse Bungee at Thrill Factory launches you about 180 feet up in around 2 seconds. The attraction is imported from Italy — an upward shot instead of a downward fall.",
     "features": [
-      "180 FT Vertical Rocket Launch in Under 2 Seconds",
-      "Asia's Only Reverse Bungee Rig Imported From Italy",
-      "Spherical High-Tensile Steel Cage with Shock Absorption",
-      "Complimentary 4K DSLR Jump Footage Included",
-      "Weight: Minimum 40kg | Maximum 120kg"
+      "Reverse bungee imported from Italy — only one in India",
+      "About 180-ft upward launch in around 2 seconds",
+      "Trained operating staff and pre-activity safety briefing",
+      "Age 12+ | Weight 40–120kg",
+      "Timings 10:00 AM to 9:00 PM, Shivpuri"
     ],
     "paragraphs": [
-      "Experience the world upside down with a 180 feet throw above the ground in just 2 seconds in a cage",
-      "Experience the world upside down with a 180 feet throw above the ground in just 2 seconds in a cage",
+      "Reverse Bungee in Rishikesh – Experience a 180-Ft Launch at Thrill Factory Reverse Bungee Jumping in Rishikesh Overview Activity Location:",
       "Reverse Bungee Jumping in Rishikesh redefines the thrill as you embark on a mind-boggling adventure that defies gravity. At Thrill Factory, India's highest fixed platform awaits you to leap from astonishing heights. As you gather your nerves and prepare to ascend, the anticipation surges through your veins, and you're treated to awe-inspiring vistas of the enchanting landscape. The experience of soaring upwards and the exhilarating sensation of defying gravity make reverse bungee jumping an indelible escapade, pushing the boundaries of adventure.",
       "Safety and Professionalism: Safety and Professionalism: When it comes to reverse bungee jumping, Thrill Factory prioritizes your well-being by ensuring a safe and professional experience. With a highly trained staff and state-of-the-art equipment, we adhere to rigorous safety standards, guaranteeing a thrilling yet secure reverse bungee jumping adventure in Rishikesh. Our commitment to your safety starts with comprehensive safety briefings and continues with expert harnessing and vigilant jump supervision. Rest assured that your journey at Thrill Factory is in capable hands.",
       "At Thrill Factory, our reverse bungee jumping facility in Shivpuri is being imported from Italy. We spare no effort in ensuring your safety by providing appropriate safety equipment that meets stringent standards. Throughout the activity, you will be accompanied by experienced and well-trained professionals who will guide you every step of the way.",
@@ -314,7 +294,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "height": "15 meters",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Sky Cycling at an height of 15 meters in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity",
+    "shortDesc": "Sky Cycling at an height of 15 meters in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00",
     "fullDesc": "Sky Cycling at an height of 15 meters in Rishikesh Overview\n\nActivity Location: Shivpuri, Rishikesh Activity\n\nTiming: Between 10:00 AM to 9:00 PM",
     "features": [
       "Sky Cycling at an height of 15 meters in Rishikesh Overview",
@@ -327,7 +307,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Safety and Professionalism:"
     ],
     "paragraphs": [
-      "Sky Cycling at an height of 15 meters in Rishikesh Overview",
+      "Sky Cycling at an height of 15 meters in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00",
       "Cycling on roads are for everyone…..for real adventure enthusiast it's the sky…",
       "Enjoy the thrill of cycling on a wire only at the thrill factory.",
       "Sky cycling in Rishikesh offers a unique and thrilling adventure that allows you to pedal your way through the sky while enjoying panoramic views of the breathtaking surroundings. At Thrill Factory, you'll have the opportunity to embark on an exhilarating cycling journey on a suspended track high above the ground. As you pedal through the air, the adrenaline rushes through your veins, and you'll feel a sense of freedom and excitement like never before. Sky cycling promises an unforgettable and adrenaline-pumping experience.",
@@ -361,7 +341,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/rope-course.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Rope Course in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity",
+    "shortDesc": "Rope Course in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Experience rope course at the thrill",
     "fullDesc": "Rope Course in Rishikesh Overview\n\nActivity Location: Shivpuri, Rishikesh Activity\n\nTiming: Between 10:00 AM to 9:00 PM",
     "features": [
       "Rope Course in Rishikesh Overview",
@@ -374,7 +354,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "At Thrill Factory, safety is our utmost priority for all our activities, including Rope Course. Our highly trained staff and stringent safety measures adhere to the highest standards to ensure a secure and thrilling experience. Thorough safety briefings, expert guidance, and constant supervision by experienced professionals are integral parts of our commitment to your safety and enjoyment. Rest assured that your Rope Course adventure in Rishikesh will be guided by professionals who prioritize your well-being."
     ],
     "paragraphs": [
-      "Experience rope course at the thrill factory and give a perfect kick to your adrenaline rush quotient.",
+      "Rope Course in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Experience rope course at the thrill",
       "Rope Course in Rishikesh offers an exciting and adventurous experience that allows you to challenge yourself while navigating through a series of thrilling rope-based obstacles. At Thrill Factory, you'll have the opportunity to test your strength, agility, and problem-solving skills as you maneuver through suspended ropes, swings, and bridges. With each step, you'll feel a rush of adrenaline and a sense of accomplishment. Rope Course promises an unforgettable and thrilling adventure.",
       "At Thrill Factory, safety is our utmost priority for all our activities, including Rope Course. Our highly trained staff and stringent safety measures adhere to the highest standards to ensure a secure and thrilling experience. Thorough safety briefings, expert guidance, and constant supervision by experienced professionals are integral parts of our commitment to your safety and enjoyment. Rest assured that your Rope Course adventure in Rishikesh will be guided by professionals who prioritize your well-being.",
       "The Rope Course at Thrill Factory in Shivpuri has been meticulously designed and constructed to provide a safe and challenging experience by using all the safety equipments imported from Germany. Our trained professionals will ensure that you are properly equipped and briefed before you start your journey through the rope-based obstacles. They will be there to guide you, offer assistance, and ensure your safety throughout the course.",
@@ -406,7 +386,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/quick-jump.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Test your arm's strength …. catch & hold on to the bag for 5 mins to win bungee or for 3 minutes to win giant swing free!!! Quick Jump in Rishikesh Overview ...",
+    "shortDesc": "Test your arm's strength …. catch & hold on to the bag for 5 mins to win bungee or for",
     "fullDesc": "Test your arm's strength …. catch & hold on to the bag for 5 mins to win bungee or for 3 minutes to win giant swing free!!!\n\nQuick Jump in Rishikesh Overview Activity\n\nLocation: Shivpuri, Rishikesh Activity",
     "features": [
       "Test your arm's strength …. catch & hold on to the bag for 5 mins to win bungee or for 3 minutes to win giant swing free!!!",
@@ -419,7 +399,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Our quick jump activity is widely recognized for its safety and professionalism. With extensive experience in conducting quick jumps, our team will support you throughout the entire process, making it both thrilling and secure."
     ],
     "paragraphs": [
-      "Test your arm's strength …. catch & hold on to the bag for 5 mins to win bungee or for 3 minutes to win giant swing free!!!",
+      "Test your arm's strength …. catch & hold on to the bag for 5 mins to win bungee or for",
       "Experience the Thrill of Quick Jump in Rishikesh Quick jump in Rishikesh offers a thrilling and adrenaline-pumping experience that combines the excitement of freefall with the rush of controlled descent. At Thrill Factory, you'll have the opportunity to take the leap and experience a quick but exhilarating descent from a height. The moment you let go and feel the exhilarating rush of wind, you'll be filled with a sense of adventure and pure adrenaline. Quick jump provides an instant thrill and an unforgettable experience.",
       "Safety and Professionalism: When it comes to quick jump, safety is our top priority at Thrill Factory. Our highly trained staff and state-of-the-art equipment adhere to the strictest safety standards, ensuring a secure and thrilling experience. Thorough safety briefings, expert harnessing, and constant supervision by experienced professionals are integral parts of our commitment to your safety and enjoyment. You can have complete confidence that your quick jump adventure in Rishikesh will be guided by professionals who prioritize your well-being.",
       "The quick jump platform at Thrill Factory in Shivpuri has been meticulously designed and constructed to provide a safe and thrilling experience. Our trained professionals will ensure that you are properly equipped and securely fastened before you take the leap. They will be there to guide you through the entire process, ensuring your comfort and confidence.",
@@ -450,7 +430,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "duration": "15 - 30 mins",
     "ageLimit": "12 years and above",
     "weightLimit": "80 Kg",
-    "shortDesc": "360 Degree cycle Activity Location: Shivpuri, Rishikesh Activity",
+    "shortDesc": "360 Degree cycle Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Get ready for an adrenaline-pumping adventure with",
     "fullDesc": "360 Degree cycle\n\nActivity Location: Shivpuri, Rishikesh Activity\n\nTiming: Between 10:00 AM to 9:00 PM",
     "features": [
       "360 Degree cycle",
@@ -463,7 +443,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Complete 360° Spins: Feel the excitement of a full rotation."
     ],
     "paragraphs": [
-      "Get ready for an adrenaline-pumping adventure with the 360° Cycle—a one-of-a-kind ride that combines excitement, innovation, and safety. Designed for thrill-seekers of all ages, this single-seat cycle delivers the ultimate 360-degree spinning experience in a secure and controlled setting.",
+      "360 Degree cycle Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Get ready for an adrenaline-pumping adventure with",
       "Crafted with precision engineering and durable materials, the 360° Cycle ensures every ride is as safe as it is exhilarating. Feel the rush as you complete full circular rotations, enjoying the dynamics of the spin while being securely harnessed.",
       "This ride isn’t just about spinning; it’s about redefining excitement. The innovative design allows for smooth and controlled revolutions, ensuring riders can fully immerse themselves in the adventure without compromising on safety. Whether you’re looking for a heart-pounding thrill or a unique activity to try with friends and family, the 360° Cycle promises an unforgettable experience.",
       "Complete 360° Spins: Feel the excitement of a full rotation.",
@@ -484,7 +464,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/wall-climbing.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "14 years",
-    "shortDesc": "Note: Child: Age below 14 years",
+    "shortDesc": "Note: Child: Age below 14 years Adult: Age 14 years and above Looking for an exciting activity in Rishikesh that",
     "fullDesc": "Note:\n\nChild: Age below 14 years\n\nAdult: Age 14 years and above",
     "features": [
       "Note:",
@@ -497,7 +477,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Section Add-ons"
     ],
     "paragraphs": [
-      "Looking for an exciting activity in Rishikesh that combines fun, fitness, and challenge? Wall Climbing at Thrill Factory is a strong choice for visitors who want to test their strength, balance, and confidence in a safe and engaging setup. It is one of the most enjoyable activities for kids, teens, friends, and families who want something active and memorable.",
+      "Note: Child: Age below 14 years Adult: Age 14 years and above Looking for an exciting activity in Rishikesh that",
       "Wall Climbing is not just about reaching the top. It is about focus, body control, and the thrill of pushing yourself step by step. Whether you are trying it for the first time or simply want a fun physical challenge, this activity delivers an experience that feels rewarding from start to finish.",
       "At Thrill Factory, Wall Climbing is suitable for visitors who enjoy action-based activities without needing prior climbing experience. It works well for beginners and for guests who want to build confidence, coordination, and agility through a structured adventure setup.",
       "This activity is a popular option for family outings, school groups, friend groups, and visitors searching for fun activities in Rishikesh. It adds an energetic and sporty experience to your visit while remaining approachable for a wide range of participants."
@@ -514,7 +494,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/gun-shooting.webp",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is designed fo...",
+    "shortDesc": "Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is",
     "fullDesc": "Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is designed for visitors who enjoy focus, precision, and the thrill of hitting a target. It gives participants a controlled shooting-game experience that is engaging for friends, families, couples, and groups.\n\nThis activity is popular because it combines concentration with fun. The challenge is simple to understand but exciting to perform: aim carefully, stay steady, and improve your accuracy shot after shot. Whether someone is trying target shooting for the first time or just wants a different kind of recreational activity, Gun Shooting adds variety to the overall Thrill Factory experience.\n\nGun Shooting is also a strong choice for visitors looking for indoor or low-exertion entertainment that still feels interactive. It works well for mixed-age groups, casual outings, short play sessions, and friendly competition between friends or family members.",
     "features": [
       "Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is designed for visitors who enjoy focus, precision, and the thrill of hitting a target. It gives participants a controlled shooting-game experience that is engaging for friends, families, couples, and groups.",
@@ -527,7 +507,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Suitable for first-time participants"
     ],
     "paragraphs": [
-      "Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is designed for visitors who enjoy focus, precision, and the thrill of hitting a target. It gives participants a controlled shooting-game experience that is engaging for friends, families, couples, and groups.",
+      "Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is",
       "This activity is popular because it combines concentration with fun. The challenge is simple to understand but exciting to perform: aim carefully, stay steady, and improve your accuracy shot after shot. Whether someone is trying target shooting for the first time or just wants a different kind of recreational activity, Gun Shooting adds variety to the overall Thrill Factory experience.",
       "Gun Shooting is also a strong choice for visitors looking for indoor or low-exertion entertainment that still feels interactive. It works well for mixed-age groups, casual outings, short play sessions, and friendly competition between friends or family members.",
       "For visitors searching online for fun activities in Rishikesh, target games in Rishikesh, or skill-based entertainment at Thrill Factory, this page should position Gun Shooting as a focused, enjoyable, and memorable attraction.",
@@ -547,7 +527,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/foot-pool.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Get ready to experience a game like no other with Human Foot pool, a thrilling blend of football and pool that will keep you on your toes—literally! Imagine ...",
+    "shortDesc": "Get ready to experience a game like no other with Human Foot pool, a thrilling blend of football and pool",
     "fullDesc": "Get ready to experience a game like no other with Human Foot pool, a thrilling blend of football and pool that will keep you on your toes—literally! Imagine stepping onto a giant pool table, but instead of cues and balls, you’re using your feet to skilfully kick oversized balls into the pockets. Sounds exciting? It’s even better when you try it!\n\nWhat’s Human Foot pool All About? Human Foot pool is a larger-than-life game that combines the strategy of pool with the energy of football. The rules are simple but the fun is endless: aim, strategize, and kick the balls into the pockets to score big. It’s perfect for anyone who loves a mix of friendly competition, clever gameplay, and a good dose of laughter.\n\nWhy You’ll Love Human Foot pool:",
     "features": [
       "Get ready to experience a game like no other with Human Foot pool, a thrilling blend of football and pool that will keep you on your toes—literally! Imagine stepping onto a giant pool table, but instead of cues and balls, you’re using your feet to skilfully kick oversized balls into the pockets. Sounds exciting? It’s even better when you try it!",
@@ -560,7 +540,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Price: 200 per person for 30 mins"
     ],
     "paragraphs": [
-      "Get ready to experience a game like no other with Human Foot pool, a thrilling blend of football and pool that will keep you on your toes—literally! Imagine stepping onto a giant pool table, but instead of cues and balls, you’re using your feet to skilfully kick oversized balls into the pockets. Sounds exciting? It’s even better when you try it!",
+      "Get ready to experience a game like no other with Human Foot pool, a thrilling blend of football and pool",
       "What’s Human Foot pool All About? Human Foot pool is a larger-than-life game that combines the strategy of pool with the energy of football. The rules are simple but the fun is endless: aim, strategize, and kick the balls into the pockets to score big. It’s perfect for anyone who loves a mix of friendly competition, clever gameplay, and a good dose of laughter.",
       "Unique and Engaging: This isn’t your ordinary game—it’s pool on a grand scale with a football twist! Whether you’re a football fanatic, a pool pro, or just looking for something out-of-the-box, Human Foot pool is your ticket to nonstop entertainment.",
       "Fun for Everyone: From kids mastering their first kicks to adults showing off their skills, Human Foot pool is designed for players of all ages and abilities. No prior expertise required—just bring your enthusiasm and a sense of adventure!",
@@ -583,7 +563,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/archery.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Thrill Factory Indoor Archery with Multimedia Projections Activity Location: Shivpuri, Rishikesh Activity",
+    "shortDesc": "Thrill Factory Indoor Archery with Multimedia Projections Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Multimedia projections with sensors",
     "fullDesc": "Thrill Factory Indoor Archery with Multimedia Projections\n\nActivity Location: Shivpuri, Rishikesh Activity\n\nTiming: Between 10:00 AM to 9:00 PM",
     "features": [
       "Thrill Factory Indoor Archery with Multimedia Projections",
@@ -596,7 +576,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Unleash Your Skills in a Futuristic Environment At Thrill Factory, we believe in pushing the boundaries of adventure. With our Indoor Archery range, you'll be transported into a futuristic setting where immersive multimedia projections surround you. Feel the excitement build up as you draw your bow and release arrows towards virtual targets, watching as your shots come to life through captivating visuals. This high-tech archery experience adds an extra level of excitement and challenges your skills in a whole new dimension."
     ],
     "paragraphs": [
-      "Thrill Factory Indoor Archery with Multimedia Projections",
+      "Thrill Factory Indoor Archery with Multimedia Projections Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Multimedia projections with sensors",
       "Multimedia projections with sensors integrated indoor Archery.",
       "Experience real bows and arrows interactive with vibrant visual simulations.",
       "Immerse Yourself in the Future of Archery at Thrill Factory",
@@ -631,7 +611,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/cricket.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Thrill Factory Box Cricket Overview Activity Location: Shivpuri, Rishikesh",
+    "shortDesc": "Thrill Factory Box Cricket Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Unleash Your Cricketing Skills with",
     "fullDesc": "Thrill Factory Box Cricket Overview\n\nActivity Location: Shivpuri, Rishikesh\n\nActivity Timing: Between 10:00 AM to 9:00 PM",
     "features": [
       "Thrill Factory Box Cricket Overview",
@@ -644,7 +624,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Safety and Professionalism Your safety is our top priority at Thrill Factory. Our Box Cricket activity adheres to stringent safety measures to ensure a secure and enjoyable experience. Our indoor arena is equipped with top-quality equipment, and our staff is trained to maintain a safe environment for all players. Whether you're a seasoned cricketer or a beginner, our friendly and knowledgeable staff will be there to provide guidance and assistance throughout the game."
     ],
     "paragraphs": [
-      "Unleash Your Cricketing Skills with Box Cricket at Thrill Factory",
+      "Thrill Factory Box Cricket Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Unleash Your Cricketing Skills with",
       "Feel like Dhoni or Virat while you take on bowlers from around the world setting the highest scores in individual over. Be a pro or just try to play a game to relive your childhood days.",
       "Calling all cricket enthusiasts! Get ready to experience the thrill of the game like never before at Thrill Factory's Box Cricket arena. Step onto our specially designed indoor cricket pitch and prepare for an adrenaline-pumping cricket adventure that combines the excitement of the sport with a unique twist. With state-of-the-art facilities, professional-grade equipment, and a vibrant atmosphere, our Box Cricket activity promises an unforgettable experience for players of all ages and skill levels.",
       "Immerse Yourself in the Excitement of Box Cricket At Thrill Factory, we believe in pushing the boundaries of traditional sports, and Box Cricket is no exception. This fast-paced, action-packed version of the game will put your skills to the test. Gather your team, strategize your game plan, and get ready to unleash your batting, bowling, and fielding prowess. Experience the thrill of hitting boundaries, taking wickets, and executing breathtaking catches as you compete against your friends or colleagues.",
@@ -675,7 +655,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/pool-table.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Thrill Factory Pool Table Experience Activity Location: Shivpuri, Rishikesh Activity",
+    "shortDesc": "Thrill Factory Pool Table Experience Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Need a fun game to help",
     "fullDesc": "Thrill Factory Pool Table Experience\n\nActivity Location: Shivpuri, Rishikesh Activity\n\nTiming: Between 10:00 AM to 9:00 PM",
     "features": [
       "Thrill Factory Pool Table Experience",
@@ -688,7 +668,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Unleash Your Cue Sports Talent At Thrill Factory, we believe in providing a platform for players to shine. Our Pool Table is the perfect arena to demonstrate your cue sports talent. Grab a cue, analyze your shots, and strategize your moves as you aim to sink those satisfying balls into the pockets. Challenge your friends or family members to a friendly competition or embark on a solo journey to perfect your skills. The thrill of each shot and the anticipation of victory create an electrifying atmosphere that will keep you engaged throughout your game."
     ],
     "paragraphs": [
-      "Need a fun game to help you relax? Hit some breathtaking shots in an 8-ball pool game!",
+      "Thrill Factory Pool Table Experience Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Need a fun game to help",
       "Pool is one of the most fun and engaging sports games.",
       "Play pool at The Thrill Factory for a challenging and rewarding experience.",
       "Dive into the World of Billiards at Thrill Factory Prepare to showcase your skills and precision at Thrill Factory's Pool Table. Step into our dedicated billiards area and immerse yourself in the art of cue sports. Whether you're a seasoned player or new to the game, our pool table experience offers an exciting and engaging activity for all.",
@@ -721,7 +701,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/bowling.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Bowling Alley in Rishikesh Overview Manufactured by AMM, United States.",
+    "shortDesc": "Bowling Alley in Rishikesh Overview Manufactured by AMM, United States. Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Experience",
     "fullDesc": "Bowling Alley in Rishikesh Overview\n\nManufactured by AMM, United States.\n\nActivity Location: Shivpuri, Rishikesh Activity",
     "features": [
       "Bowling Alley in Rishikesh Overview",
@@ -734,7 +714,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Enjoy the Thrills of Bowling At Thrill Factory, we believe in creating unforgettable moments and providing a dynamic entertainment experience. Whether you are a seasoned bowler or a novice trying it out for the first time, our Bowling Alley caters to all skill levels. Grab a bowling ball, select your lane, and get ready to release your inner bowler as you aim for strikes and spares. Feel the exhilaration build up with each roll and celebrate your victories with joy and laughter."
     ],
     "paragraphs": [
-      "Experience the Excitement of Bowling at Thrill Factory Manufactured by AMM, United States.",
+      "Bowling Alley in Rishikesh Overview Manufactured by AMM, United States. Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Experience",
       "Looking for a purr-fectly hilarious way to have a ball? Look no further than our thrilling Bowling Alley at Thrill Factory! We guarantee a strikingly good time filled with laughter, friendly competition, and endless entertainment.",
       "Thrill Factory presents an exciting and immersive Bowling Alley experience that guarantees endless fun for individuals, families, and groups alike. Step into our state-of-the-art facility in Rishikesh and unleash your competitive spirit as you engage in the classic sport of bowling. With well-maintained lanes, top-quality equipment, and a vibrant atmosphere, our Bowling Alley offers a thrilling and memorable experience for everyone.",
       "Enjoy the Thrills of Bowling At Thrill Factory, we believe in creating unforgettable moments and providing a dynamic entertainment experience. Whether you are a seasoned bowler or a novice trying it out for the first time, our Bowling Alley caters to all skill levels. Grab a bowling ball, select your lane, and get ready to release your inner bowler as you aim for strikes and spares. Feel the exhilaration build up with each roll and celebrate your victories with joy and laughter.",
@@ -767,7 +747,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/soft-play-zone-for-kids.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "3 - 12 Years",
-    "shortDesc": "Duration: 30 Minutes per session If you are looking for a child-friendly activity in Rishikesh that feels safe, playful, and easy to enjoy, Soft Play Zone Fo...",
+    "shortDesc": "Duration: 30 Minutes per session If you are looking for a child-friendly activity in Rishikesh that feels safe, playful, and",
     "fullDesc": "Duration: 30 Minutes per session\n\nIf you are looking for a child-friendly activity in Rishikesh that feels safe, playful, and easy to enjoy, Soft Play Zone For Kids at Thrill Factory is a strong fit. This activity is designed around movement, exploration, and free play in a kid-focused environment. It works particularly well for parents who want an engaging option for younger children during a family visit.\n\nThe core appeal of a soft play zone is that it gives children room to climb, crawl, slide, move, and interact in a fun setup built for their comfort. Instead of being a high-thrill activity, it should be positioned as a playful entertainment area where children can stay active and occupied in a simple and enjoyable way.",
     "features": [
       "Duration: 30 Minutes per session",
@@ -780,7 +760,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Encourages movement, exploration, and active play"
     ],
     "paragraphs": [
-      "If you are looking for a child-friendly activity in Rishikesh that feels safe, playful, and easy to enjoy, Soft Play Zone For Kids at Thrill Factory is a strong fit. This activity is designed around movement, exploration, and free play in a kid-focused environment. It works particularly well for parents who want an engaging option for younger children during a family visit.",
+      "Duration: 30 Minutes per session If you are looking for a child-friendly activity in Rishikesh that feels safe, playful, and",
       "The core appeal of a soft play zone is that it gives children room to climb, crawl, slide, move, and interact in a fun setup built for their comfort. Instead of being a high-thrill activity, it should be positioned as a playful entertainment area where children can stay active and occupied in a simple and enjoyable way.",
       "Soft Play Zone For Kids fits naturally into family outings, birthday plans, weekend entertainment, and group visits where parents need age-appropriate activities for children. It adds variety to the overall Thrill Factory experience and can be presented as a useful option for families with younger kids who may not participate in larger adventure activities.",
       "From a product-page perspective, this activity should be framed around safe fun, movement, engagement, and child-focused entertainment. The real value is not complexity. It is the fact that children get a comfortable space to play, explore, and enjoy themselves while parents get a dependable kids activity within the venue.",
@@ -801,7 +781,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/scooter-ride-kids.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "3 - 12 Years",
-    "shortDesc": "Duration: 15 Minutes per session If you are looking for fun kids activities in Rishikesh that feel active, playful, and easy to enjoy, Scooter Ride for Kids ...",
+    "shortDesc": "Duration: 15 Minutes per session If you are looking for fun kids activities in Rishikesh that feel active, playful, and",
     "fullDesc": "Duration: 15 Minutes per session\n\nIf you are looking for fun kids activities in Rishikesh that feel active, playful, and easy to enjoy, Scooter Ride for Kids at Thrill Factory is a strong fit. This activity gives children a simple riding experience built around movement, balance, and confidence. It works well for young visitors who enjoy interactive entertainment instead of passive rides.\n\nThe attraction is easy to position for families because it combines excitement with approachability. Children get the feeling of riding, steering, and moving independently in a controlled setup, which makes the experience feel fresh and memorable. For parents, it adds a light activity option that is enjoyable without being overly complicated.",
     "features": [
       "Duration: 15 Minutes per session",
@@ -814,7 +794,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Adds movement, excitement, and playful activity to a family visit"
     ],
     "paragraphs": [
-      "If you are looking for fun kids activities in Rishikesh that feel active, playful, and easy to enjoy, Scooter Ride for Kids at Thrill Factory is a strong fit. This activity gives children a simple riding experience built around movement, balance, and confidence. It works well for young visitors who enjoy interactive entertainment instead of passive rides.",
+      "Duration: 15 Minutes per session If you are looking for fun kids activities in Rishikesh that feel active, playful, and",
       "The attraction is easy to position for families because it combines excitement with approachability. Children get the feeling of riding, steering, and moving independently in a controlled setup, which makes the experience feel fresh and memorable. For parents, it adds a light activity option that is enjoyable without being overly complicated.",
       "Scooter Ride for Kids also fits naturally into family outings, birthday plans, weekend entertainment, and group visits where children need engaging activities. It adds variety to a Thrill Factory visit and can be presented as a playful ride experience that keeps kids involved and energized.",
       "From a product-page perspective, this activity should be framed as a fun kids ride rather than a thrill activity. The real appeal is that it gives children a chance to enjoy motion, coordination, and confidence-building in a simple format. That makes it suitable for parents searching for kids entertainment, family activities, and child-friendly fun in Rishikesh.",
@@ -835,7 +815,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/kids-trampoline.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "3 - 12 Years",
-    "shortDesc": "Duration: 30 Minutes per session Looking for a fun kids activity in Rishikesh that feels energetic, playful, and easy to enjoy? Kids Trampoline at Thrill Fac...",
+    "shortDesc": "Duration: 30 Minutes per session Looking for a fun kids activity in Rishikesh that feels energetic, playful, and easy to",
     "fullDesc": "Duration: 30 Minutes per session\n\nLooking for a fun kids activity in Rishikesh that feels energetic, playful, and easy to enjoy? Kids Trampoline at Thrill Factory is a lively attraction designed for children who love jumping, movement, and active entertainment. It gives young visitors a chance to enjoy a simple but exciting experience that feels both fun and memorable.\n\nA trampoline activity works well for families because it is easy to understand, visually engaging, and naturally exciting for children. The joy comes from movement, bounce, and the freedom to play in a way that feels active rather than passive. For many parents, this makes it a strong choice when selecting kids activities that can keep children engaged.",
     "features": [
       "Duration: 30 Minutes per session",
@@ -848,7 +828,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Adds energy and excitement to a family outing"
     ],
     "paragraphs": [
-      "Looking for a fun kids activity in Rishikesh that feels energetic, playful, and easy to enjoy? Kids Trampoline at Thrill Factory is a lively attraction designed for children who love jumping, movement, and active entertainment. It gives young visitors a chance to enjoy a simple but exciting experience that feels both fun and memorable.",
+      "Duration: 30 Minutes per session Looking for a fun kids activity in Rishikesh that feels energetic, playful, and easy to",
       "A trampoline activity works well for families because it is easy to understand, visually engaging, and naturally exciting for children. The joy comes from movement, bounce, and the freedom to play in a way that feels active rather than passive. For many parents, this makes it a strong choice when selecting kids activities that can keep children engaged.",
       "Kids Trampoline fits naturally into family outings, birthday visits, weekend fun plans, and broader entertainment packages at Thrill Factory. It adds a child-focused experience to the venue and helps balance the mix of activities for families visiting with younger kids.",
       "From a product-page perspective, this activity should be positioned as a kids entertainment attraction rather than a high-thrill activity. The messaging should stay clear, family-friendly, and easy to understand, with emphasis on fun, play, and energy.",
@@ -869,7 +849,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/car-ride-for-kids.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "3 - 12 Years",
-    "shortDesc": "Duration: 15 Minutes per session Looking for a fun kids activity in Rishikesh that feels playful, exciting, and family-friendly? Car Ride for Kids at Thrill ...",
+    "shortDesc": "Duration: 15 Minutes per session Looking for a fun kids activity in Rishikesh that feels playful, exciting, and family-friendly? Car",
     "fullDesc": "Duration: 15 Minutes per session\n\nLooking for a fun kids activity in Rishikesh that feels playful, exciting, and family-friendly? Car Ride for Kids at Thrill Factory gives children an enjoyable ride experience in a setting designed for entertainment and movement. It is a strong option for parents who want an activity that keeps children engaged while adding variety to a family outing.\n\nThis activity is ideal for children who enjoy ride-based fun and love the feeling of driving-style play. A kids car ride combines movement, excitement, and imagination, making it a memorable part of the visit. For many children, the appeal is simple: it feels fun, active, and different from regular games.",
     "features": [
       "Duration: 15 Minutes per session",
@@ -882,7 +862,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Great option for family outings and weekend visits"
     ],
     "paragraphs": [
-      "Looking for a fun kids activity in Rishikesh that feels playful, exciting, and family-friendly? Car Ride for Kids at Thrill Factory gives children an enjoyable ride experience in a setting designed for entertainment and movement. It is a strong option for parents who want an activity that keeps children engaged while adding variety to a family outing.",
+      "Duration: 15 Minutes per session Looking for a fun kids activity in Rishikesh that feels playful, exciting, and family-friendly? Car",
       "This activity is ideal for children who enjoy ride-based fun and love the feeling of driving-style play. A kids car ride combines movement, excitement, and imagination, making it a memorable part of the visit. For many children, the appeal is simple: it feels fun, active, and different from regular games.",
       "Car Ride for Kids works well for family visits, weekend outings, birthday plans, and casual entertainment days in Rishikesh. It is suitable for parents looking for a child-focused activity that is easy to enjoy and does not require special skill or prior experience.",
       "At Thrill Factory, this activity adds a playful entertainment option for younger visitors and fits naturally into a broader family experience. It is especially useful for families searching for kids activities in Rishikesh, fun rides for children, or indoor and entertainment-based family attractions.",
@@ -900,7 +880,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/ball-pool-for-kids.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "3 - 12 Years",
-    "shortDesc": "Duration: 30 Minutes per session Looking for fun kids activities in Rishikesh that are colourful, playful, and easy to enjoy? Ball Pool for Kids at Thrill Fa...",
+    "shortDesc": "Duration: 30 Minutes per session Looking for fun kids activities in Rishikesh that are colourful, playful, and easy to enjoy?",
     "fullDesc": "Duration: 30 Minutes per session\n\nLooking for fun kids activities in Rishikesh that are colourful, playful, and easy to enjoy? Ball Pool for Kids at Thrill Factory is a cheerful activity created for children who love active play, movement, and soft-play fun. It gives kids a lively space where they can jump in, move around, and enjoy themselves in an engaging environment.\n\nA ball pool is one of the most loved play attractions for younger children because it feels simple, exciting, and comfortable at the same time. It encourages playful movement, curiosity, and free activity, making it a strong choice for parents who want their children to enjoy a light and entertaining experience during a family visit.",
     "features": [
       "Duration: 30 Minutes per session",
@@ -913,7 +893,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Easy-to-enjoy play experience for younger children"
     ],
     "paragraphs": [
-      "Looking for fun kids activities in Rishikesh that are colourful, playful, and easy to enjoy? Ball Pool for Kids at Thrill Factory is a cheerful activity created for children who love active play, movement, and soft-play fun. It gives kids a lively space where they can jump in, move around, and enjoy themselves in an engaging environment.",
+      "Duration: 30 Minutes per session Looking for fun kids activities in Rishikesh that are colourful, playful, and easy to enjoy?",
       "A ball pool is one of the most loved play attractions for younger children because it feels simple, exciting, and comfortable at the same time. It encourages playful movement, curiosity, and free activity, making it a strong choice for parents who want their children to enjoy a light and entertaining experience during a family visit.",
       "At Thrill Factory, Ball Pool for Kids works well for family outings, birthday plans, weekend visits, and casual fun time with children. It adds a bright, playful option to the overall entertainment mix and is especially suitable for parents looking for easy-going activities that children can quickly enjoy.",
       "This activity is ideal for kids who enjoy soft-play experiences and interactive movement-based games. Whether they want to jump into the pool, play around, or simply enjoy a colourful fun zone, the ball pool creates a happy and memorable part of the visit.",
@@ -932,7 +912,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/hoverboard-ride-kids.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "3 - 12 Years",
-    "shortDesc": "Duration: 15 Minutes per session Looking for fun kids activities in Rishikesh that feel different from the usual arcade or play-zone options? Hoverboard Ride...",
+    "shortDesc": "Duration: 15 Minutes per session Looking for fun kids activities in Rishikesh that feel different from the usual arcade or",
     "fullDesc": "Duration: 15 Minutes per session\n\nLooking for fun kids activities in Rishikesh that feel different from the usual arcade or play-zone options? Hoverboard Ride for Kids at Thrill Factory gives children a playful riding experience built around balance, movement, and excitement. It is a good fit for young visitors who enjoy trying something new in a controlled entertainment setting.\n\nThe activity combines fun and coordination. For children, the appeal is simple: the hoverboard feels modern, exciting, and memorable. It gives them a chance to glide, balance, and enjoy a ride experience that feels interactive rather than passive. That makes it a strong option for families who want a kids-focused attraction that stands out.",
     "features": [
       "Duration: 15 Minutes per session",
@@ -945,7 +925,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Interactive riding experience with modern appeal"
     ],
     "paragraphs": [
-      "Looking for fun kids activities in Rishikesh that feel different from the usual arcade or play-zone options? Hoverboard Ride for Kids at Thrill Factory gives children a playful riding experience built around balance, movement, and excitement. It is a good fit for young visitors who enjoy trying something new in a controlled entertainment setting.",
+      "Duration: 15 Minutes per session Looking for fun kids activities in Rishikesh that feel different from the usual arcade or",
       "The activity combines fun and coordination. For children, the appeal is simple: the hoverboard feels modern, exciting, and memorable. It gives them a chance to glide, balance, and enjoy a ride experience that feels interactive rather than passive. That makes it a strong option for families who want a kids-focused attraction that stands out.",
       "This activity works especially well for family outings, weekend visits, birthday plans, and group entertainment sessions where parents want children to stay engaged. It adds variety to a Thrill Factory visit and pairs well with other light recreation and indoor entertainment options.",
       "For first-time riders, the attraction is also easy to position as a confidence-building activity. It is not just about motion. It also introduces balance, control, and playful learning in a format children naturally enjoy. That combination of fun and skill makes Hoverboard Ride for Kids a useful addition to a family entertainment page.",
@@ -967,7 +947,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "duration": "15 - 30 mins",
     "ageLimit": "10 years and above",
     "weightLimit": "30 Kgs",
-    "shortDesc": "Price: ₹500 per person",
+    "shortDesc": "Price: ₹500 per person ₹800 for two people Not a fan of dangling from dizzying heights but still crave",
     "fullDesc": "Price:\n\n₹500 per person\n\n₹800 for two people",
     "features": [
       "Price:",
@@ -980,7 +960,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Adventures of Aladdin: Embark on a magical journey through the mystical world of Aladdin."
     ],
     "paragraphs": [
-      "Not a fan of dangling from dizzying heights but still crave the thrill of a breathtaking plunge? Dive into an exhilarating adventure like never before with Thrill Factory's VR Bungee Jump Flight Simulator, a perfect blend of cutting-edge technology and heart-pounding excitement. Imagine the thrill of bungee jumping combined with the magic of virtual reality, creating an immersive experience that will leave you awestruck. Whether you’re a thrill-seeker looking for an adrenaline rush or someone eager to explore new dimensions, this simulator is designed to deliver unforgettable moments.",
+      "Price: ₹500 per person ₹800 for two people Not a fan of dangling from dizzying heights but still crave",
       "Our VR Bungee offers an unparalleled adventure for two participants at a time. The experience begins with state-of-the-art DPVR E3C headsets, ensuring crystal-clear visuals and seamless virtual environments that transport you to breathtaking worlds. Paired with a powerful computing system, the simulator creates a smooth and immersive journey, blurring the lines between the virtual and real. To amplify the realism, synchronized wind effects respond dynamically to your movements, making every jump and flight feel extraordinarily lifelike.",
       "Safety and comfort are at the heart of this experience. The VR Bungee is equipped with a vertical lifting soft seat, sturdy helical wire ropes, and robust construction, ensuring you can focus entirely on the adventure without a second thought. The simulator's ergonomic design guarantees comfort, even during high-energy movements, making it an ideal choice for individuals of all ages.",
       "What sets this simulator apart is the variety of virtual environments it offers. You can choose from an exciting selection of scenarios, each crafted to transport you to a different world:",
@@ -1014,7 +994,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/vr-battlefield-multiplayer.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Price for: 4 players: 250 Per Person",
+    "shortDesc": "Price for: 4 players: 250 Per Person 3 Players: 300 Per Person 2 Players: 400 Per Person Step into a",
     "fullDesc": "Price for:\n\n4 players: 250 Per Person\n\n3 Players: 300 Per Person",
     "features": [
       "Price for:",
@@ -1027,7 +1007,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Whether you are planning a casual outing, a birthday visit, a college group day, or a team fun session, VR Battlefield adds a high-engagement digital adventure to the experience. It is especially suited to guests who enjoy action, strategy, and multiplayer competition in a safe indoor setting."
     ],
     "paragraphs": [
-      "Step into a fully immersive battle zone with VR Battlefield (Multiplayer) at Thrill Factory. This activity is built for visitors who want more than just a game screen. It places players inside a virtual combat-style environment where movement, coordination, reaction time, and teamwork drive the experience.",
+      "Price for: 4 players: 250 Per Person 3 Players: 300 Per Person 2 Players: 400 Per Person Step into a",
       "Unlike solo VR games, this multiplayer format is designed for shared action. Friends, siblings, couples, and groups can enter the same session and play together, making it one of the most exciting group entertainment options at Thrill Factory. The experience feels competitive, energetic, and highly interactive, which makes it ideal for visitors who want something modern and memorable.",
       "VR Battlefield is a strong fit for people searching for VR games in Rishikesh, indoor group activities in Rishikesh, or fun activities for friends and teams. It combines gaming, motion, and immersion in a way that appeals to teenagers, young adults, families with older kids, and social groups looking for a new kind of challenge.",
       "Whether you are planning a casual outing, a birthday visit, a college group day, or a team fun session, VR Battlefield adds a high-engagement digital adventure to the experience. It is especially suited to guests who enjoy action, strategy, and multiplayer competition in a safe indoor setting.",
@@ -1046,7 +1026,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/ai-photobooth.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Capture the magic of your adventure at Thrill Factory with the Dola Foto AI Intelligent Photobooth, a revolutionary way to preserve picture-perfect memories ...",
+    "shortDesc": "Capture the magic of your adventure at Thrill Factory with the Dola Foto AI Intelligent Photobooth, a revolutionary way to",
     "fullDesc": "Capture the magic of your adventure at Thrill Factory with the Dola Foto AI Intelligent Photobooth, a revolutionary way to preserve picture-perfect memories with your family and friends. This cutting-edge photobooth uses advanced artificial intelligence to recognize facial expressions, optimize lighting, and apply creative effects, ensuring every snapshot is a masterpiece. Whether you're striking a pose solo or cramming in with your entire group, the Dola Foto Photobooth is designed to make every moment unforgettable.\n\nWith features like intelligent lifting for perfect angles, customizable background frames, and a variety of stylish filters, the photobooth tailors each photo to your unique vibe. Want to share a laugh, mark a milestone, or capture the thrill of your visit? This photobooth does it all, offering layout options like 4, 6, or 8-grid formats to suit your preferences. It’s perfect for candid group shots, sweet family moments, or even a quick set of ID photos!\n\nThe sleek design and user-friendly interface make it fun and accessible for everyone, from kids to adults. You can instantly preview your photos, apply stunning effects, and take home high-quality prints as keepsakes from your visit. With Dola Foto’s cutting-edge technology, you don’t just take pictures—you create memories that last a lifetime.",
     "features": [
       "Capture the magic of your adventure at Thrill Factory with the Dola Foto AI Intelligent Photobooth, a revolutionary way to preserve picture-perfect memories with your family and friends. This cutting-edge photobooth uses advanced artificial intelligence to recognize facial expressions, optimize lighting, and apply creative effects, ensuring every snapshot is a masterpiece. Whether you're striking a pose solo or cramming in with your entire group, the Dola Foto Photobooth is designed to make every moment unforgettable.",
@@ -1056,7 +1036,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Price: 150"
     ],
     "paragraphs": [
-      "Capture the magic of your adventure at Thrill Factory with the Dola Foto AI Intelligent Photobooth, a revolutionary way to preserve picture-perfect memories with your family and friends. This cutting-edge photobooth uses advanced artificial intelligence to recognize facial expressions, optimize lighting, and apply creative effects, ensuring every snapshot is a masterpiece. Whether you're striking a pose solo or cramming in with your entire group, the Dola Foto Photobooth is designed to make every moment unforgettable.",
+      "Capture the magic of your adventure at Thrill Factory with the Dola Foto AI Intelligent Photobooth, a revolutionary way to",
       "With features like intelligent lifting for perfect angles, customizable background frames, and a variety of stylish filters, the photobooth tailors each photo to your unique vibe. Want to share a laugh, mark a milestone, or capture the thrill of your visit? This photobooth does it all, offering layout options like 4, 6, or 8-grid formats to suit your preferences. It’s perfect for candid group shots, sweet family moments, or even a quick set of ID photos!",
       "The sleek design and user-friendly interface make it fun and accessible for everyone, from kids to adults. You can instantly preview your photos, apply stunning effects, and take home high-quality prints as keepsakes from your visit. With Dola Foto’s cutting-edge technology, you don’t just take pictures—you create memories that last a lifetime.",
       "So, grab your friends, gather your family, and let the Dola Foto AI Intelligent Photobooth turn your Thrill Factory experience into a collection of cherished moments. It’s not just a photo—it’s your adventure captured in perfect clarity!"
@@ -1073,7 +1053,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "image": "/images/activities/arcade-games.jpg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
-    "shortDesc": "Thrill Factory Indoor Arcade Games Activity Location: Shivpuri, Rishikesh",
+    "shortDesc": "Thrill Factory Indoor Arcade Games Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Get Ready for Non-Stop Fun",
     "fullDesc": "Thrill Factory Indoor Arcade Games\n\nActivity Location: Shivpuri, Rishikesh\n\nActivity Timing: Between 10:00 AM to 9:00 PM",
     "features": [
       "Thrill Factory Indoor Arcade Games",
@@ -1086,7 +1066,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
       "Safety and Convenience At Thrill Factory, we prioritize the safety and comfort of our guests. Our Indoor Arcade is well-maintained and equipped with modern safety features to ensure a secure environment for all. Our friendly and attentive staff is always on hand to assist you, provide game instructions, and ensure that you have a seamless and enjoyable gaming experience."
     ],
     "paragraphs": [
-      "Get Ready for Non-Stop Fun at Thrill Factory's Indoor Arcade Step into a world of excitement and entertainment at Thrill Factory's Indoor Arcade. Brace yourself for an unforgettable experience as you immerse yourself in a playground of cutting-edge games and thrilling attractions. With a wide variety of arcade games that cater to all ages and skill levels, our indoor arcade is the perfect destination for gaming enthusiasts and those seeking a fun-filled adventure.",
+      "Thrill Factory Indoor Arcade Games Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Get Ready for Non-Stop Fun",
       "Endless Gaming Thrills At Thrill Factory, we're all about delivering non-stop fun and excitement. Our Indoor Arcade is packed with a vast array of games that will keep you engaged and entertained for hours on end. From classic retro games to the latest high-tech attractions, there's something for everyone to enjoy. Challenge your friends to a friendly competition, test your skills on the arcade machines, and aim for high scores as you immerse yourself in a world of gaming thrills.",
       "A Captivating Atmosphere As you step into our Indoor Arcade, you'll be greeted by a vibrant and energetic atmosphere. The flashing lights, pulsating sounds, and the buzz of excitement create an immersive environment that adds to the overall gaming experience. Lose yourself in the captivating ambiance as you navigate through different game stations, fully absorbed in the thrill of the virtual worlds.",
       "Fun for All Ages Thrill Factory's Indoor Arcade is designed to cater to gamers of all ages. Whether you're a young child discovering the joy of gaming or an adult reminiscing about your favorite classics, our arcade has something for everyone. Our diverse selection of games ensures that there are options suitable for players of all skill levels, making it an ideal destination for family outings, group events, or a fun date night.",
@@ -1108,11 +1088,99 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
   }
 ];
 
+const ACTIVITY_VIDEO = '/images/HeroHomeVideo.mp4';
+
+ALL_ADVENTURES_DATA.forEach((activity) => {
+  activity.videoUrl = ACTIVITY_VIDEO;
+  activity.featured = activity.id === 'bungee-jumping';
+
+  if (activity.id === 'bungee-jumping') {
+    const rope = ALL_ADVENTURES_DATA.find((item) => item.id === 'rope-bungee');
+    const freestyle = ALL_ADVENTURES_DATA.find((item) => item.id === 'free-style-bungee');
+    activity.options = [
+      {
+        id: 'classic-bungee',
+        label: 'A',
+        title: 'Classic Bungee',
+        note: '165 FT · Standard freefall',
+        price: activity.price,
+        videoUrl: ACTIVITY_VIDEO,
+      },
+      {
+        id: 'rope-bungee',
+        label: 'B',
+        title: 'Rope Bungee',
+        note: '160 FT · Rope pendulum',
+        price: rope?.price ?? 1500,
+        videoUrl: ACTIVITY_VIDEO,
+      },
+      {
+        id: 'free-style-bungee',
+        label: 'C',
+        title: 'Freestyle Bungee',
+        note: '160 FT · Full-body harness',
+        price: freestyle?.price ?? 2500,
+        videoUrl: ACTIVITY_VIDEO,
+      },
+      {
+        id: 'water-splash-bungee',
+        label: 'D',
+        title: 'Water Splash Bungee',
+        note: '165 FT · Water touchdown',
+        price: activity.price,
+        videoUrl: ACTIVITY_VIDEO,
+      },
+    ];
+  }
+});
+
+export type ActivityTabId = 'extreme' | 'moderate' | 'entertainment' | 'kids' | 'vr';
+
+/** Homepage / catalog tab membership, matching Shopify collections. */
+export const ACTIVITY_TAB_ORDER: Record<ActivityTabId, string[]> = {
+  extreme: [
+    'bungee-jumping',
+    'giant-swing',
+    'free-style-bungee',
+    'rope-bungee',
+    'zip-lining-in-rishikesh',
+    'scad-jumping-in-rishikesh',
+    'reverse-bungee',
+  ],
+  moderate: ['sky-cycling', 'rope-course', 'quick-jump', '360-degree-cycle'],
+  entertainment: [
+    'foot-pool',
+    'wall-climbing',
+    'cricket',
+    'gun-shooting',
+    'pool-table',
+    'archery',
+    'bowling',
+  ],
+  kids: [
+    'soft-play-zone-for-kids',
+    'scooter-ride-kids',
+    'kids-trampoline',
+    'car-ride-for-kids',
+    'ball-pool-for-kids',
+    'hoverboard-ride-kids',
+  ],
+  vr: ['vr-battlefield-multiplayer', 'ai-photobooth', 'arcade-games', 'vr-bungee'],
+};
+
+export const activitiesForTab = (tab: ActivityTabId): Activity[] =>
+  ACTIVITY_TAB_ORDER[tab]
+    .map((id) => ALL_ADVENTURES_DATA.find((activity) => activity.id === id))
+    .filter((activity): activity is Activity => Boolean(activity));
+
 export const ACTIVITIES_DATA: Activity[] = ALL_ADVENTURES_DATA;
 
 export const FEATURED_ACTIVITIES: Activity[] = [
   ALL_ADVENTURES_DATA.find((a) => a.id === 'bungee-jumping')!,
   ALL_ADVENTURES_DATA.find((a) => a.id === 'giant-swing')!,
-  ALL_ADVENTURES_DATA.find((a) => a.id === 'reverse-bungee')!,
+  ALL_ADVENTURES_DATA.find((a) => a.id === 'free-style-bungee')!,
+  ALL_ADVENTURES_DATA.find((a) => a.id === 'rope-bungee')!,
+  ALL_ADVENTURES_DATA.find((a) => a.id === 'zip-lining-in-rishikesh')!,
   ALL_ADVENTURES_DATA.find((a) => a.id === 'scad-jumping-in-rishikesh')!,
+  ALL_ADVENTURES_DATA.find((a) => a.id === 'reverse-bungee')!,
 ].filter(Boolean);

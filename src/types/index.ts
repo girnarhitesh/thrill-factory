@@ -1,3 +1,12 @@
+export interface ActivityOption {
+  id: string;
+  label: string;
+  title: string;
+  note: string;
+  price: number;
+  videoUrl: string;
+}
+
 export interface Activity {
   id: string;
   slug: string;
@@ -16,6 +25,9 @@ export interface Activity {
   features: string[];
   paragraphs?: string[];
   includesDSLRVideo?: boolean;
+  videoUrl?: string;
+  featured?: boolean;
+  options?: ActivityOption[];
 }
 
 export interface PackageCombo {

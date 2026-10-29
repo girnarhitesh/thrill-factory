@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
-import { ALL_ADVENTURES_DATA } from '@/data/activities';
+import { ActivityTabId, activitiesForTab } from '@/data/activities';
 import { Activity } from '@/types';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ActivityCard } from '@/components/home/ActivityCard';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './ActivitiesCatalog.css';
 
-type ActivityGroupId = 'extreme' | 'moderate' | 'entertainment' | 'kids' | 'vr';
+type ActivityGroupId = ActivityTabId;
 
 const GROUPS: Array<{
   id: ActivityGroupId;
@@ -24,7 +24,7 @@ const GROUPS: Array<{
     tag: 'High Adrenaline',
     title: 'Extreme',
     highlight: 'Rides',
-    description: '165 FT bungee, reverse catapult, SCAD, giant swing, zip line, and rope drops.',
+    description: 'Bungee, giant swing, freestyle, rope bungee, zip line, SCAD, and reverse bungee.',
   },
   {
     id: 'moderate',
@@ -72,7 +72,7 @@ export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, on
     () =>
       GROUPS.map((group) => ({
         ...group,
-        items: ALL_ADVENTURES_DATA.filter((item) => item.category === group.id),
+        items: activitiesForTab(group.id),
       })),
     []
   );

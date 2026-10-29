@@ -1,0 +1,169 @@
+/* ==========================================================================
+   HOMEPAGE ACTIVITIES GRID — scoped to .ag-section
+   ========================================================================== */
+
+.ag-section {
+  --ag-text: #121826;
+  --ag-muted: #5B6170;
+  --ag-tab-border: #D6D3CE;
+  position: relative;
+  padding: 40px 24px 28px;
+}
+
+.ag-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.ag-section .section-header {
+  margin-bottom: 0;
+}
+
+.ag-section .section-stamp {
+  margin-bottom: 0.45rem;
+}
+
+.ag-section .section-title {
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.85rem, 3.4vw, 2.55rem);
+}
+
+.ag-section .section-slash {
+  margin-bottom: 0.65rem;
+}
+
+.ag-section .section-desc {
+  font-size: 0.95rem;
+}
+
+.ag-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 22px;
+}
+
+.ag-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--ag-tab-border);
+  border-radius: 0;
+  background: #FFFFFF;
+  color: var(--ag-text);
+  font-family: var(--font-family-sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ag-tab:hover {
+  border-color: var(--ag-text);
+}
+
+.ag-tab.is-active {
+  background: var(--ag-text);
+  border-color: var(--ag-text);
+  color: #FFFFFF;
+}
+
+.ag-tab-count {
+  font-family: var(--font-family-display);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--ag-muted);
+}
+
+.ag-tab.is-active .ag-tab-count {
+  color: #FF7A4D;
+}
+
+.ag-lanes {
+  display: none;
+}
+
+.ag-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 28px;
+}
+
+.ag-section .packages-action-footer {
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .ag-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .ag-section {
+    padding: 40px 16px 48px;
+  }
+
+  .ag-tabs,
+  .ag-grid,
+  .ag-section .packages-action-footer {
+    display: none;
+  }
+
+  .ag-lanes {
+    display: grid;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .ag-lane {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    text-decoration: none;
+    background: #ece7e1;
+  }
+
+  .ag-lane-img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .ag-lane-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(8 12 24 / 0.05) 20%, rgb(8 12 24 / 0.72) 100%);
+  }
+
+  .ag-lane-copy {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #fff5ee;
+  }
+
+  .ag-lane-count {
+    font-family: var(--font-family-display);
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+    line-height: 1;
+  }
+
+  .ag-lane-label {
+    font-family: var(--font-family-sans);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { PackageCombo } from '@/data/packages';
 import { ThemeButton } from '@/components/common/ThemeButton';
@@ -22,6 +22,8 @@ const isRideName = (name: string) =>
   );
 
 export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }) => {
+  const cardRef = useRef<HTMLElement>(null);
+  const previewRef = useRef<HTMLVideoElement>(null);
   const rideNames = combo.activitiesIncluded.filter(isRideName);
   const rideCount = rideNames.length;
   const rides = rideNames.slice(0, 3);
@@ -35,8 +37,52 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }
     ? `Save ₹${savings.toLocaleString('en-IN')}`
     : combo.badge ?? `${rideCount} rides`;
 
+  useEffect(() => {
+    const card = cardRef.current;
+    const video = previewRef.current;
+    if (!card || !video || !combo.videoUrl) return;
+
+    const startPreview = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!video.getAttribute('src')) video.src = combo.videoUrl!;
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.loop = true;
+      void video.play().then(() => card.classList.add('is-previewing')).catch(() => {
+        card.classList.remove('is-previewing');
+      });
+    };
+
+    const stopPreview = () => {
+      video.pause();
+      video.currentTime = 0;
+      card.classList.remove('is-previewing');
+    };
+
+    const onFocusOut = (event: FocusEvent) => {
+      if (!card.contains(event.relatedTarget as Node | null)) stopPreview();
+    };
+
+    card.addEventListener('mouseenter', startPreview);
+    card.addEventListener('mouseleave', stopPreview);
+    card.addEventListener('focusin', startPreview);
+    card.addEventListener('focusout', onFocusOut);
+
+    return () => {
+      card.removeEventListener('mouseenter', startPreview);
+      card.removeEventListener('mouseleave', stopPreview);
+      card.removeEventListener('focusin', startPreview);
+      card.removeEventListener('focusout', onFocusOut);
+      stopPreview();
+    };
+  }, [combo.videoUrl]);
+
   return (
-    <article className={`ride-card ride-card--combo${combo.popular ? ' is-popular' : ''}`}>
+    <article
+      ref={cardRef}
+      className={`ride-card ride-card--combo${combo.popular ? ' is-popular' : ''}`}
+    >
       <button
         type="button"
         className="ride-card-media"
@@ -50,6 +96,16 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }
           sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
           className="ride-card-img"
         />
+        {combo.videoUrl ? (
+          <video
+            ref={previewRef}
+            className="ride-card-video"
+            muted
+            loop
+            playsInline
+            preload="none"
+          />
+        ) : null}
         <span className="ride-card-scrim" aria-hidden="true" />
 
         <span className="ride-card-media-top">
@@ -66,9 +122,9 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }
       <div className="ride-card-body">
         <h3 className="ride-card-title">{combo.title}</h3>
 
-        {combo.formula ? (
-          <p className="ride-card-desc" title={combo.formula}>
-            {combo.formula}
+        {combo.cardDesc || combo.formula ? (
+          <p className="ride-card-desc" title={combo.cardDesc || combo.formula}>
+            {combo.cardDesc || combo.formula}
           </p>
         ) : null}
 

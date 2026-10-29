@@ -23,11 +23,13 @@ export interface PackageCombo {
   image: string;
   gallery: string[];
   formula: string;
+  cardDesc?: string;
   activitiesIncluded: string[];
   highlights: string[];
   suitableFor: string;
   safetySpecs: ComboSafetySpecs;
   rideDetails: RideDetail[];
+  videoUrl?: string;
 }
 
 export const FEATURED_PACKAGES: PackageCombo[] = [
@@ -48,6 +50,7 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Reverse Bungee+ Giant Swing +SCAD Jump",
+    "cardDesc": "Combo Activity : ( Reverse Bungee+ Giant Swing +SCAD Jump ) Combo Activity Includes: Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (150 ft).",
     "activitiesIncluded": [
       "Reverse Bungee in Rishikesh (180 ft)",
       "Giant Swing in Rishikesh (140 ft)",
@@ -101,9 +104,12 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       "/images/giant-swing.jpg"
     ],
     "formula": "Free Style Bungee + Any one From Reverse Bungee/ Gaint Swing / Scad Jump",
+    "cardDesc": "Combo Activity : (Free Style Bungee + Any one From Reverse Bungee/ Gaint Swing / Scad Jump) Combo Activity Includes: Free Style Bungee (160 ft) and any one of Reverse Bungee (180 ft), Giant Swing, or SCAD Jump.",
     "activitiesIncluded": [
       "Free Style Bungee (160 ft)",
-      "Reverse Bungee in Rishikesh (180 ft)"
+      "Reverse Bungee in Rishikesh (180 ft)",
+      "Giant Swing in Rishikesh",
+      "SCAD Jump in Rishikesh"
     ],
     "highlights": [
       "Official discounted combo at The Shivpuri Thrill Factory",
@@ -154,6 +160,7 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump",
+    "cardDesc": "Combo Activity : (Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft), Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (140 ft).",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)",
@@ -215,12 +222,12 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump + SCAD Jump + Free Style Bungee + Reverse Bungee + Rope Bungee + VR Bungee",
+    "cardDesc": "Combo Activity : (Bungee Jump + SCAD Jump + Free Style Bungee + Reverse Bungee + Rope Bungee + VR Bungee) Combo Activity Includes: Bungee Jump (165 ft), SCAD Jump (150 ft), Free Style Bungee (160 ft), Reverse Bungee (180 ft), Rope Bungee (160 ft), and VR Bungee.",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (165 ft)",
-      "Reverse Bungee in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)",
-      "Scad Jump in Rishikesh (150 ft)",
+      "SCAD Jump in Rishikesh (150 ft)",
       "Free Style Bungee (160 ft)",
+      "Reverse Bungee in Rishikesh (180 ft)",
       "Rope Bungee (160 ft)",
       "VR Bungee"
     ],
@@ -305,6 +312,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Reverse Bungee+ Giant Swing +SCAD Jump",
+    "cardDesc": "Combo Activity : ( Reverse Bungee+ Giant Swing +SCAD Jump ) Combo Activity Includes: Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (150 ft).",
     "activitiesIncluded": [
       "Reverse Bungee in Rishikesh (180 ft)",
       "Giant Swing in Rishikesh (140 ft)",
@@ -358,9 +366,12 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/giant-swing.jpg"
     ],
     "formula": "Free Style Bungee + Any one From Reverse Bungee/ Gaint Swing / Scad Jump",
+    "cardDesc": "Combo Activity : (Free Style Bungee + Any one From Reverse Bungee/ Gaint Swing / Scad Jump) Combo Activity Includes: Free Style Bungee (160 ft) and any one of Reverse Bungee (180 ft), Giant Swing, or SCAD Jump.",
     "activitiesIncluded": [
       "Free Style Bungee (160 ft)",
-      "Reverse Bungee in Rishikesh (180 ft)"
+      "Reverse Bungee in Rishikesh (180 ft)",
+      "Giant Swing in Rishikesh",
+      "SCAD Jump in Rishikesh"
     ],
     "highlights": [
       "Official discounted combo at The Shivpuri Thrill Factory",
@@ -411,6 +422,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump",
+    "cardDesc": "Combo Activity : (Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft), Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (140 ft).",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)",
@@ -472,12 +484,12 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump + SCAD Jump + Free Style Bungee + Reverse Bungee + Rope Bungee + VR Bungee",
+    "cardDesc": "Combo Activity : (Bungee Jump + SCAD Jump + Free Style Bungee + Reverse Bungee + Rope Bungee + VR Bungee) Combo Activity Includes: Bungee Jump (165 ft), SCAD Jump (150 ft), Free Style Bungee (160 ft), Reverse Bungee (180 ft), Rope Bungee (160 ft), and VR Bungee.",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (165 ft)",
-      "Reverse Bungee in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)",
-      "Scad Jump in Rishikesh (150 ft)",
+      "SCAD Jump in Rishikesh (150 ft)",
       "Free Style Bungee (160 ft)",
+      "Reverse Bungee in Rishikesh (180 ft)",
       "Rope Bungee (160 ft)",
       "VR Bungee"
     ],
@@ -559,6 +571,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/giant-swing.jpg"
     ],
     "formula": "Bungee Jump / Shower Bungee + Reverse Bungee/Giant Swing/ SCAD Jump",
+    "cardDesc": "Combo Activity : (Bungee Jump / Shower Bungee + Reverse Bungee/Giant Swing/ SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)"
@@ -606,6 +619,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump + Reverse Bungee + SCAD jump",
+    "cardDesc": "Combo Activity : (Bungee Jump + Reverse Bungee + SCAD jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft) Reverse Bungee in",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)",
@@ -659,6 +673,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump + Giant Swing + SCAD Jump",
+    "cardDesc": "Combo Activity : (Bungee Jump + Giant Swing + SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft) Giant Swing in",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Giant Swing in Rishikesh (140 ft)",
@@ -712,6 +727,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/giant-swing.jpg"
     ],
     "formula": "Bungee Jump + Reverse Bungee + Giant Swing",
+    "cardDesc": "Combo Activity : (Bungee Jump + Reverse Bungee + Giant Swing) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft) Reverse Bungee in",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)",
@@ -764,6 +780,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/giant-swing.jpg"
     ],
     "formula": "Reverse Bungee+ Giant Swing",
+    "cardDesc": "Combo Activity : (Reverse Bungee+ Giant Swing) Bungee Jump in Rishikesh (165 ft) Giant Swing in Rishikesh (140 ft) Experience the Thrill of Reverse",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (165 ft)",
       "Giant Swing in Rishikesh (140 ft)"
@@ -810,6 +827,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/hero-bungee.jpg"
     ],
     "formula": "Bungee Jump + Free Style Bungee",
+    "cardDesc": "Combo Activity : (Bungee Jump + Free Style Bungee) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft) Free Style Bungee (160",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Free Style Bungee (160 ft)"
@@ -861,6 +879,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/soft-play-zone.jpg"
     ],
     "formula": "Archery + Box Cricket + Bowling",
+    "cardDesc": "Combo Activity ( Archery + Box Cricket + Bowling ) Combo Activity Includes Archery Box Cricket Bowling Product Description Looking",
     "activitiesIncluded": [
       "Archery",
       "Box Cricket",
@@ -934,6 +953,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/hoverboard.jpg"
     ],
     "formula": "Archery + Box Cricket + Bowling + Gun Shooting",
+    "cardDesc": "Combo Activity: ( Archery + Box Cricket + Bowling + Gun Shooting ) Combo Activity Includes: Archery Box Cricket Bowling",
     "activitiesIncluded": [
       "Archery",
       "Box Cricket",
@@ -998,5 +1018,15 @@ export const ALL_PACKAGES: PackageCombo[] = [
     ]
   }
 ];
+
+const COMBO_PREVIEW_VIDEO = '/images/HeroHomeVideo.mp4';
+
+FEATURED_PACKAGES.forEach((combo) => {
+  combo.videoUrl = COMBO_PREVIEW_VIDEO;
+});
+
+ALL_PACKAGES.forEach((combo) => {
+  combo.videoUrl = COMBO_PREVIEW_VIDEO;
+});
 
 export const PACKAGES_DATA = ALL_PACKAGES;

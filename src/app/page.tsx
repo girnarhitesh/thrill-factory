@@ -46,7 +46,7 @@ export default function HomePage() {
         <PackagesSection onBook={(title) => handleOpenBooking(title)} />
         <KidsZoneHighlight onBook={(title) => handleOpenBooking(title)} />
         <SafetyOverview />
-        <LegacyMilestoneBanner />
+        {/* <LegacyMilestoneBanner /> */}
         <ReviewsSection />
         <InstagramReelsSection />
         <LocationSection />

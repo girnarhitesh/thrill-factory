@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import '@/styles/variables.css';
 import '@/styles/globals.css';
 import '@/styles/components.css';
@@ -26,28 +26,10 @@ import '@/styles/animations.css';
 import { ScrollRevealObserver } from '@/components/common/ScrollRevealObserver';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  themeColor: SITE_CONFIG.themeColor,
-};
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
-  title: {
-    default: SITE_CONFIG.title,
-    template: `%s | ${SITE_CONFIG.shortName}`,
-  },
+  title: `${SITE_CONFIG.tagline} | ${SITE_CONFIG.brandName}`,
   description: SITE_CONFIG.description,
-  applicationName: SITE_CONFIG.shortName,
-  authors: [{ name: SITE_CONFIG.brandName }],
-  formatDetection: {
-    telephone: false,
-  },
-  alternates: {
-    canonical: './',
-  },
   keywords: [
     'bungee jumping rishikesh',
     'shivpuri thrill factory',
@@ -59,6 +41,7 @@ export const metadata: Metadata = {
     'thrill factory shivpuri',
     'extreme sports uttarakhand',
   ],
+  authors: [{ name: SITE_CONFIG.brandName }],
   icons: {
     icon: [
       { url: '/favicon.png', type: 'image/png' },
@@ -70,10 +53,10 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: SITE_CONFIG.title,
+    title: `${SITE_CONFIG.brandName} - Best Bungee Jumping in Rishikesh`,
     description: SITE_CONFIG.description,
-    url: './',
-    siteName: SITE_CONFIG.shortName,
+    url: SITE_CONFIG.domain,
+    siteName: SITE_CONFIG.brandName,
     images: [
       {
         url: '/images/tf-og-share.jpg',
@@ -87,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: SITE_CONFIG.title,
+    title: `${SITE_CONFIG.brandName} - Bungee Jumping Rishikesh`,
     description: SITE_CONFIG.description,
     images: ['/images/tf-og-share.jpg'],
   },
@@ -105,7 +88,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/images/tf-favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

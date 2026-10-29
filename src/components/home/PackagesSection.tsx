@@ -12,8 +12,18 @@ interface PackagesSectionProps {
   onBook: (packageName: string) => void;
 }
 
+const HOME_PACKAGE_ORDER = [
+  'bungee-combo',
+  'bungee-jump-and-giant-swing-combo',
+  'bungee-jumping-combo-rishikesh',
+  'thrill-activity-package-combo-in-rishikesh',
+];
+
 export const PackagesSection: React.FC<PackagesSectionProps> = ({ onBook }) => {
   const [selectedComboForDetails, setSelectedComboForDetails] = useState<PackageCombo | null>(null);
+  const packages = HOME_PACKAGE_ORDER.map((id) => FEATURED_PACKAGES.find((pkg) => pkg.id === id)).filter(
+    (pkg): pkg is PackageCombo => Boolean(pkg)
+  );
 
   return (
     <section id="combos" className="section section-alt bg-architectural-grid">
@@ -26,7 +36,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onBook }) => {
         />
 
         <div className="packages-grid-4">
-          {FEATURED_PACKAGES.map((pkg) => (
+          {packages.map((pkg) => (
             <ComboCard
               key={pkg.id}
               combo={pkg}

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Activity } from '@/types';
 import { ThemeButton } from '@/components/common/ThemeButton';
@@ -43,6 +43,9 @@ const rideSpecs = (activity: Activity) => {
   return specs.slice(0, 3);
 };
 
+const cardParagraphs = (activity: Activity) =>
+  (activity.paragraphs?.filter(Boolean).join(' ') || activity.fullDesc || '').trim();
+
 export const ActivityCard: React.FC<ActivityCardProps> = ({
   activity,
   index,
@@ -52,9 +55,53 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
   const specs = rideSpecs(activity);
   const heightStamp = compactHeight(activity);
   const category = activity.category?.replace(/-/g, ' ');
+  const previewCopy = cardParagraphs(activity);
+  const cardRef = useRef<HTMLElement>(null);
+  const previewRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    const video = previewRef.current;
+    if (!card || !video || !activity.videoUrl) return;
+
+    const startPreview = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!video.getAttribute('src')) video.src = activity.videoUrl!;
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.loop = true;
+      void video.play().then(() => card.classList.add('is-previewing')).catch(() => {
+        card.classList.remove('is-previewing');
+      });
+    };
+
+    const stopPreview = () => {
+      video.pause();
+      video.currentTime = 0;
+      card.classList.remove('is-previewing');
+    };
+
+    const onFocusOut = (event: FocusEvent) => {
+      if (!card.contains(event.relatedTarget as Node | null)) stopPreview();
+    };
+
+    card.addEventListener('mouseenter', startPreview);
+    card.addEventListener('mouseleave', stopPreview);
+    card.addEventListener('focusin', startPreview);
+    card.addEventListener('focusout', onFocusOut);
+
+    return () => {
+      card.removeEventListener('mouseenter', startPreview);
+      card.removeEventListener('mouseleave', stopPreview);
+      card.removeEventListener('focusin', startPreview);
+      card.removeEventListener('focusout', onFocusOut);
+      stopPreview();
+    };
+  }, [activity.videoUrl]);
 
   return (
-    <article className="ride-card">
+    <article ref={cardRef} className="ride-card">
       <button
         type="button"
         className="ride-card-media"
@@ -68,6 +115,16 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
           height={240}
           className="ride-card-img"
         />
+        {activity.videoUrl ? (
+          <video
+            ref={previewRef}
+            className="ride-card-video"
+            muted
+            loop
+            playsInline
+            preload="none"
+          />
+        ) : null}
         <span className="ride-card-scrim" aria-hidden="true" />
 
         <span className="ride-card-media-top">
@@ -81,7 +138,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
       <div className="ride-card-body">
         <h3 className="ride-card-title">{activity.title}</h3>
 
-        {activity.shortDesc ? <p className="ride-card-desc">{activity.shortDesc}</p> : null}
+        {previewCopy ? <p className="ride-card-desc">{previewCopy}</p> : null}
 
         {specs.length > 0 ? (
           <div className="ride-card-specs" aria-label="Ride facts">
