@@ -54,7 +54,7 @@ const METRICS = [
   {
     index: '04',
     code: 'GGL',
-    end: 4.9,
+    end: 4.5,
     decimals: 1,
     suffix: '',
     label: 'Google Rated',

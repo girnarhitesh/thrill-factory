@@ -1090,8 +1090,19 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
 
 const ACTIVITY_VIDEO = '/images/HeroHomeVideo.mp4';
 
+/** Clips in public/images/ActivitiesVideos, named to match the activity id. */
+const ACTIVITY_VIDEOS: Record<string, string> = {
+  '360-degree-cycle': '/images/ActivitiesVideos/360-degree-cycle.mp4',
+  'giant-swing': '/images/ActivitiesVideos/Giant-Swing-Video.mp4',
+  'vr-bungee': '/images/ActivitiesVideos/VR-Bungee.mp4',
+  archery: '/images/ActivitiesVideos/Archery-video.mp4',
+  'pool-table': '/images/ActivitiesVideos/pool-table.mp4',
+  'wall-climbing': '/images/ActivitiesVideos/wall-climb.mp4',
+  'bungee-jumping': '/images/ActivitiesVideos/freestyle-bungee.mp4',
+};
+
 ALL_ADVENTURES_DATA.forEach((activity) => {
-  activity.videoUrl = ACTIVITY_VIDEO;
+  activity.videoUrl = ACTIVITY_VIDEOS[activity.id] ?? ACTIVITY_VIDEO;
   activity.featured = activity.id === 'bungee-jumping';
 
   if (activity.id === 'bungee-jumping') {
@@ -1120,7 +1131,7 @@ ALL_ADVENTURES_DATA.forEach((activity) => {
         title: 'Freestyle Bungee',
         note: '160 FT · Full-body harness',
         price: freestyle?.price ?? 2500,
-        videoUrl: ACTIVITY_VIDEO,
+        videoUrl: '/images/ActivitiesVideos/freestyle-bungee.mp4',
       },
       {
         id: 'water-splash-bungee',

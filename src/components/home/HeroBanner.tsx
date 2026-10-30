@@ -20,7 +20,7 @@ const HERO_STATS = [
   { end: 165, suffix: ' FT', label: 'Freefall Drop' },
   { end: 180, suffix: ' FT', label: 'Reverse Catapult' },
   { end: 50000, suffix: '+', label: 'Successful Jumps' },
-  { end: 4.9, decimals: 1, suffix: '', label: 'Google Rated', logo: 'google' },
+  { end: 4.5, decimals: 1, suffix: '', label: 'Google Rated', logo: 'google' },
 ] as const;
 
 const SCALE_LABELS = [
