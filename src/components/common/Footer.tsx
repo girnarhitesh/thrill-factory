@@ -59,8 +59,8 @@ const GoogleGLogo = () => (
 );
 
 const FOOTER_METRICS = [
-  { code: 'GGL', value: '4.9 / 5.0', label: 'Google Verified', google: true },
-  { code: 'TWR', value: '165 FT', label: "India's Highest Drop" },
+  { code: 'GGL', value: '4.5', label: 'Google Rated', google: true },
+  { code: 'TWR', value: '150 FT', label: 'Free Fall Drop' },
   { code: 'OPS', value: '7 DAYS', label: 'Open All Week' },
   { code: 'CLK', value: '9 AM', label: 'Until 10 PM' },
 ] as const;

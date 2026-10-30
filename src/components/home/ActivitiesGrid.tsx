@@ -55,7 +55,7 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
         <SectionHeader
           tag="The Full Park"
           title="World-Class Adventure"
-          highlightWord="In Shivpuri"
+          highlightWord="In Rishikesh"
           description="Extreme drops, aerial rides, ground games, a kids zone, and VR. One destination, every kind of day."
         />
 

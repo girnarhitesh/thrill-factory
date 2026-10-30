@@ -23,7 +23,7 @@ const OFFICIAL_REELS: ReelItem[] = [
   {
     id: 'reel-1',
     code: 'R01',
-    title: 'Giant Swing Canyon Rush (165 FT)',
+    title: 'Giant Swing Canyon Rush (145 FT)',
     tag: 'Extreme Freefall',
     duration: '00:42',
     videoUrl:

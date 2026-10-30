@@ -35,9 +35,9 @@ export const SITE_CONFIG = {
 
   // Trust Badges & Stats
   stats: [
-    { value: '50,000+', label: 'Successful Jumps' },
-    { value: '100%', label: 'Safety Record' },
-    { value: '180 FT', label: 'Max Drop Height' },
-    { value: '4.9 ★', label: 'Google Rating' },
+    { value: '150 FT', label: 'Free Fall Drop' },
+    { value: '180 FT', label: 'Reverse Bungee' },
+    { value: '1 Lakh+', label: 'Successful Jumps' },
+    { value: '4.5', label: 'Google Rated' },
   ],
 };

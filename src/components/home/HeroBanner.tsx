@@ -17,14 +17,14 @@ const HERO_VIDEO = '/images/HeroHomeVideo.mp4';
 const HERO_POSTER = '/images/HeroBackground.jpg';
 
 const HERO_STATS = [
-  { end: 165, suffix: ' FT', label: 'Freefall Drop' },
-  { end: 180, suffix: ' FT', label: 'Reverse Catapult' },
-  { end: 50000, suffix: '+', label: 'Successful Jumps' },
+  { end: 150, suffix: ' FT', label: 'Free Fall Drop' },
+  { end: 180, suffix: ' FT', label: 'Reverse Bungee' },
+  { end: 1, suffix: ' Lakh+', label: 'Successful Jumps' },
   { end: 4.5, decimals: 1, suffix: '', label: 'Google Rated', logo: 'google' },
 ] as const;
 
 const SCALE_LABELS = [
-  { ft: '165 FT', top: '0%' },
+  { ft: '150 FT', top: '0%' },
   { ft: '120 FT', top: '27.3%' },
   { ft: '80 FT', top: '51.5%' },
   { ft: '40 FT', top: '75.8%' },
@@ -265,7 +265,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
       <div className="hero-stage">
         <div className="hero-window-wrap">
           <p className="hero-altimeter-giant" aria-hidden="true">
-            165 FT
+            150 FT
           </p>
 
           <div className="hero-window">
@@ -303,7 +303,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
           <div className="hero-band-head">
             <p className="hero-adventure-badge">
               <span className="hero-badge-line" aria-hidden="true" />
-              <span>Adventure & Entertainment · Shivpuri, Rishikesh</span>
+              <span>Adventure & Entertainment Destination · Shivpuri, Rishikesh</span>
             </p>
 
             <h1 className="hero-adventure-title">

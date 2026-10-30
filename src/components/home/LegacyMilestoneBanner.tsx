@@ -30,9 +30,9 @@ const METRICS = [
   {
     index: '01',
     code: 'TWR',
-    end: 165,
+    end: 150,
     suffix: ' FT',
-    label: 'Freefall Drop',
+    label: 'Free Fall Drop',
     note: "India's Highest Fixed Tower",
   },
   {
@@ -40,15 +40,15 @@ const METRICS = [
     code: 'REV',
     end: 180,
     suffix: ' FT',
-    label: 'Reverse Catapult',
+    label: 'Reverse Bungee',
     note: "Asia's Only Italian Rig",
   },
   {
     index: '03',
     code: 'LOG',
-    end: 50000,
-    suffix: '+',
-    label: 'Jumps Completed',
+    end: 1,
+    suffix: ' Lakh+',
+    label: 'Successful Jumps',
     note: '100% Zero-Accident Record',
   },
   {
@@ -85,7 +85,7 @@ export const LegacyMilestoneBanner: React.FC = () => {
             Our Track Record
           </span>
           <h2 id="legacy-banner-title" className="legacy-title">
-            Over <span>50,000+</span> Extreme Jumps
+            Over <span>1 Lakh+</span> Successful Jumps
           </h2>
           <span className="legacy-rule" aria-hidden="true" />
           <p className="legacy-lead">

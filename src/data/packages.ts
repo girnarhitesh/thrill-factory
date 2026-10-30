@@ -50,10 +50,10 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Reverse Bungee+ Giant Swing +SCAD Jump",
-    "cardDesc": "Combo Activity : ( Reverse Bungee+ Giant Swing +SCAD Jump ) Combo Activity Includes: Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (150 ft).",
+    "cardDesc": "Combo Activity : ( Reverse Bungee+ Giant Swing +SCAD Jump ) Combo Activity Includes: Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (145 ft), Scad Jump in Rishikesh (150 ft).",
     "activitiesIncluded": [
       "Reverse Bungee in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)",
+      "Giant Swing in Rishikesh (145 ft)",
       "Scad Jump in Rishikesh (150 ft)"
     ],
     "highlights": [
@@ -77,7 +77,7 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       },
       {
@@ -160,11 +160,11 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump",
-    "cardDesc": "Combo Activity : (Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft), Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (140 ft).",
+    "cardDesc": "Combo Activity : (Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft), Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (145 ft), Scad Jump in Rishikesh (140 ft).",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)",
+      "Giant Swing in Rishikesh (145 ft)",
       "Scad Jump in Rishikesh (140 ft)"
     ],
     "highlights": [
@@ -193,7 +193,7 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       },
       {
@@ -257,7 +257,7 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       },
       {
@@ -312,10 +312,10 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Reverse Bungee+ Giant Swing +SCAD Jump",
-    "cardDesc": "Combo Activity : ( Reverse Bungee+ Giant Swing +SCAD Jump ) Combo Activity Includes: Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (150 ft).",
+    "cardDesc": "Combo Activity : ( Reverse Bungee+ Giant Swing +SCAD Jump ) Combo Activity Includes: Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (145 ft), Scad Jump in Rishikesh (150 ft).",
     "activitiesIncluded": [
       "Reverse Bungee in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)",
+      "Giant Swing in Rishikesh (145 ft)",
       "Scad Jump in Rishikesh (150 ft)"
     ],
     "highlights": [
@@ -339,7 +339,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       },
       {
@@ -422,11 +422,11 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/scad-jump.jpg"
     ],
     "formula": "Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump",
-    "cardDesc": "Combo Activity : (Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft), Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (140 ft), Scad Jump in Rishikesh (140 ft).",
+    "cardDesc": "Combo Activity : (Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft), Reverse Bungee in Rishikesh (180 ft), Giant Swing in Rishikesh (145 ft), Scad Jump in Rishikesh (140 ft).",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)",
+      "Giant Swing in Rishikesh (145 ft)",
       "Scad Jump in Rishikesh (140 ft)"
     ],
     "highlights": [
@@ -455,7 +455,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       },
       {
@@ -519,7 +519,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       },
       {
@@ -676,7 +676,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "cardDesc": "Combo Activity : (Bungee Jump + Giant Swing + SCAD Jump) Combo Activity Includes: Bungee Jump in Rishikesh (180 ft) Giant Swing in",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)",
+      "Giant Swing in Rishikesh (145 ft)",
       "Scad Jump in Rishikesh (140 ft)"
     ],
     "highlights": [
@@ -700,7 +700,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       },
       {
@@ -731,7 +731,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (180 ft)",
       "Reverse Bungee in Rishikesh (180 ft)",
-      "Giant Swing in Rishikesh (140 ft)"
+      "Giant Swing in Rishikesh (145 ft)"
     ],
     "highlights": [
       "Official discounted combo at The Shivpuri Thrill Factory",
@@ -759,7 +759,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
       },
       {
         "title": "Giant Swing in Rishikesh",
-        "heightOrSpec": "140 FT Pendulum Arc",
+        "heightOrSpec": "145 FT Pendulum Arc",
         "text": "Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure."
       }
     ]
@@ -780,10 +780,10 @@ export const ALL_PACKAGES: PackageCombo[] = [
       "/images/giant-swing.jpg"
     ],
     "formula": "Reverse Bungee+ Giant Swing",
-    "cardDesc": "Combo Activity : (Reverse Bungee+ Giant Swing) Bungee Jump in Rishikesh (165 ft) Giant Swing in Rishikesh (140 ft) Experience the Thrill of Reverse",
+    "cardDesc": "Combo Activity : (Reverse Bungee+ Giant Swing) Bungee Jump in Rishikesh (165 ft) Giant Swing in Rishikesh (145 ft) Experience the Thrill of Reverse",
     "activitiesIncluded": [
       "Bungee Jump in Rishikesh (165 ft)",
-      "Giant Swing in Rishikesh (140 ft)"
+      "Giant Swing in Rishikesh (145 ft)"
     ],
     "highlights": [
       "Official discounted combo at The Shivpuri Thrill Factory",
