@@ -4,16 +4,9 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { Activity } from '@/types';
 import { SITE_CONFIG } from '@/constants/siteConfig';
-import {
-  X,
-  Check,
-  ShieldCheck,
-  Sparkles,
-  MessageCircle,
-  Clock,
-  Scale
-} from 'lucide-react';
+import { X, MessageCircle } from 'lucide-react';
 import { ThemeButton } from '@/components/common/ThemeButton';
+import { CATALOG_ACTIVITIES, activityDetailHtml, catalogImageUrl } from '@/data/catalogActivities';
 import './ComboDetailsModal.css';
 
 interface ActivityDetailsModalProps {
@@ -53,8 +46,19 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello The Shivpuri Thrill Factory, I want to inquire about ${activity.title} (Rs. ${activity.price.toLocaleString('en-IN')}). Please share slot availability.`
+    activity.comingSoon
+      ? `Hello The Shivpuri Thrill Factory, I want to inquire about ${activity.title}. Please share when it opens.`
+      : `Hello The Shivpuri Thrill Factory, I want to inquire about ${activity.title} (Rs. ${activity.price.toLocaleString('en-IN')}). Please share slot availability.`
   );
+
+  const catalog = CATALOG_ACTIVITIES.find((item) => item.handle === activity.slug);
+  const gallery = catalog?.images.length
+    ? catalog.images.map((image) => ({
+        src: catalogImageUrl(image.local_path),
+        alt: image.alt || activity.title,
+      }))
+    : [{ src: activity.image, alt: activity.title }];
+  const copyHtml = catalog?.description_html ? activityDetailHtml(catalog.description_html) : '';
 
   return (
     <div className="combo-modal-overlay" onClick={onClose}>
@@ -99,118 +103,69 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
           <div className="combo-header-section">
             <div className="combo-header-left">
               <h2 className="combo-modal-title">{activity.title}</h2>
-              <p style={{ fontSize: '13.5px', color: 'var(--color-text-secondary)', margin: 0, lineHeight: 1.5 }}>
-                {activity.shortDesc}
-              </p>
             </div>
 
             <div className="combo-header-pricing">
-              <div className="combo-price-main-row">
-                <span className="combo-price-val">
-                  Rs. {activity.price.toLocaleString('en-IN')}.00
-                </span>
-                {activity.originalPrice && activity.originalPrice > activity.price && (
-                  <span className="combo-price-original">
-                    Rs. {activity.originalPrice.toLocaleString('en-IN')}
+              {activity.comingSoon ? (
+                <div className="combo-price-main-row">
+                  <span className="combo-price-val">Coming Soon</span>
+                </div>
+              ) : (
+                <>
+                  <div className="combo-price-main-row">
+                    <span className="combo-price-val">
+                      Rs. {activity.price.toLocaleString('en-IN')}.00
+                    </span>
+                    {activity.originalPrice && activity.originalPrice > activity.price && (
+                      <span className="combo-price-original">
+                        Rs. {activity.originalPrice.toLocaleString('en-IN')}
+                      </span>
+                    )}
+                  </div>
+                  <span className="combo-price-savings-pill">
+                    Official Direct Park Rate
                   </span>
-                )}
-              </div>
-              <span className="combo-price-savings-pill">
-                Official Direct Park Rate
-              </span>
+                </>
+              )}
             </div>
           </div>
 
-          {/* Two-Column Mid Grid: Photo Left, Highlights Right */}
-          <div className="combo-mid-grid">
-            {/* Photo Banner */}
-            <div className="combo-gallery">
-              <div className="combo-gallery-main" style={{ height: '260px' }}>
+          <div className="activity-detail-gallery">
+            {gallery.map((image) => (
+              <div className="activity-detail-frame" key={image.src}>
                 <Image
-                  src={activity.image}
-                  alt={activity.title}
+                  src={image.src}
+                  alt={image.alt}
                   fill
-                  className="combo-gallery-img"
-                  priority
+                  sizes="(max-width: 768px) 100vw, 340px"
+                  className="activity-detail-photo"
                 />
               </div>
-            </div>
-
-            {/* Highlights & Features */}
-            <div className="combo-mid-right">
-              <div className="combo-inclusions-box">
-                <div className="combo-inclusions-label">Activity Highlights & Inclusions:</div>
-                <ul className="combo-inclusions-list">
-                  {activity.features.map((feature, idx) => (
-                    <li key={idx} className="combo-inclusion-row">
-                      <Check size={16} />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Specs Grid */}
-              <div className="combo-specs-grid">
-                <div className="combo-spec-card">
-                  <div className="combo-spec-label">Weight Limit</div>
-                  <div className="combo-spec-value">{activity.weightLimit || 'Standard (35-110 kg)'}</div>
-                </div>
-                <div className="combo-spec-card">
-                  <div className="combo-spec-label">Age Requirement</div>
-                  <div className="combo-spec-value">{activity.ageLimit || '8+ Years'}</div>
-                </div>
-                <div className="combo-spec-card">
-                  <div className="combo-spec-label">Duration</div>
-                  <div className="combo-spec-value">{activity.duration || '20 – 45 Mins'}</div>
-                </div>
-                <div className="combo-spec-card">
-                  <div className="combo-spec-label">Safety Standard</div>
-                  <div className="combo-spec-value">CE / EN Certified</div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Full Verbatim Description from thrillfactory.in */}
-          {activity.paragraphs && activity.paragraphs.length > 0 && (
-            <div className="combo-rides-section">
-              <div className="combo-section-title">
-                <Sparkles size={16} color="var(--color-primary)" />
-                <span>The Complete Adventure Experience</span>
-              </div>
-              <div className="combo-ride-cards-stack">
-                {activity.paragraphs.map((para, idx) => (
-                  <div key={idx} className="combo-ride-detail-card">
-                    <p className="combo-ride-full-text">{para}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Safety & Protocol */}
-          <div className="combo-protocol-banner">
-            <ShieldCheck size={22} color="var(--color-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
-            <div>
-              <div className="combo-protocol-title">
-                International Safety Standards & Certified Marshals
-              </div>
-              <p className="combo-protocol-desc">
-                Operating under rigorous international standards with daily load tests, CE/EN-rated harnesses, and trained adventure marshals at The Shivpuri Thrill Factory.
-              </p>
-            </div>
-          </div>
+          {copyHtml ? (
+            <article
+              className="activity-detail-copy"
+              dangerouslySetInnerHTML={{ __html: copyHtml }}
+            />
+          ) : activity.paragraphs && activity.paragraphs.length > 0 ? (
+            <article className="activity-detail-copy">
+              {activity.paragraphs.map((para, index) => (
+                <p key={index}>{para}</p>
+              ))}
+            </article>
+          ) : null}
         </div>
 
         {/* Sticky Action Footer */}
         <div className="combo-modal-footer">
           <div className="combo-modal-footer-price">
             <span className="combo-footer-price-main">
-              Rs. {activity.price.toLocaleString('en-IN')}.00
+              {activity.comingSoon ? 'Coming Soon' : `Rs. ${activity.price.toLocaleString('en-IN')}.00`}
             </span>
             <span className="combo-footer-price-sub">
-              Instant online slot confirmation
+              {activity.comingSoon ? 'Opening at Thrill Factory' : 'Instant online slot confirmation'}
             </span>
           </div>
 
@@ -226,9 +181,11 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
               Ask on WhatsApp
             </ThemeButton>
 
-            <ThemeButton variant="ghost" arrow onClick={handleProceedBooking}>
-              Book This Activity Now
-            </ThemeButton>
+            {activity.comingSoon ? null : (
+              <ThemeButton variant="ghost" arrow onClick={handleProceedBooking}>
+                Book This Activity Now
+              </ThemeButton>
+            )}
           </div>
         </div>
       </div>

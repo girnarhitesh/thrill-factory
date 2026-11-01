@@ -151,17 +151,23 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
         ) : null}
 
         <div className="ride-card-foot">
-          <div className="ride-card-price">
-            {activity.originalPrice ? (
-              <span className="ride-card-price-was">
-                ₹{activity.originalPrice.toLocaleString('en-IN')}
+          {activity.comingSoon ? (
+            <div className="ride-card-price">
+              <span className="ride-card-soon">Coming Soon</span>
+            </div>
+          ) : (
+            <div className="ride-card-price">
+              {activity.originalPrice ? (
+                <span className="ride-card-price-was">
+                  ₹{activity.originalPrice.toLocaleString('en-IN')}
+                </span>
+              ) : null}
+              <span className="ride-card-price-now">
+                ₹{activity.price.toLocaleString('en-IN')}
               </span>
-            ) : null}
-            <span className="ride-card-price-now">
-              ₹{activity.price.toLocaleString('en-IN')}
-            </span>
-            <span className="ride-card-price-unit">per person</span>
-          </div>
+              <span className="ride-card-price-unit">per person</span>
+            </div>
+          )}
 
           <div className="ride-card-actions">
             {onDetails ? (
@@ -173,9 +179,11 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
                 Details
               </button>
             ) : null}
-            <ThemeButton size="sm" variant="ghost" arrow onClick={() => onBook(activity.title)}>
-              Book
-            </ThemeButton>
+            {activity.comingSoon ? null : (
+              <ThemeButton size="sm" variant="solid" arrow onClick={() => onBook(activity.title)}>
+                Book
+              </ThemeButton>
+            )}
           </div>
         </div>
       </div>

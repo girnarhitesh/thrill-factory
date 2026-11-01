@@ -85,7 +85,7 @@ export const SafetyOverview: React.FC = () => {
           tag="Safety Is Non-Negotiable"
           title="World-Class Protocols &"
           highlightWord="Safety Standards"
-          description="Operating under AS/NZS 5848 international bungee standards with dual-redundant harnesses and daily cord testing."
+          description="Safety rules follow every activity on site — extreme rides, moderate adventures, games, VR, and the kids zone."
         />
 
         <div className="safety-protocol-board">
@@ -120,14 +120,16 @@ export const SafetyOverview: React.FC = () => {
           </div>
 
           <p className="safety-medical-lead">
-            For participant wellbeing, the following medical conditions strictly disqualify individuals from bungee jumping and extreme gravity rides:
+            For participant wellbeing, certain medical conditions may restrict participation in bungee jumping and extreme adventure activities. Please review these criteria before participating.
           </p>
 
           <div className="safety-medical-list">
-            {MEDICAL_RESTRICTIONS.map((item, idx) => (
-              <div key={idx} className="safety-medical-item">
+            {MEDICAL_RESTRICTIONS.map((item) => (
+              <div key={item.title} className="safety-medical-item">
                 <div className="safety-medical-dot" />
-                <span>{item}</span>
+                <span>
+                  <strong>{item.title}:</strong> {item.detail}
+                </span>
               </div>
             ))}
           </div>

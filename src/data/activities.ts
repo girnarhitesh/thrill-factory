@@ -2,6 +2,22 @@ import { Activity } from '@/types';
 
 export const ALL_ADVENTURES_DATA: Activity[] = [
   {
+    "id": "indias-highest-bungee-120m",
+    "slug": "indias-highest-bungee-120m",
+    "title": "India's Highest Bungee 120m",
+    "price": 0,
+    "category": "extreme",
+    "tag": "120 M",
+    "image": "/images/120m-heighest-bungee.PNG",
+    "height": "120 M",
+    "shortDesc": "Coming soon.",
+    "fullDesc": "Coming soon.",
+    "features": ["Coming soon"],
+    "paragraphs": ["Coming soon."],
+    "comingSoon": true,
+    "includesDSLRVideo": false
+  },
+  {
     "id": "bungee-jumping",
     "slug": "bungee-jumping",
     "title": "Bungee Jumping in Rishikesh",
@@ -1102,7 +1118,9 @@ const ACTIVITY_VIDEOS: Record<string, string> = {
 };
 
 ALL_ADVENTURES_DATA.forEach((activity) => {
-  activity.videoUrl = ACTIVITY_VIDEOS[activity.id] ?? ACTIVITY_VIDEO;
+  if (!activity.comingSoon) {
+    activity.videoUrl = ACTIVITY_VIDEOS[activity.id] ?? ACTIVITY_VIDEO;
+  }
   activity.featured = activity.id === 'bungee-jumping';
 
   if (activity.id === 'bungee-jumping') {
@@ -1150,6 +1168,7 @@ export type ActivityTabId = 'extreme' | 'moderate' | 'entertainment' | 'kids' | 
 /** Homepage / catalog tab membership, matching Shopify collections. */
 export const ACTIVITY_TAB_ORDER: Record<ActivityTabId, string[]> = {
   extreme: [
+    'indias-highest-bungee-120m',
     'bungee-jumping',
     'giant-swing',
     'free-style-bungee',
@@ -1187,6 +1206,7 @@ export const activitiesForTab = (tab: ActivityTabId): Activity[] =>
 export const ACTIVITIES_DATA: Activity[] = ALL_ADVENTURES_DATA;
 
 export const FEATURED_ACTIVITIES: Activity[] = [
+  ALL_ADVENTURES_DATA.find((a) => a.id === 'indias-highest-bungee-120m')!,
   ALL_ADVENTURES_DATA.find((a) => a.id === 'bungee-jumping')!,
   ALL_ADVENTURES_DATA.find((a) => a.id === 'giant-swing')!,
   ALL_ADVENTURES_DATA.find((a) => a.id === 'free-style-bungee')!,

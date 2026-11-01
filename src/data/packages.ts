@@ -1030,3 +1030,13 @@ ALL_PACKAGES.forEach((combo) => {
 });
 
 export const PACKAGES_DATA = ALL_PACKAGES;
+
+const comboSequenceValue = (title: string) => {
+  const match = title.match(/(\d+(?:\.\d+)?)/);
+  return match ? Number.parseFloat(match[1]) : Number.POSITIVE_INFINITY;
+};
+
+export const sortCombosBySequence = <T extends { title: string }>(combos: readonly T[]) =>
+  [...combos].sort(
+    (a, b) => comboSequenceValue(a.title) - comboSequenceValue(b.title) || a.title.localeCompare(b.title)
+  );

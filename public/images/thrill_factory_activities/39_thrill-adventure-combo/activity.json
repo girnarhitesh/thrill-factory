@@ -1,0 +1,57 @@
+{
+  "id": 8683037229116,
+  "title": "Thrill Combo 2.2",
+  "handle": "thrill-adventure-combo",
+  "url": "https://thrillfactory.in/products/thrill-adventure-combo",
+  "categories": [],
+  "product_type": "",
+  "vendor": "Thrill Factory",
+  "tags": [
+    "bookeasy"
+  ],
+  "price": "6000.00",
+  "compare_at_price": "",
+  "options": [
+    {
+      "id": 10806412509244,
+      "product_id": 8683037229116,
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 43544871927868,
+      "title": "Default Title",
+      "sku": null,
+      "price": "6000.00",
+      "compare_at_price": "",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "available": true,
+      "requires_shipping": false,
+      "taxable": false
+    }
+  ],
+  "description_html": "<p><strong>Combo Activity :</strong></p>\n<p><span data-contrast=\"auto\" lang=\"EN-IN\" class=\"TextRun SCXW243613676 BCX0\"><span class=\"NormalTextRun SCXW243613676 BCX0\">(Bungee Jump + Giant Swing + SCAD Jump)</span></span><span class=\"EOP SCXW243613676 BCX0\" data-ccp-props='{\"335559685\":720}'> </span></p>\n<p><strong>Combo Activity Includes:</strong></p>\n<ul>\n<li>\n<ins>Bungee Jump</ins><ins><span> </span>in Rishikesh</ins><span> </span>(180 ft) </li>\n<li>\n<ins>Giant Swing</ins><span><ins> in Rishikesh</ins></span><span> </span>(140 ft)</li>\n<li>\n<ins>Scad Jump</ins><span><ins> in Rishikesh</ins></span><span> </span>(140 ft)</li>\n</ul>\n<p>Bungee jumping in Rishikesh is a heart-pounding activity that allows you to conquer your fears and experience an exhilarating freefall. At Thrill Factory, you'll have the opportunity to take a leap from India's highest fixed platform, standing at a staggering height. As you prepare to jump, the adrenaline coursing through your veins, you'll be rewarded with breathtaking views of the surrounding natural beauty. The rush of adrenaline and the feeling of weightlessness during the descent make bungee jumping an unforgettable adventure.</p>\n<p>Giant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure.</p>\n<p>SCAD jumping in Rishikesh offers an adrenaline-pumping adventure that will push your limits and leave you with an unforgettable experience. At Thrill Factory, you'll have the chance to engage in SCAD jumping, a unique and thrilling activity that will have you soaring through the air. Prepare yourself for an extraordinary leap from India's highest fixed platform, standing at an astounding height. As you prepare for the jump, your heart pounding with excitement, the breathtaking views of the surrounding natural beauty will further enhance the thrill. The incredible rush of adrenaline and the sensation of weightlessness during the descent make SCAD jumping a truly remarkable adventure. </p>\n<p> </p>",
+  "description_text": "Combo Activity :\n(Bungee Jump + Giant Swing + SCAD Jump) \nCombo Activity Includes:\nBungee Jump in Rishikesh (180 ft) \nGiant Swing in Rishikesh (140 ft)\nScad Jump in Rishikesh (140 ft)\nBungee jumping in Rishikesh is a heart-pounding activity that allows you to conquer your fears and experience an exhilarating freefall. At Thrill Factory, you'll have the opportunity to take a leap from India's highest fixed platform, standing at a staggering height. As you prepare to jump, the adrenaline coursing through your veins, you'll be rewarded with breathtaking views of the surrounding natural beauty. The rush of adrenaline and the feeling of weightlessness during the descent make bungee jumping an unforgettable adventure.\nGiant Swing in Rishikesh offers an adrenaline-pumping adventure that will take your breath away. At Thrill Factory, you'll have the opportunity to embark on a thrilling ride that combines the exhilaration of a swing with the excitement of freefall. Prepare yourself for a heart-pounding experience as you are lifted high above the ground and then released into an incredible pendulum swing. The rush of wind, the feeling of weightlessness, and the sheer speed make the giant swing an unforgettable adventure.\nSCAD jumping in Rishikesh offers an adrenaline-pumping adventure that will push your limits and leave you with an unforgettable experience. At Thrill Factory, you'll have the chance to engage in SCAD jumping, a unique and thrilling activity that will have you soaring through the air. Prepare yourself for an extraordinary leap from India's highest fixed platform, standing at an astounding height. As you prepare for the jump, your heart pounding with excitement, the breathtaking views of the surrounding natural beauty will further enhance the thrill. The incredible rush of adrenaline and the sensation of weightlessness during the descent make SCAD jumping a truly remarkable adventure.",
+  "images": [
+    {
+      "position": 1,
+      "alt": null,
+      "width": 2000,
+      "height": 1333,
+      "original_url": "https://cdn.shopify.com/s/files/1/0690/5528/3260/files/788f0b0b-9f98-4209-a355-6509cf18c934.webp?v=1756104396",
+      "local_path": "39_thrill-adventure-combo/images/01.webp",
+      "variant_ids": []
+    }
+  ],
+  "image_folder": "39_thrill-adventure-combo/images",
+  "created_at": "2025-09-30T18:08:48+05:30",
+  "updated_at": "2026-11-01T17:45:44+05:30",
+  "published_at": "2025-09-30T18:08:48+05:30"
+}

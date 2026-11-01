@@ -27,6 +27,7 @@ export interface Activity {
   includesDSLRVideo?: boolean;
   videoUrl?: string;
   featured?: boolean;
+  comingSoon?: boolean;
   options?: ActivityOption[];
 }
 

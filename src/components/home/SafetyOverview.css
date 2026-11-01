@@ -341,6 +341,12 @@
   gap: 10px;
   font-size: 13px;
   color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+.safety-medical-item strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
 }
 
 .safety-medical-dot {

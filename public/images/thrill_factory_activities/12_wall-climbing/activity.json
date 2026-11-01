@@ -1,0 +1,73 @@
+{
+  "id": 8893059465276,
+  "title": "Wall Climbing",
+  "handle": "wall-climbing",
+  "url": "https://thrillfactory.in/products/wall-climbing",
+  "categories": [
+    "Entertainment Adventure"
+  ],
+  "product_type": "",
+  "vendor": "Thrill Factory",
+  "tags": [
+    "bookeasy"
+  ],
+  "price": "250.00",
+  "compare_at_price": "",
+  "options": [
+    {
+      "id": 11066703085628,
+      "product_id": 8893059465276,
+      "name": "Age Group",
+      "position": 1,
+      "values": [
+        "Child",
+        "Adult"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 44346764066876,
+      "title": "Child",
+      "sku": null,
+      "price": "250.00",
+      "compare_at_price": "",
+      "option1": "Child",
+      "option2": null,
+      "option3": null,
+      "available": true,
+      "requires_shipping": false,
+      "taxable": false
+    },
+    {
+      "id": 44346764099644,
+      "title": "Adult",
+      "sku": null,
+      "price": "400.00",
+      "compare_at_price": "",
+      "option1": "Adult",
+      "option2": null,
+      "option3": null,
+      "available": true,
+      "requires_shipping": false,
+      "taxable": false
+    }
+  ],
+  "description_html": "<p dir=\"ltr\"><strong>Note:</strong></p>\n<ul>\n<li dir=\"ltr\"><strong>Child: Age below 14 years</strong></li>\n<li dir=\"ltr\"><strong>Adult: Age 14 years and above</strong></li>\n</ul>\n<p dir=\"ltr\"><span>Looking for an exciting activity in Rishikesh that combines fun, fitness, and challenge? Wall Climbing at Thrill Factory is a strong choice for visitors who want to test their strength, balance, and confidence in a safe and engaging setup. It is one of the most enjoyable activities for kids, teens, friends, and families who want something active and memorable.</span></p>\n<p dir=\"ltr\"><span>Wall Climbing is not just about reaching the top. It is about focus, body control, and the thrill of pushing yourself step by step. Whether you are trying it for the first time or simply want a fun physical challenge, this activity delivers an experience that feels rewarding from start to finish.</span></p>\n<p dir=\"ltr\"><span>At Thrill Factory, Wall Climbing is suitable for visitors who enjoy action-based activities without needing prior climbing experience. It works well for beginners and for guests who want to build confidence, coordination, and agility through a structured adventure setup.</span></p>\n<p dir=\"ltr\"><span>This activity is a popular option for family outings, school groups, friend groups, and visitors searching for fun activities in Rishikesh. It adds an energetic and sporty experience to your visit while remaining approachable for a wide range of participants.</span></p>\n<h3 dir=\"ltr\"><span>Section Add-ons</span></h3>\n<div dir=\"ltr\" align=\"center\">\n<table>\n<colgroup>\n<col width=\"280\">\n<col width=\"280\">\n</colgroup>\n<tbody>\n<tr>\n<td>\n<p dir=\"ltr\"><strong>Why choose Wall Climbing at Thrill Factory?</strong></p>\n</td>\n<td>\n<p dir=\"ltr\"><strong>Best for</strong></p>\n</td>\n</tr>\n<tr>\n<td>\n<ul>\n<li dir=\"ltr\"><span>Fun and challenging activity for all age groups</span></li>\n<li dir=\"ltr\">Great for building confidence and coordination</li>\n<li dir=\"ltr\">Suitable for beginners</li>\n<li dir=\"ltr\">Ideal for kids, teens, friends, and families</li>\n<li dir=\"ltr\">A strong fit for adventure seekers in Rishikesh</li>\n</ul>\n</td>\n<td>\n<ul>\n<li dir=\"ltr\"><span>Kids activities</span></li>\n<li dir=\"ltr\">Family outings</li>\n<li dir=\"ltr\">School and college groups</li>\n<li dir=\"ltr\">Friends group fun</li>\n<li dir=\"ltr\">Weekend adventure plans</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "description_text": "Note:\nChild: Age below 14 years\nAdult: Age 14 years and above\nLooking for an exciting activity in Rishikesh that combines fun, fitness, and challenge? Wall Climbing at Thrill Factory is a strong choice for visitors who want to test their strength, balance, and confidence in a safe and engaging setup. It is one of the most enjoyable activities for kids, teens, friends, and families who want something active and memorable.\nWall Climbing is not just about reaching the top. It is about focus, body control, and the thrill of pushing yourself step by step. Whether you are trying it for the first time or simply want a fun physical challenge, this activity delivers an experience that feels rewarding from start to finish.\nAt Thrill Factory, Wall Climbing is suitable for visitors who enjoy action-based activities without needing prior climbing experience. It works well for beginners and for guests who want to build confidence, coordination, and agility through a structured adventure setup.\nThis activity is a popular option for family outings, school groups, friend groups, and visitors searching for fun activities in Rishikesh. It adds an energetic and sporty experience to your visit while remaining approachable for a wide range of participants.\nSection Add-ons\nWhy choose Wall Climbing at Thrill Factory?\nBest for\nFun and challenging activity for all age groups\nGreat for building confidence and coordination\nSuitable for beginners\nIdeal for kids, teens, friends, and families\nA strong fit for adventure seekers in Rishikesh\nKids activities\nFamily outings\nSchool and college groups\nFriends group fun\nWeekend adventure plans",
+  "images": [
+    {
+      "position": 1,
+      "alt": null,
+      "width": 275,
+      "height": 183,
+      "original_url": "https://cdn.shopify.com/s/files/1/0690/5528/3260/files/wall-climbing-thrill-factory.jpg?v=1776947084",
+      "local_path": "12_wall-climbing/images/01.jpg",
+      "variant_ids": []
+    }
+  ],
+  "image_folder": "12_wall-climbing/images",
+  "created_at": "2026-04-23T18:02:41+05:30",
+  "updated_at": "2026-11-01T17:44:21+05:30",
+  "published_at": "2026-04-23T18:02:42+05:30"
+}

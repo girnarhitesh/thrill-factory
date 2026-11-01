@@ -165,7 +165,7 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }
                 Details
               </button>
             ) : null}
-            <ThemeButton size="sm" variant="ghost" arrow onClick={() => onBook(combo.title)}>
+            <ThemeButton size="sm" variant="solid" arrow onClick={() => onBook(combo.title)}>
               Book
             </ThemeButton>
           </div>

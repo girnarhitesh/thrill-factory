@@ -1,0 +1,59 @@
+{
+  "id": 8892924067900,
+  "title": "Gun Shooting",
+  "handle": "gun-shooting",
+  "url": "https://thrillfactory.in/products/gun-shooting",
+  "categories": [
+    "Entertainment Adventure"
+  ],
+  "product_type": "",
+  "vendor": "Thrill Factory",
+  "tags": [
+    "bookeasy"
+  ],
+  "price": "250.00",
+  "compare_at_price": "",
+  "options": [
+    {
+      "id": 11066470563900,
+      "product_id": 8892924067900,
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 44337295196220,
+      "title": "Default Title",
+      "sku": null,
+      "price": "250.00",
+      "compare_at_price": "",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "available": true,
+      "requires_shipping": false,
+      "taxable": false
+    }
+  ],
+  "description_html": "<p dir=\"ltr\"><span>Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is designed for visitors who enjoy focus, precision, and the thrill of hitting a target. It gives participants a controlled shooting-game experience that is engaging for friends, families, couples, and groups.</span></p>\n<p dir=\"ltr\"><span>This activity is popular because it combines concentration with fun. The challenge is simple to understand but exciting to perform: aim carefully, stay steady, and improve your accuracy shot after shot. Whether someone is trying target shooting for the first time or just wants a different kind of recreational activity, Gun Shooting adds variety to the overall Thrill Factory experience.</span></p>\n<p dir=\"ltr\"><span>Gun Shooting is also a strong choice for visitors looking for indoor or low-exertion entertainment that still feels interactive. It works well for mixed-age groups, casual outings, short play sessions, and friendly competition between friends or family members.</span></p>\n<p dir=\"ltr\"><span>For visitors searching online for fun activities in Rishikesh, target games in Rishikesh, or skill-based entertainment at Thrill Factory, this page should position Gun Shooting as a focused, enjoyable, and memorable attraction.</span></p>\n<h3 dir=\"ltr\"><span>Why choose Gun Shooting at Thrill Factory?</span></h3>\n<ul>\n<li dir=\"ltr\" role=\"presentation\"><span>Interactive target-based activity with a competitive feel</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Good for friends, families, couples, and groups</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Suitable for first-time participants</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Adds skill, focus, and fun to the visit</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>A good option for short-form entertainment and repeat attempts</span></li>\n</ul>\n<h3 dir=\"ltr\"><span>Best For</span></h3>\n<ul>\n<li dir=\"ltr\" role=\"presentation\"><span>Friends group outings</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Family entertainment</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Couple fun activities</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>School or college group visits</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Visitors looking for skill-based games in Rishikesh</span></li>\n</ul>",
+  "description_text": "Looking for an action-based activity in Rishikesh that feels competitive, skill-driven, and instantly exciting? Gun Shooting at Thrill Factory is designed for visitors who enjoy focus, precision, and the thrill of hitting a target. It gives participants a controlled shooting-game experience that is engaging for friends, families, couples, and groups.\nThis activity is popular because it combines concentration with fun. The challenge is simple to understand but exciting to perform: aim carefully, stay steady, and improve your accuracy shot after shot. Whether someone is trying target shooting for the first time or just wants a different kind of recreational activity, Gun Shooting adds variety to the overall Thrill Factory experience.\nGun Shooting is also a strong choice for visitors looking for indoor or low-exertion entertainment that still feels interactive. It works well for mixed-age groups, casual outings, short play sessions, and friendly competition between friends or family members.\nFor visitors searching online for fun activities in Rishikesh, target games in Rishikesh, or skill-based entertainment at Thrill Factory, this page should position Gun Shooting as a focused, enjoyable, and memorable attraction.\nWhy choose Gun Shooting at Thrill Factory?\nInteractive target-based activity with a competitive feel\nGood for friends, families, couples, and groups\nSuitable for first-time participants\nAdds skill, focus, and fun to the visit\nA good option for short-form entertainment and repeat attempts\nBest For\nFriends group outings\nFamily entertainment\nCouple fun activities\nSchool or college group visits\nVisitors looking for skill-based games in Rishikesh",
+  "images": [
+    {
+      "position": 1,
+      "alt": null,
+      "width": 1915,
+      "height": 972,
+      "original_url": "https://cdn.shopify.com/s/files/1/0690/5528/3260/files/Gun-Shooting-Activity-in-rishikesh.webp?v=1776933936",
+      "local_path": "16_gun-shooting/images/01.webp",
+      "variant_ids": []
+    }
+  ],
+  "image_folder": "16_gun-shooting/images",
+  "created_at": "2026-04-23T14:17:32+05:30",
+  "updated_at": "2026-11-01T17:44:37+05:30",
+  "published_at": "2026-04-23T14:17:33+05:30"
+}

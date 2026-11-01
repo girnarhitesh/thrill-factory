@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import { ALL_PACKAGES, PackageCombo } from '@/data/packages';
+import { ALL_PACKAGES, PackageCombo, sortCombosBySequence } from '@/data/packages';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ComboCard } from '@/components/home/ComboCard';
 import { ThemeButton } from '@/components/common/ThemeButton';
@@ -59,11 +59,11 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
   const [activeLane, setActiveLane] = useState<ComboLaneId>('all');
 
   const gravityCombos = useMemo(
-    () => ALL_PACKAGES.filter((combo) => !isIndoorCombo(combo)),
+    () => sortCombosBySequence(ALL_PACKAGES.filter((combo) => !isIndoorCombo(combo))),
     []
   );
   const indoorCombos = useMemo(
-    () => ALL_PACKAGES.filter((combo) => isIndoorCombo(combo)),
+    () => sortCombosBySequence(ALL_PACKAGES.filter((combo) => isIndoorCombo(combo))),
     []
   );
 

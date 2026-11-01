@@ -160,7 +160,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   onChange={handleChange}
                 >
                   <optgroup label="Single Extreme Activities">
-                    {ACTIVITIES_DATA.map((act) => (
+                    {ACTIVITIES_DATA.filter((act) => !act.comingSoon).map((act) => (
                       <option key={act.id} value={act.title}>
                         {act.title} (₹{act.price.toLocaleString('en-IN')})
                       </option>

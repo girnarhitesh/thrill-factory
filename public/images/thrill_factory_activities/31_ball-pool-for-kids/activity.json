@@ -1,0 +1,77 @@
+{
+  "id": 8892910829628,
+  "title": "Ball Pool for Kids",
+  "handle": "ball-pool-for-kids",
+  "url": "https://thrillfactory.in/products/ball-pool-for-kids",
+  "categories": [
+    "Kids Adventure"
+  ],
+  "product_type": "",
+  "vendor": "Thrill Factory",
+  "tags": [
+    "bookeasy"
+  ],
+  "price": "100.00",
+  "compare_at_price": "",
+  "options": [
+    {
+      "id": 11066447855676,
+      "product_id": 8892910829628,
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 44336390537276,
+      "title": "Default Title",
+      "sku": null,
+      "price": "100.00",
+      "compare_at_price": "",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "available": true,
+      "requires_shipping": false,
+      "taxable": false
+    }
+  ],
+  "description_html": "<p dir=\"ltr\"><span><strong style=\"font-size: 0.875rem;\">Duration: 30 Minutes per session </strong></span></p>\n<p dir=\"ltr\"><span>Looking for fun kids activities in Rishikesh that are colourful, playful, and easy to enjoy? Ball Pool for Kids at Thrill Factory is a cheerful activity created for children who love active play, movement, and soft-play fun. It gives kids a lively space where they can jump in, move around, and enjoy themselves in an engaging environment.</span></p>\n<p dir=\"ltr\"><span>A ball pool is one of the most loved play attractions for younger children because it feels simple, exciting, and comfortable at the same time. It encourages playful movement, curiosity, and free activity, making it a strong choice for parents who want their children to enjoy a light and entertaining experience during a family visit.</span></p>\n<p dir=\"ltr\"><span>At Thrill Factory, Ball Pool for Kids works well for family outings, birthday plans, weekend visits, and casual fun time with children. It adds a bright, playful option to the overall entertainment mix and is especially suitable for parents looking for easy-going activities that children can quickly enjoy.</span></p>\n<p dir=\"ltr\"><span>This activity is ideal for kids who enjoy soft-play experiences and interactive movement-based games. Whether they want to jump into the pool, play around, or simply enjoy a colourful fun zone, the ball pool creates a happy and memorable part of the visit.</span></p>\n<h3 dir=\"ltr\"><span>Why Choose Ball Pool for Kids at Thrill Factory?</span></h3>\n<ul>\n<li dir=\"ltr\"><span>Fun and colourful activity designed for kids</span></li>\n<li dir=\"ltr\"><span>Easy-to-enjoy play experience for younger children</span></li>\n<li dir=\"ltr\"><span>Good option for family outings and kids entertainment</span></li>\n<li dir=\"ltr\"><span>Adds playful movement and excitement to the visit</span></li>\n<li dir=\"ltr\"><span>Ideal for weekend fun, birthday visits, and family time</span></li>\n</ul>\n<h3 dir=\"ltr\"><span>Best For</span></h3>\n<ul>\n<li dir=\"ltr\"><span>Kids activities in Rishikesh</span></li>\n<li dir=\"ltr\"><span>Family outings</span></li>\n<li dir=\"ltr\"><span>Birthday visits</span></li>\n<li dir=\"ltr\"><span>Weekend fun for children</span></li>\n<li dir=\"ltr\"><span>Indoor and entertainment-based play experiences</span></li>\n</ul>",
+  "description_text": "Duration: 30 Minutes per session \nLooking for fun kids activities in Rishikesh that are colourful, playful, and easy to enjoy? Ball Pool for Kids at Thrill Factory is a cheerful activity created for children who love active play, movement, and soft-play fun. It gives kids a lively space where they can jump in, move around, and enjoy themselves in an engaging environment.\nA ball pool is one of the most loved play attractions for younger children because it feels simple, exciting, and comfortable at the same time. It encourages playful movement, curiosity, and free activity, making it a strong choice for parents who want their children to enjoy a light and entertaining experience during a family visit.\nAt Thrill Factory, Ball Pool for Kids works well for family outings, birthday plans, weekend visits, and casual fun time with children. It adds a bright, playful option to the overall entertainment mix and is especially suitable for parents looking for easy-going activities that children can quickly enjoy.\nThis activity is ideal for kids who enjoy soft-play experiences and interactive movement-based games. Whether they want to jump into the pool, play around, or simply enjoy a colourful fun zone, the ball pool creates a happy and memorable part of the visit.\nWhy Choose Ball Pool for Kids at Thrill Factory?\nFun and colourful activity designed for kids\nEasy-to-enjoy play experience for younger children\nGood option for family outings and kids entertainment\nAdds playful movement and excitement to the visit\nIdeal for weekend fun, birthday visits, and family time\nBest For\nKids activities in Rishikesh\nFamily outings\nBirthday visits\nWeekend fun for children\nIndoor and entertainment-based play experiences",
+  "images": [
+    {
+      "position": 1,
+      "alt": null,
+      "width": 2890,
+      "height": 1927,
+      "original_url": "https://cdn.shopify.com/s/files/1/0690/5528/3260/files/Ball-pool-for-kids.jpg?v=1776933252",
+      "local_path": "31_ball-pool-for-kids/images/01.jpg",
+      "variant_ids": []
+    },
+    {
+      "position": 2,
+      "alt": null,
+      "width": 2890,
+      "height": 1927,
+      "original_url": "https://cdn.shopify.com/s/files/1/0690/5528/3260/files/Ball-pool-for-kids-indoor-activity.jpg?v=1776933251",
+      "local_path": "31_ball-pool-for-kids/images/02.jpg",
+      "variant_ids": []
+    },
+    {
+      "position": 3,
+      "alt": null,
+      "width": 2890,
+      "height": 1927,
+      "original_url": "https://cdn.shopify.com/s/files/1/0690/5528/3260/files/Ball-pool-for-kids-in-rishikesh.jpg?v=1776933251",
+      "local_path": "31_ball-pool-for-kids/images/03.jpg",
+      "variant_ids": []
+    }
+  ],
+  "image_folder": "31_ball-pool-for-kids/images",
+  "created_at": "2026-04-23T14:06:33+05:30",
+  "updated_at": "2026-11-01T17:45:15+05:30",
+  "published_at": "2026-04-23T14:06:34+05:30"
+}

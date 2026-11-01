@@ -407,6 +407,95 @@
   margin: 0;
 }
 
+.activity-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.activity-detail-frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #f4efe9;
+  overflow: hidden;
+}
+
+.activity-detail-photo {
+  object-fit: contain;
+}
+
+.activity-detail-copy {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.activity-detail-copy :where(p, div) {
+  margin: 0 0 0.55em;
+}
+
+.activity-detail-copy ul {
+  margin: 0.15em 0 0.75em;
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+
+.activity-detail-copy ol {
+  margin: 0.15em 0 0.75em;
+  padding-left: 1.15rem;
+  list-style: decimal;
+}
+
+.activity-detail-copy li {
+  margin: 0.12em 0;
+  display: list-item;
+}
+
+.activity-detail-copy li :where(p, div) {
+  margin: 0;
+}
+
+.activity-detail-copy a {
+  color: var(--color-primary);
+}
+
+.activity-key-facts {
+  margin: 0 0 16px;
+  padding: 12px 14px 8px 16px;
+  background: #fff1e8;
+  border-left: 4px solid var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.activity-detail-copy .activity-key-facts,
+.catalog-modal-html .activity-key-facts {
+  margin: 0 0 16px;
+}
+
+.activity-key-facts :where(p, div) {
+  margin: 0 0 0.35em;
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.activity-key-facts ul {
+  margin: 0.2em 0 0.35em;
+  padding-left: 1.15rem;
+  list-style: disc;
+  font-weight: 600;
+}
+
+.activity-key-facts li {
+  margin: 0.28em 0;
+  color: var(--color-text-primary);
+}
+
+.activity-faq-q {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
 /* Safety & Protocol Banner */
 .combo-protocol-banner {
   padding: 16px 20px;

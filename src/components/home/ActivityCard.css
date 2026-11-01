@@ -1,12 +1,12 @@
 .ride-card {
   --ride-ink: #1c1c1c;
-  --ride-line: rgb(28 28 28 / 0.16);
+  --ride-line: rgb(255 72 0 / 0.28);
   --ride-tick: 12px;
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #ffffff;
+  background: #fff3eb;
   isolation: isolate;
 }
 
@@ -21,14 +21,14 @@
     linear-gradient(var(--ride-line), var(--ride-line)),
     linear-gradient(var(--ride-line), var(--ride-line)),
     linear-gradient(var(--ride-line), var(--ride-line)),
-    linear-gradient(var(--ride-ink), var(--ride-ink)),
-    linear-gradient(var(--ride-ink), var(--ride-ink)),
-    linear-gradient(var(--ride-ink), var(--ride-ink)),
-    linear-gradient(var(--ride-ink), var(--ride-ink)),
-    linear-gradient(var(--ride-ink), var(--ride-ink)),
-    linear-gradient(var(--ride-ink), var(--ride-ink)),
-    linear-gradient(var(--ride-ink), var(--ride-ink)),
-    linear-gradient(var(--ride-ink), var(--ride-ink));
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary)),
+    linear-gradient(var(--color-primary), var(--color-primary));
   background-repeat: no-repeat;
   background-size:
     100% 1px,
@@ -163,6 +163,7 @@
   flex-direction: column;
   flex: 1;
   padding: 14px 16px 16px;
+  background: linear-gradient(180deg, #fff7f3 0%, #ffe4d6 100%);
 }
 
 .ride-card-title {
@@ -198,6 +199,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0 0 14px;
+  background: rgb(255 72 0 / 0.1);
   border-top: 1px solid var(--ride-line);
   border-bottom: 1px solid var(--ride-line);
 }
@@ -237,6 +239,15 @@
   text-decoration: line-through;
 }
 
+.ride-card-soon {
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
 .ride-card-price-now {
   font-family: var(--font-family-display);
   font-size: 1.55rem;
@@ -267,16 +278,23 @@
   background: none;
   font-family: var(--font-family-sans);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgb(28 28 28 / 0.55);
+  color: var(--color-primary);
   cursor: pointer;
 }
 
 .ride-card-details:hover,
 .ride-card-details:focus-visible {
-  color: var(--ride-ink);
+  color: var(--color-primary-hover);
+}
+
+.ride-card .btn.btn--solid:has(> .btn__label) {
+  --btn-ink: #fff5ee;
+  --btn-line: rgb(255 245 238 / 0.55);
+  --btn-bg: var(--color-primary);
+  --btn-bg-hover: var(--color-primary-hover);
 }
 
 .ride-card .btn--sm .btn__label {
@@ -306,6 +324,7 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
+  background: rgb(255 72 0 / 0.1);
   border-top: 1px solid var(--ride-line);
   border-bottom: 1px solid var(--ride-line);
   min-height: 88px;

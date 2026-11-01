@@ -41,9 +41,9 @@ export default function HomePage() {
       <main>
         <HeroBanner onOpenBooking={() => handleOpenBooking()} />
         <AdrenalineTicker />
-        <QuickHighlights />
         <ActivitiesGrid onBook={(title) => handleOpenBooking(title)} />
         <PackagesSection onBook={(title) => handleOpenBooking(title)} />
+        <QuickHighlights />
         <KidsZoneHighlight onBook={(title) => handleOpenBooking(title)} />
         <SafetyOverview />
         {/* <LegacyMilestoneBanner /> */}

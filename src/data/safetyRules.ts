@@ -2,48 +2,70 @@ import { SafetyRule } from '@/types';
 
 export const SAFETY_STANDARDS: SafetyRule[] = [
   {
-    id: 'certified-jumpmasters',
-    title: 'Certified & Veteran Jump Masters',
-    desc: 'Our Jump Masters have overseen tens of thousands of successful jumps and undergo rigorous regular re-certifications according to international bungee jumping safety protocols.',
+    id: 'extreme-rides',
+    title: 'Extreme Ride Standards',
+    desc: 'Certified guides and daily checks on bungee, swing, zip, rope, reverse, and SCAD.',
     iconName: 'Award',
   },
   {
-    id: 'australian-standards',
-    title: 'Global Engineering & AS/NZS Standards',
-    desc: 'All cantilever platforms, bungee cords, steel carabiners, and arresting gear strictly conform to Australian & New Zealand Standards (AS/NZS 5848) code of practice.',
-    iconName: 'ShieldCheck',
-  },
-  {
-    id: 'redundant-harness',
-    title: 'Dual Redundant Ankle & Body Harnesses',
-    desc: 'Every jumper is outfitted with both an anatomical waist/chest full-body harness and a dual-locking ankle harness backup, eliminating single-point vulnerabilities.',
+    id: 'moderate-rides',
+    title: 'Moderate Adventure Checks',
+    desc: 'Briefing and harness for sky cycling, rope course, quick jump, and 360 cycle.',
     iconName: 'Lock',
   },
   {
-    id: 'daily-inspection',
-    title: 'Daily Cord Cycle & Load Testing',
-    desc: 'Bungee cords are calibrated according to jumper body weight and are retired far before their certified cycle limits. Rigorous daily load tests are conducted prior to opening.',
+    id: 'entertainment',
+    title: 'Games & Ground Activities',
+    desc: 'Staff and rules for climbing, shooting, archery, cricket, bowling, and foot pool.',
+    iconName: 'ShieldCheck',
+  },
+  {
+    id: 'kids-zone',
+    title: 'Supervised Kids Zone',
+    desc: 'Staffed, age-appropriate soft play, ball pool, trampoline, and kids rides.',
+    iconName: 'Users',
+  },
+  {
+    id: 'vr-arcade',
+    title: 'VR & Arcade Supervision',
+    desc: 'Headset checks and staff nearby for VR bungee, battlefield, photobooth, and arcade.',
     iconName: 'CheckCircle2',
   },
   {
-    id: 'medical-screening',
-    title: 'Strict Pre-Jump Medical Screenings',
-    desc: 'Every participant goes through a thorough health evaluation and digital weight measurement. Individuals with heart conditions, high blood pressure, or recent surgeries are advised not to jump.',
+    id: 'health-screening',
+    title: 'Health Rules for High Rides',
+    desc: 'Health and weight check on high rides. Listed conditions may restrict participation.',
     iconName: 'HeartPulse',
   },
-  {
-    id: 'valley-rescue',
-    title: 'Rapid River Retrieval Crew',
-    desc: 'A dedicated ground and water recovery team stands by with specialized retrieval gear to guide jumpers smoothly back to the observation platform.',
-    iconName: 'Users',
-  }
 ];
 
 export const MEDICAL_RESTRICTIONS = [
-  'Back or neck injuries, spinal issues, or recent dislocations',
-  'Heart conditions, pacemaker implants, or uncontrolled high blood pressure',
-  'Recent surgeries (within the past 6 months) or bone fractures',
-  'Pregnancy (strictly prohibited across all extreme gravity activities)',
-  'Epilepsy, fainting spells, or severe neurological disorders',
-  'Alcohol or drug impairment (zero-tolerance breathalyzer check)'
+  {
+    title: 'Back or Neck Injuries',
+    detail: 'Spinal problems, neck injuries, or significant bone and joint conditions.',
+  },
+  {
+    title: 'Heart Conditions',
+    detail: 'Heart disease, pacemaker implants, or uncontrolled high blood pressure.',
+  },
+  {
+    title: 'Neurological Conditions',
+    detail: 'Epilepsy, seizures, fainting spells, or severe neurological disorders.',
+  },
+  {
+    title: 'Respiratory Conditions',
+    detail: 'Asthma, breathing difficulties, or other significant respiratory problems.',
+  },
+  {
+    title: 'Recent Surgeries or Fractures',
+    detail: 'Recent surgery, bone fractures, or injuries that may affect safe participation.',
+  },
+  {
+    title: 'Pregnancy',
+    detail: 'Participation is not permitted during pregnancy.',
+  },
+  {
+    title: 'Alcohol or Drug Impairment',
+    detail: 'Participation is not allowed while under the influence of alcohol or drugs.',
+  },
 ];
