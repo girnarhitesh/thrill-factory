@@ -49,18 +49,12 @@ export const WhatsAppFloating: React.FC<WhatsAppFloatingProps> = ({ customMessag
         <aside className={`call-desk${callIn ? ' is-in' : ''}`} aria-label="Call jump desk">
           <span className="call-desk-slash" aria-hidden="true" />
           <a href={`tel:${SITE_CONFIG.phones[0].raw}`} className="call-desk-card">
-            <span className="call-desk-stamp">
-              <span className="call-desk-node" aria-hidden="true" />
-              Live desk
+            <span className="call-desk-icon" aria-hidden="true">
+              <Phone size={12} strokeWidth={2} />
             </span>
-            <span className="call-desk-row">
-              <span className="call-desk-icon" aria-hidden="true">
-                <Phone size={15} strokeWidth={1.75} />
-              </span>
-              <span className="call-desk-copy">
-                <strong>Call now</strong>
-                <em>{SITE_CONFIG.phones[0].label}</em>
-              </span>
+            <span className="call-desk-copy">
+              <strong>Call now</strong>
+              <em>{SITE_CONFIG.phones[0].label}</em>
             </span>
           </a>
           <button

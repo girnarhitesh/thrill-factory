@@ -209,9 +209,9 @@ export default function ContactPage() {
                 </div>
 
                 <div style={{ backgroundColor: '#FFFFFF', border: '1px solid var(--color-border)', padding: 'var(--space-md)', borderRadius: 'var(--radius-md)' }}>
-                  <strong style={{ color: 'var(--color-text-primary)' }}>From Rishikesh Bus / Train Station:</strong>
+                  <strong style={{ color: 'var(--color-text-primary)' }}>Extra participant:</strong>
                   <p style={{ color: 'var(--color-text-secondary)', marginTop: '2px' }}>
-                    Shared jeeps, local buses, and private taxis regularly head from Rishikesh to Shivpuri (approx. ₹300–₹600 for taxi, ₹50 for shared transport).
+                    If an extra person joins any activity, the charge is ₹1,000 per person.
                   </p>
                 </div>
 
