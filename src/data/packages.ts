@@ -1019,16 +1019,6 @@ export const ALL_PACKAGES: PackageCombo[] = [
   }
 ];
 
-const COMBO_PREVIEW_VIDEO = '/images/HeroHomeVideo.mp4';
-
-FEATURED_PACKAGES.forEach((combo) => {
-  combo.videoUrl = COMBO_PREVIEW_VIDEO;
-});
-
-ALL_PACKAGES.forEach((combo) => {
-  combo.videoUrl = COMBO_PREVIEW_VIDEO;
-});
-
 export const PACKAGES_DATA = ALL_PACKAGES;
 
 const comboSequenceValue = (title: string) => {

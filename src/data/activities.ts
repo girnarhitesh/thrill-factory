@@ -72,7 +72,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "price": 1500,
     "category": "extreme",
     "tag": "145 FT",
-    "image": "/images/activities/giant-swing.jpg",
+    "image": "/images/thrill_factory_activities/02_giant-swing/images/swing.jpeg",
     "height": "145 Feet",
     "duration": "15 - 30 mins",
     "ageLimit": "12 years and above",
@@ -145,7 +145,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "price": 2500,
     "category": "extreme",
     "tag": "160 FT Freestyle",
-    "image": "/images/activities/free-style-bungee.jpg",
+    "image": "/images/freestyle-bungee-image.jpeg",
     "height": "160 Feet",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ years",
@@ -176,7 +176,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "originalPrice": 4500,
     "category": "extreme",
     "tag": "150 FT Free Fall",
-    "image": "/images/activities/scad-jumping-in-rishikesh.jpg",
+    "image": "/images/thrill_factory_activities/09_scad-jumping-in-rishikesh/images/scadjump.jpeg",
     "height": "150 Feet",
     "duration": "1 – 1.5 hours",
     "ageLimit": "12 years and above",
@@ -263,7 +263,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "price": 2000,
     "category": "extreme",
     "tag": "180 FT Launch",
-    "image": "/images/activities/reverse-bungee.jpg",
+    "image": "/images/thrill_factory_activities/11_reverse-bungee/images/reverse-bungee.jpeg",
     "height": "180 Feet",
     "duration": "15 - 30 mins",
     "ageLimit": "12 years and above",
@@ -354,7 +354,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "price": 500,
     "category": "moderate",
     "tag": "Moderate Adventure",
-    "image": "/images/activities/rope-course.jpg",
+    "image": "/images/thrill_factory_activities/13_rope-course/images/rope-course.jpeg",
     "duration": "15 - 30 mins",
     "ageLimit": "12+ Years",
     "shortDesc": "Rope Course in Rishikesh Overview Activity Location: Shivpuri, Rishikesh Activity Timing: Between 10:00 AM to 9:00 PM Experience rope course at the thrill",
@@ -1115,12 +1115,17 @@ const ACTIVITY_VIDEOS: Record<string, string> = {
   'pool-table': '/images/ActivitiesVideos/pool-table.mp4',
   'wall-climbing': '/images/ActivitiesVideos/wall-climb.mp4',
   'bungee-jumping': '/images/ActivitiesVideos/freestyle-bungee.mp4',
+  'free-style-bungee': '/images/ActivitiesVideos/Free-Style-Bungee-in-Rishikesh.mp4',
+  'scad-jumping-in-rishikesh': '/images/ActivitiesVideos/scad-jump-video-thrill.mp4',
+  'sky-cycling': '/images/ActivitiesVideos/sky-cycle-video.mp4',
+  cricket: '/images/ActivitiesVideos/cricket-thrill-video.mp4',
+  'foot-pool': '/images/ActivitiesVideos/Foot-Pool.mp4',
+  'reverse-bungee': '/images/ActivitiesVideos/reverse-bungee-thrill.mp4',
 };
 
 ALL_ADVENTURES_DATA.forEach((activity) => {
-  if (!activity.comingSoon) {
-    activity.videoUrl = ACTIVITY_VIDEOS[activity.id] ?? ACTIVITY_VIDEO;
-  }
+  const clip = ACTIVITY_VIDEOS[activity.id];
+  if (clip) activity.videoUrl = clip;
   activity.featured = activity.id === 'bungee-jumping';
 
   if (activity.id === 'bungee-jumping') {
@@ -1149,7 +1154,7 @@ ALL_ADVENTURES_DATA.forEach((activity) => {
         title: 'Freestyle Bungee',
         note: '160 FT · Full-body harness',
         price: freestyle?.price ?? 2500,
-        videoUrl: '/images/ActivitiesVideos/freestyle-bungee.mp4',
+        videoUrl: '/images/ActivitiesVideos/Free-Style-Bungee-in-Rishikesh.mp4',
       },
       {
         id: 'water-splash-bungee',

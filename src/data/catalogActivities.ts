@@ -154,6 +154,12 @@ const PREVIEW_VIDEOS: Record<string, string> = {
   'pool-table': '/images/ActivitiesVideos/pool-table.mp4',
   'wall-climbing': '/images/ActivitiesVideos/wall-climb.mp4',
   'bungee-jumping': '/images/ActivitiesVideos/freestyle-bungee.mp4',
+  'free-style-bungee': '/images/ActivitiesVideos/Free-Style-Bungee-in-Rishikesh.mp4',
+  'scad-jumping-in-rishikesh': '/images/ActivitiesVideos/scad-jump-video-thrill.mp4',
+  'sky-cycling': '/images/ActivitiesVideos/sky-cycle-video.mp4',
+  cricket: '/images/ActivitiesVideos/cricket-thrill-video.mp4',
+  'foot-pool': '/images/ActivitiesVideos/Foot-Pool.mp4',
+  'reverse-bungee': '/images/ActivitiesVideos/reverse-bungee-thrill.mp4',
 };
 
 export const catalogPreviewVideo = (handle: string) => PREVIEW_VIDEOS[handle];

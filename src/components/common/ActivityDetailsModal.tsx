@@ -52,12 +52,18 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
   );
 
   const catalog = CATALOG_ACTIVITIES.find((item) => item.handle === activity.slug);
-  const gallery = catalog?.images.length
+  const catalogGallery = catalog?.images.length
     ? catalog.images.map((image) => ({
         src: catalogImageUrl(image.local_path),
         alt: image.alt || activity.title,
       }))
-    : [{ src: activity.image, alt: activity.title }];
+    : [];
+  const lead = { src: activity.image, alt: activity.title };
+  const showCustomLead =
+    catalogGallery.length > 0 &&
+    !activity.image.startsWith('/images/activities/') &&
+    !catalogGallery.some((image) => image.src === activity.image);
+  const gallery = showCustomLead ? [lead, ...catalogGallery] : catalogGallery.length ? catalogGallery : [lead];
   const copyHtml = catalog?.description_html ? activityDetailHtml(catalog.description_html) : '';
 
   return (

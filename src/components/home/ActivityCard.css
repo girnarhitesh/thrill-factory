@@ -1,12 +1,12 @@
 .ride-card {
   --ride-ink: #1c1c1c;
-  --ride-line: rgb(255 72 0 / 0.28);
+  --ride-line: rgb(255 72 0 / 0.16);
   --ride-tick: 12px;
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #fff3eb;
+  background: #fff8f5;
   isolation: isolate;
 }
 
@@ -163,7 +163,7 @@
   flex-direction: column;
   flex: 1;
   padding: 14px 16px 16px;
-  background: linear-gradient(180deg, #fff7f3 0%, #ffe4d6 100%);
+  background: linear-gradient(180deg, #fffdfb 0%, #fff1e8 100%);
 }
 
 .ride-card-title {
@@ -199,7 +199,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0 0 14px;
-  background: rgb(255 72 0 / 0.1);
+  background: rgb(255 72 0 / 0.06);
   border-top: 1px solid var(--ride-line);
   border-bottom: 1px solid var(--ride-line);
 }
@@ -324,7 +324,7 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
-  background: rgb(255 72 0 / 0.1);
+  background: rgb(255 72 0 / 0.06);
   border-top: 1px solid var(--ride-line);
   border-bottom: 1px solid var(--ride-line);
   min-height: 88px;
