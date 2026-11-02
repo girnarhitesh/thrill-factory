@@ -8,7 +8,7 @@ export const ALL_ADVENTURES_DATA: Activity[] = [
     "price": 0,
     "category": "extreme",
     "tag": "120 M",
-    "image": "/images/120m-heighest-bungee.PNG",
+    "image": "/images/120m-heighest-bungee.webp",
     "height": "120 M",
     "shortDesc": "Coming soon.",
     "fullDesc": "Coming soon.",

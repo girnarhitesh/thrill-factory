@@ -86,6 +86,7 @@ export const CatalogActivityCard: React.FC<CatalogActivityCardProps> = ({
             alt={image.alt || activity.title}
             width={image.width || 400}
             height={image.height || 240}
+            sizes="(max-width: 768px) 100vw, 400px"
             className="ride-card-img"
           />
         ) : null}

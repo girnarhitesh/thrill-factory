@@ -93,7 +93,7 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }
           src={combo.image}
           alt={combo.title}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, 400px"
           className="ride-card-img"
         />
         {combo.videoUrl ? (

@@ -82,6 +82,9 @@ export const Footer: React.FC = () => {
               <img
                 src="/images/thrill-factory-logo-white.png"
                 alt={SITE_CONFIG.brandName}
+                width={540}
+                height={316}
+                loading="lazy"
               />
             </Link>
             <p className="footer-desc">
@@ -130,7 +133,7 @@ export const Footer: React.FC = () => {
 
         <div className="footer-board">
           <nav className="footer-col" aria-label="Adventure rides">
-            <h4 className="footer-heading">Rides</h4>
+            <p className="footer-heading">Rides</p>
             <ul className="footer-link-list">
               {FOOTER_LINKS.activities.map((link, index) => (
                 <li key={link.label}>
@@ -144,7 +147,7 @@ export const Footer: React.FC = () => {
           </nav>
 
           <div className="footer-col footer-col--visit">
-            <h4 className="footer-heading">Visit</h4>
+            <p className="footer-heading">Visit</p>
             <ul className="footer-facts">
               {VISIT_FACTS.map((fact) => (
                 <li key={fact.code} className="footer-fact">
@@ -171,7 +174,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <nav className="footer-col" aria-label="Site links">
-            <h4 className="footer-heading">House</h4>
+            <p className="footer-heading">House</p>
             <ul className="footer-link-list">
               {FOOTER_LINKS.company.map((link) => (
                 <li key={link.label}>
@@ -198,7 +201,7 @@ export const Footer: React.FC = () => {
               className="footer__powered-link"
               aria-label="Powered by okGhumo"
             >
-              <img src="/images/okghumo-logo-white.png" alt="okGhumo" className="footer__powered-logo" />
+              <img src="/images/okghumo-logo-white.png" alt="okGhumo" width={850} height={176} loading="lazy" className="footer__powered-logo" />
             </a>
           </div>
 

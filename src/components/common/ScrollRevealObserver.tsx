@@ -82,31 +82,30 @@ export const ScrollRevealObserver: React.FC = () => {
       }
     );
 
+    let revealFrame = 0;
     const observeElements = () => {
       const elements = document.querySelectorAll(REVEAL_SELECTORS);
-      const viewportHeight = window.innerHeight;
-
       elements.forEach((el) => {
-        if (el.classList.contains('is-revealed')) return;
-
-        const rect = el.getBoundingClientRect();
-        // Immediately reveal any element within or near the top of the viewport
-        if (rect.top <= viewportHeight + 40) {
-          el.classList.add('is-revealed');
-        } else {
-          observer.observe(el);
-        }
+        if (el.classList.contains('is-revealed') || el.hasAttribute('data-reveal-watched')) return;
+        el.setAttribute('data-reveal-watched', '');
+        observer.observe(el);
       });
     };
 
-    observeElements();
+    const scheduleObserve = () => {
+      if (revealFrame) return;
+      revealFrame = window.requestAnimationFrame(() => {
+        revealFrame = 0;
+        observeElements();
+      });
+    };
 
-    // Re-check after layout settles
-    const timer = setTimeout(observeElements, 100);
+    scheduleObserve();
 
-    // 3. MutationObserver to handle dynamic tabs and filter changes
+    const timer = window.setTimeout(scheduleObserve, 100);
+
     const mutationObserver = new MutationObserver(() => {
-      observeElements();
+      scheduleObserve();
     });
 
     mutationObserver.observe(document.body, {
@@ -116,6 +115,7 @@ export const ScrollRevealObserver: React.FC = () => {
 
     return () => {
       window.removeEventListener('scroll', updateProgress);
+      if (revealFrame) window.cancelAnimationFrame(revealFrame);
       clearTimeout(timer);
       observer.disconnect();
       mutationObserver.disconnect();

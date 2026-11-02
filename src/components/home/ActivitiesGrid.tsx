@@ -59,15 +59,32 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
           description="Extreme drops, aerial rides, ground games, a kids zone, and VR. One destination, every kind of day."
         />
 
-        <div className="ag-tabs" role="tablist" aria-label="Activity categories">
+        <div
+          className="ag-tabs"
+          role="tablist"
+          aria-label="Activity categories"
+          onKeyDown={(event) => {
+            if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+            event.preventDefault();
+            const index = TABS.findIndex((tab) => tab.id === activeTab);
+            const direction = event.key === 'ArrowRight' ? 1 : -1;
+            const next = TABS[(index + direction + TABS.length) % TABS.length];
+            selectTab(next.id);
+            document.getElementById(`ag-tab-${next.id}`)?.focus();
+          }}
+        >
           {TABS.map((tab) => {
-            const pressed = activeTab === tab.id;
+            const selected = activeTab === tab.id;
             return (
               <button
                 key={tab.id}
+                id={`ag-tab-${tab.id}`}
                 type="button"
-                className={`ag-tab${pressed ? ' is-active' : ''}`}
-                aria-pressed={pressed}
+                role="tab"
+                className={`ag-tab${selected ? ' is-active' : ''}`}
+                aria-selected={selected}
+                aria-controls="ag-panel"
+                tabIndex={selected ? 0 : -1}
                 onClick={() => selectTab(tab.id)}
               >
                 <span>{tab.label}</span>
@@ -88,7 +105,7 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
                 src={tab.image}
                 alt={`${tab.label} at Thrill Factory, Rishikesh`}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 640px) 100vw, 1px"
                 className="ag-lane-img"
               />
               <span className="ag-lane-scrim" aria-hidden="true" />
@@ -102,7 +119,7 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
           ))}
         </div>
 
-        <div className="ag-grid">
+        <div id="ag-panel" role="tabpanel" aria-labelledby={`ag-tab-${activeTab}`} className="ag-grid">
           {visible.map((activity, index) => (
             <ActivityCard
               key={activity.id}

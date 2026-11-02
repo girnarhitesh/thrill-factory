@@ -10,12 +10,12 @@ const WHATSAPP_URL = `https://wa.me/${SITE_CONFIG.whatsapp.number}?text=${encode
 )}`;
 
 const SHOTS = [
-  { src: '/images/HeroBackground.jpg', alt: '165 FT bungee leap' },
-  { src: '/images/HeroBackground2.webp', alt: 'Giant swing over the canyon' },
-  { src: '/images/platform-view.jpg', alt: 'Shivpuri adventure platform' },
-  { src: '/images/journey-bungee-leap.webp', alt: 'Freefall from the tower' },
-  { src: '/images/HeroBackground4.webp', alt: 'Canyon leap at Thrill Factory' },
-  { src: '/images/journey-walk-platform.webp', alt: 'Walking the 165 FT deck' },
+  { src: '/images/HeroBackground.jpg', alt: '165 FT bungee leap', width: 6000, height: 4000 },
+  { src: '/images/HeroBackground2.webp', alt: 'Giant swing over the canyon', width: 1400, height: 933 },
+  { src: '/images/platform-view.jpg', alt: 'Shivpuri adventure platform', width: 1600, height: 1066 },
+  { src: '/images/journey-bungee-leap.webp', alt: 'Freefall from the tower', width: 658, height: 1024 },
+  { src: '/images/HeroBackground4.webp', alt: 'Canyon leap at Thrill Factory', width: 1400, height: 1050 },
+  { src: '/images/journey-walk-platform.webp', alt: 'Walking the 165 FT deck', width: 1024, height: 768 },
 ] as const;
 
 interface BookingCtaBannerProps {
@@ -56,7 +56,7 @@ export const BookingCtaBanner: React.FC<BookingCtaBannerProps> = ({ onOpenBookin
           <div className="cta-mosaic" aria-hidden="true">
             {SHOTS.map((shot, index) => (
               <figure key={shot.src} className={`cta-shot cta-shot--${index + 1}`}>
-                <img src={shot.src} alt={shot.alt} />
+                <img src={shot.src} alt={shot.alt} width={shot.width} height={shot.height} loading="lazy" />
               </figure>
             ))}
           </div>

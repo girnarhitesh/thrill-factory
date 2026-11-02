@@ -60,6 +60,7 @@ export function LegacyDocument({ page }: { page: LegacySeoPage }) {
           alt={page.h1}
           width={960}
           height={540}
+          sizes="(max-width: 768px) 100vw, 960px"
           style={{ width: '100%', height: 'auto', maxHeight: '28rem', objectFit: 'cover', marginBottom: '1.5rem' }}
         />
         {page.price != null ? (

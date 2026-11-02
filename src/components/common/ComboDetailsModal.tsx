@@ -137,8 +137,8 @@ export const ComboDetailsModal: React.FC<ComboDetailsModalProps> = ({
                   src={activeImage}
                   alt={combo.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 640px"
                   className="combo-gallery-img"
-                  priority
                 />
               </div>
 
@@ -152,7 +152,7 @@ export const ComboDetailsModal: React.FC<ComboDetailsModalProps> = ({
                       onClick={() => setActiveImageIndex(idx)}
                       aria-label={`View photo ${idx + 1}`}
                     >
-                      <img src={img} alt={`${combo.title} preview ${idx + 1}`} />
+                      <img src={img} alt={`${combo.title} preview ${idx + 1}`} width={800} height={533} />
                     </button>
                   ))}
                 </div>

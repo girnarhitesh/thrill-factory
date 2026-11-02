@@ -98,6 +98,7 @@ export default function BlogsPage() {
                   src={featuredPost.image}
                   alt={featuredPost.title}
                   fill
+                  sizes="(max-width: 900px) 100vw, 720px"
                   style={{ objectFit: 'cover' }}
                   priority
                 />
@@ -228,6 +229,7 @@ export default function BlogsPage() {
                     src={post.image}
                     alt={post.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, 360px"
                     style={{ objectFit: 'cover' }}
                   />
                   <div

@@ -94,7 +94,7 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
     <section className="combos-page" aria-label="All thrill combos">
       <div className="combos-hero">
         <div className="combos-hero-bg" aria-hidden="true">
-          <img src="/images/giant-swing.jpg" alt="Giant swing at Thrill Factory, Rishikesh" />
+          <img src="/images/giant-swing.jpg" alt="Giant swing at Thrill Factory, Rishikesh" width={1600} height={1066} />
         </div>
         <div className="combos-hero-overlay" aria-hidden="true" />
         <span className="combos-hero-slash" aria-hidden="true" />

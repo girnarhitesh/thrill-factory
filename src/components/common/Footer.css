@@ -366,7 +366,7 @@ a.footer-fact-val:hover {
   padding-top: 0.95rem;
   border-top: 1px solid var(--footer-line);
   font-size: 0.72rem;
-  color: rgb(255 245 238 / 0.46);
+  color: rgb(255 245 238 / 0.72);
 }
 
 .footer-copyright {
@@ -411,7 +411,7 @@ a.footer-fact-val:hover {
 }
 
 .footer-base-links a {
-  color: rgb(255 245 238 / 0.46);
+  color: rgb(255 245 238 / 0.72);
 }
 
 .footer-base-links a:hover {

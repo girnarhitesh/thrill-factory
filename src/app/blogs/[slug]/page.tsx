@@ -152,6 +152,7 @@ export default function BlogPostPage({
               src={post.image}
               alt={post.title}
               fill
+              sizes="(max-width: 880px) 100vw, 880px"
               style={{ objectFit: 'cover' }}
               priority
             />
@@ -292,6 +293,7 @@ export default function BlogPostPage({
                         src={rel.image}
                         alt={rel.title}
                         fill
+                        sizes="(max-width: 640px) 100vw, 280px"
                         style={{ objectFit: 'cover' }}
                       />
                     </div>

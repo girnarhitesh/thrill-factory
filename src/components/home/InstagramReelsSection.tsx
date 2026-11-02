@@ -92,6 +92,10 @@ export const InstagramReelsSection: React.FC = () => {
     Object.entries(videoRefs.current).forEach(([id, video]) => {
       if (!video) return;
       if (id === reel.id) {
+        if (!video.getAttribute('src')) {
+          video.src = reel.videoUrl;
+          video.load();
+        }
         video.currentTime = 0;
         video.play().catch(() => {});
       } else {
@@ -104,6 +108,39 @@ export const InstagramReelsSection: React.FC = () => {
     setHoveredId((current) => (current === reel.id ? null : current));
     videoRefs.current[reel.id]?.pause();
   };
+
+  useEffect(() => {
+    const cells = document.querySelectorAll<HTMLElement>('[data-reel-id]');
+    if (!cells.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = (entry.target as HTMLElement).dataset.reelId;
+          if (!id) return;
+          const video = videoRefs.current[id];
+          const source = (entry.target as HTMLElement).dataset.reelSrc;
+          if (!video || !source) return;
+          if (entry.isIntersecting) {
+            if (!video.getAttribute('src')) {
+              video.src = source;
+              video.load();
+            }
+          } else {
+            video.pause();
+            if (video.getAttribute('src')) {
+              video.removeAttribute('src');
+              video.load();
+            }
+          }
+        });
+      },
+      { rootMargin: '200px' },
+    );
+
+    cells.forEach((cell) => observer.observe(cell));
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -156,6 +193,8 @@ export const InstagramReelsSection: React.FC = () => {
                 key={reel.id}
                 type="button"
                 className={`insta-cell${isLive ? ' is-live' : ''}`}
+                data-reel-id={reel.id}
+                data-reel-src={reel.videoUrl}
                 onMouseEnter={() => playReel(reel)}
                 onMouseLeave={() => pauseReel(reel)}
                 onFocus={() => playReel(reel)}
@@ -167,11 +206,13 @@ export const InstagramReelsSection: React.FC = () => {
                   ref={(node) => {
                     videoRefs.current[reel.id] = node;
                   }}
-                  src={reel.videoUrl}
+                  poster={reel.posterUrl}
                   muted
                   loop
                   playsInline
-                  preload="metadata"
+                  preload="none"
+                  width={360}
+                  height={640}
                   className="insta-cell-video"
                   style={{ opacity: isLive ? 1 : 0 }}
                 />

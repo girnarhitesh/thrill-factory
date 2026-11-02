@@ -281,6 +281,7 @@ export default function CorporatePage() {
                       src={client.logo}
                       alt={client.name}
                       fill
+                      sizes="160px"
                       style={{ objectFit: 'contain' }}
                     />
                   </div>

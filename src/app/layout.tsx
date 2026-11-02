@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Bebas_Neue, Outfit } from 'next/font/google';
 import { headers } from 'next/headers';
 import Script from 'next/script';
 import '@/styles/variables.css';
@@ -30,6 +31,22 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 import { legacySeoPage } from '@/data/legacySeo';
 import { siteSchema } from '@/seo/schema';
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  adjustFontFallback: true,
+  variable: '--font-outfit',
+});
+
+const bebas = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  adjustFontFallback: true,
+  variable: '--font-bebas',
+});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -113,22 +130,16 @@ export default async function RootLayout({
     || `${SITE_CONFIG.domain}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`;
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${outfit.variable} ${bebas.variable}`}>
       <head>
         <meta property="og:type" content={ogType} />
         <link rel="canonical" href={canonical} />
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/images/tf-favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=Barlow:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-JERYX5N04Z" strategy="afterInteractive" />
-        <Script id="ga4" strategy="afterInteractive">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-JERYX5N04Z" strategy="lazyOnload" />
+        <Script id="ga4" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());

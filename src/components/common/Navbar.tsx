@@ -95,11 +95,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               src="/images/thrill-factory-logo-white.png"
               alt=""
               aria-hidden="true"
+              width={540}
+              height={316}
               className="brand-logo-img brand-logo-img--white"
             />
             <img
               src="/images/thrill-factory-logo.png"
               alt={SITE_CONFIG.brandName}
+              width={362}
+              height={212}
+              fetchPriority="high"
               className="brand-logo-img brand-logo-img--color"
             />
           </span>

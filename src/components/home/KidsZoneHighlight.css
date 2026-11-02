@@ -17,7 +17,10 @@
   height: 100%;
   pointer-events: none;
   opacity: 0.46;
-  background-image: url('/images/Background-overlay-image-thrill.webp');
+  background-image: image-set(
+    url('/images/Background-overlay-image-thrill.avif') type('image/avif'),
+    url('/images/Background-overlay-image-thrill.webp') type('image/webp')
+  );
   background-size: cover;
   background-position: 68% 38%;
   background-repeat: no-repeat;

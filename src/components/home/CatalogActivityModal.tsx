@@ -127,6 +127,7 @@ export const CatalogActivityModal: React.FC<CatalogActivityModalProps> = ({
                       alt={`${activity.title} photo ${index + 1}`}
                       width={96}
                       height={72}
+                      sizes="96px"
                     />
                   </button>
                 ))}

@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
-import { Play } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
 import {
   motion,
   useAnimationFrame,
@@ -13,7 +12,7 @@ import { AnimatedCounter } from '@/components/common/AnimatedCounter';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './HeroBanner.css';
 
-const HERO_VIDEO = '/images/HeroHomeVideo.mp4';
+const HERO_MP4 = '/images/HeroHomeVideo.mp4';
 const HERO_POSTER = '/images/HeroBackground.jpg';
 
 const HERO_STATS = [
@@ -72,7 +71,7 @@ const HeroBungeeJumper: React.FC = () => {
   const rotate = useMotionValue(0);
   const stretch = useMotionValue(1);
   const opacity = useMotionValue(1);
-  const top = useTransform(progress, (value) => `${value * 100}%`);
+  const fall = useTransform(progress, (value) => value);
 
   const physics = useRef({
     y: 0,
@@ -209,11 +208,16 @@ const HeroBungeeJumper: React.FC = () => {
 
   return (
     <span className="hero-altimeter-fall">
-      <motion.span className="hero-altimeter-marker" style={{ top, opacity }}>
+      <motion.span
+        className="hero-altimeter-marker"
+        style={{ ['--fall' as string]: fall, opacity }}
+      >
         <motion.img
           className="hero-altimeter-jumper"
           src="/images/bungee-jumping.png"
           alt="Bungee jumper at Thrill Factory, Shivpuri"
+          width={228}
+          height={360}
           style={{
             x: '-50%',
             rotate,
@@ -227,16 +231,56 @@ const HeroBungeeJumper: React.FC = () => {
   );
 };
 
-const bindHeroVideo = (node: HTMLVideoElement | null) => {
-  if (!node) return;
-  node.muted = true;
-  node.defaultMuted = true;
-  node.playsInline = true;
-  node.loop = true;
-  const play = () => {
-    void node.play().catch(() => undefined);
-  };
-  play();
+const DeferredHeroVideo: React.FC<{ className: string }> = ({ className }) => {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video) return;
+    let idle = 0;
+    let timeout = 0;
+
+    const start = () => {
+      if (video.querySelector('source')) return;
+      const mp4 = document.createElement('source');
+      mp4.src = HERO_MP4;
+      mp4.type = 'video/mp4';
+      video.append(mp4);
+      video.load();
+      void video.play().catch(() => undefined);
+    };
+
+    const schedule = () => {
+      const requestIdle = window.requestIdleCallback;
+      if (typeof requestIdle === 'function') {
+        idle = requestIdle(start, { timeout: 2500 });
+      } else {
+        timeout = window.setTimeout(start, 200);
+      }
+    };
+
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule, { once: true });
+
+    return () => {
+      if (idle && 'cancelIdleCallback' in window) window.cancelIdleCallback(idle);
+      if (timeout) window.clearTimeout(timeout);
+      window.removeEventListener('load', schedule);
+    };
+  }, []);
+
+  return (
+    <video
+      ref={ref}
+      className={className}
+      poster={HERO_POSTER}
+      muted
+      loop
+      playsInline
+      preload="none"
+      aria-hidden="true"
+    />
+  );
 };
 
 interface HeroBannerProps {
@@ -247,18 +291,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
   return (
     <section className="hero-adventure-banner">
       <div className="hero-banner-bg" aria-hidden="true">
-        <video
-          ref={bindHeroVideo}
-          className="hero-banner-video"
-          src={HERO_VIDEO}
-          poster={HERO_POSTER}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-        />
+        <DeferredHeroVideo className="hero-banner-video" />
       </div>
       <div className="hero-banner-overlay" aria-hidden="true" />
 
@@ -269,18 +302,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
           </p>
 
           <div className="hero-window">
-            <video
-              ref={bindHeroVideo}
-              className="hero-window-media"
-              src={HERO_VIDEO}
-              poster={HERO_POSTER}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              aria-hidden="true"
-            />
+            <DeferredHeroVideo className="hero-window-media" />
           </div>
 
           <div className="hero-altimeter-scale" aria-hidden="true">

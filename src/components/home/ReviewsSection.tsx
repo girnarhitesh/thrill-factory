@@ -162,13 +162,14 @@ export const ReviewsSection: React.FC = () => {
           <div className="reviews-score-copy">
             <GoogleGLogo className="reviews-score-g google-g-live" />
             <span className="reviews-score-num">4.5</span>
-            <span className="reviews-score-stars" aria-label="4.5 out of 5">
+            <span className="reviews-score-stars" role="img" aria-label="4.5 out of 5">
               {Array.from({ length: 5 }).map((_, index) => (
                 <Star
                   key={index}
                   size={13}
                   fill="currentColor"
                   strokeWidth={0}
+                  aria-hidden="true"
                   className={index === 4 ? 'is-half' : undefined}
                 />
               ))}
@@ -228,9 +229,9 @@ export const ReviewsSection: React.FC = () => {
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <span className="review-card-mark">
-                      <span className="review-card-stars" aria-label={`${rev.rating} out of 5`}>
+                      <span className="review-card-stars" role="img" aria-label={`${rev.rating} out of 5`}>
                         {Array.from({ length: rev.rating }).map((_, star) => (
-                          <Star key={star} size={12} fill="currentColor" strokeWidth={0} />
+                          <Star key={star} size={12} fill="currentColor" strokeWidth={0} aria-hidden="true" />
                         ))}
                       </span>
                       <GoogleGLogo className="review-card-g" />
@@ -271,6 +272,7 @@ export const ReviewsSection: React.FC = () => {
                               alt={`Photo from ${rev.name} at Thrill Factory`}
                               width={160}
                               height={100}
+                              sizes="160px"
                               className="review-card-photo-img"
                             />
                             {showBadge ? (
@@ -289,6 +291,7 @@ export const ReviewsSection: React.FC = () => {
                         alt={`${rev.name} at Thrill Factory`}
                         width={36}
                         height={36}
+                        sizes="36px"
                         className="review-card-avatar"
                       />
                     ) : (
@@ -355,6 +358,7 @@ export const ReviewsSection: React.FC = () => {
             alt="Guest photo from Thrill Factory, Rishikesh"
             width={900}
             height={900}
+            sizes="(max-width: 900px) 100vw, 900px"
             className="review-lightbox-img"
             onClick={(event) => event.stopPropagation()}
           />

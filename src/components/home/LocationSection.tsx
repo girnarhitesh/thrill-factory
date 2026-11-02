@@ -65,6 +65,9 @@ export const LocationSection: React.FC = () => {
             <img
               src="/images/platform-view.jpg"
               alt="Jumpers on the Shivpuri adventure platform"
+              width={1600}
+              height={1066}
+              loading="lazy"
               className="location-photo-img"
             />
             <div className="location-photo-copy">

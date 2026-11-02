@@ -118,7 +118,7 @@ export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, on
     <section className="activities-page" aria-label="All adventure activities">
       <div className="activities-hero">
         <div className="activities-hero-bg" aria-hidden="true">
-          <img src="/images/activities-header-image.webp" alt="Adventure activities at Thrill Factory in Shivpuri, Rishikesh" />
+          <img src="/images/activities-header-image.webp" alt="Adventure activities at Thrill Factory in Shivpuri, Rishikesh" width={1200} height={1200} />
         </div>
         <div className="activities-hero-overlay" aria-hidden="true" />
         <span className="activities-hero-slash" aria-hidden="true" />

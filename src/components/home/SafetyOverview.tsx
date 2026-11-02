@@ -64,7 +64,7 @@ export const SafetyOverview: React.FC = () => {
             return (
               <div key={item.step} className="journey-step-card">
                 <div className="journey-step-photo" aria-hidden="true">
-                  <img src={item.image} alt={item.title} />
+                  <img src={item.image} alt={item.title} width={1400} height={1000} loading="lazy" />
                 </div>
                 <span className="journey-step-number-pill">
                   <span>Step</span>
@@ -98,10 +98,10 @@ export const SafetyOverview: React.FC = () => {
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div className="safety-protocol-copy">
-                    <h4 className="safety-protocol-title">
+                    <h3 className="safety-protocol-title">
                       <Icon size={14} strokeWidth={1.75} />
                       {rule.title}
-                    </h4>
+                    </h3>
                     <p className="safety-protocol-desc">{rule.desc}</p>
                   </div>
                 </li>

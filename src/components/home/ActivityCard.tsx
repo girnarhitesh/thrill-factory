@@ -113,6 +113,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
           alt={activity.title}
           width={400}
           height={240}
+          sizes="(max-width: 768px) 100vw, 400px"
           className="ride-card-img"
         />
         {activity.videoUrl ? (

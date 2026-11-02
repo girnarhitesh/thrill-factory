@@ -183,6 +183,7 @@ export const CorporateMix: React.FC = () => {
                   alt={item.title}
                   width={640}
                   height={427}
+                  sizes="(max-width: 768px) 100vw, 420px"
                   className="corp-mix-img"
                 />
                 <span className="corp-mix-scrim" aria-hidden="true" />

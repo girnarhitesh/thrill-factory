@@ -1,28 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  productionBrowserSourceMaps: true,
+  experimental: {
+    inlineCss: true,
+  },
   images: {
-    unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.shopify.com' },
+    ],
   },
   trailingSlash: false,
   async headers() {
+    const immutable = [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }];
     return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'no-cache, no-store, must-revalidate',
-          },
-          {
-            key: 'Pragma',
-            value: 'no-cache',
-          },
-          {
-            key: 'Expires',
-            value: '0',
-          },
-        ],
-      },
+      { source: '/images/:path*', headers: immutable },
+      { source: '/videos/:path*', headers: immutable },
+      { source: '/fonts/:path*', headers: immutable },
+      { source: '/_next/static/:path*', headers: immutable },
     ];
   },
 };
