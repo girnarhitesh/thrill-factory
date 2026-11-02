@@ -213,7 +213,7 @@ const HeroBungeeJumper: React.FC = () => {
         <motion.img
           className="hero-altimeter-jumper"
           src="/images/bungee-jumping.png"
-          alt=""
+          alt="Bungee jumper at Thrill Factory, Shivpuri"
           style={{
             x: '-50%',
             rotate,
@@ -307,8 +307,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
             </p>
 
             <h1 className="hero-adventure-title">
-              <span className="hero-title-kicker">The India’s Only</span>
-              <span className="hero-title-highlight">Adventure and Entertainment Destination</span>
+              <span className="hero-title-kicker">Bungee Jumping</span>
+              <span className="hero-title-highlight">in Rishikesh</span>
             </h1>
           </div>
 

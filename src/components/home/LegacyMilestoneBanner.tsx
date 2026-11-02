@@ -73,7 +73,7 @@ export const LegacyMilestoneBanner: React.FC = () => {
   return (
     <section className="legacy-banner" aria-labelledby="legacy-banner-title">
       <div className="legacy-banner-photo" aria-hidden="true">
-        <img src="/images/Thrill-tower-image.webp" alt="" />
+        <img src="/images/Thrill-tower-image.webp" alt="Thrill Factory tower in Shivpuri, Rishikesh" />
       </div>
       <span className="legacy-slash legacy-slash--a" aria-hidden="true" />
       <span className="legacy-slash legacy-slash--b" aria-hidden="true" />

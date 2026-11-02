@@ -10,6 +10,8 @@ import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
 import { BookingModal } from '@/components/common/BookingModal';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { BLOG_POSTS, BlogPost } from '@/data/blogs';
+import { legacySeoPage } from '@/data/legacySeo';
+import { LegacyDocument } from '@/components/seo/LegacyDocument';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { blogPostingSchema } from '@/seo/schema';
 import {
@@ -33,8 +35,10 @@ export default function BlogPostPage({
   const { slug } = use(params);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const legacy = legacySeoPage(`/blogs/${slug}`) || legacySeoPage(`/blogs/news/${slug}`);
 
   if (!post) {
+    if (legacy?.path === `/blogs/${slug}`) return <LegacyDocument page={legacy} />;
     notFound();
   }
 
@@ -93,7 +97,7 @@ export default function BlogPostPage({
                 letterSpacing: '-0.02em'
               }}
             >
-              {post.title}
+              {legacy?.h1 || post.title}
             </h1>
 
             {/* Author Byline */}

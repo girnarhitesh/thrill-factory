@@ -56,7 +56,7 @@ export const BookingCtaBanner: React.FC<BookingCtaBannerProps> = ({ onOpenBookin
           <div className="cta-mosaic" aria-hidden="true">
             {SHOTS.map((shot, index) => (
               <figure key={shot.src} className={`cta-shot cta-shot--${index + 1}`}>
-                <img src={shot.src} alt="" />
+                <img src={shot.src} alt={shot.alt} />
               </figure>
             ))}
           </div>

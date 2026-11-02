@@ -84,7 +84,7 @@ export const CorporateHero: React.FC = () => {
           <motion.img
             key={item.src}
             src={item.src}
-            alt=""
+            alt={item.label}
             className={`corp-hero-slide corp-hero-slide--${item.code.toLowerCase()}${index === activeIndex ? ' is-on' : ''}`}
             initial={false}
             animate={{ opacity: index === activeIndex ? 1 : 0 }}
@@ -110,8 +110,8 @@ export const CorporateHero: React.FC = () => {
           </motion.span>
 
           <motion.h1 className="corp-hero-title" variants={copyItem}>
-            <span>Beyond Meetings.</span>
-            <span className="corp-hero-title-accent">Into Memories.</span>
+            <span>Corporate Offsites</span>
+            <span className="corp-hero-title-accent">at Thrill Factory, Rishikesh</span>
           </motion.h1>
 
           <motion.p className="corp-hero-lead" variants={copyItem}>

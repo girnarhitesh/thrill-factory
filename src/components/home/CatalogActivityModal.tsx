@@ -124,7 +124,7 @@ export const CatalogActivityModal: React.FC<CatalogActivityModalProps> = ({
                   >
                     <Image
                       src={catalogImageUrl(image.local_path)}
-                      alt=""
+                      alt={`${activity.title} photo ${index + 1}`}
                       width={96}
                       height={72}
                     />

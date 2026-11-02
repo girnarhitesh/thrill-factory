@@ -180,7 +180,7 @@ export const CorporateMix: React.FC = () => {
               <div className="corp-mix-media">
                 <Image
                   src={item.image}
-                  alt=""
+                  alt={item.title}
                   width={640}
                   height={427}
                   className="corp-mix-img"

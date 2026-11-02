@@ -21,8 +21,8 @@ export default function ContactPage() {
         <div className="container">
           <SectionHeader
             tag="Find & Reach Us"
-            title="Contact & Location"
-            highlightWord="Directory"
+            title="Contact Thrill Factory in Shivpuri, Rishikesh"
+            headingLevel="h1"
             description="We are located directly along NH-58 in Shivpuri, Rishikesh. Feel free to call our desk or message us on WhatsApp for live route directions."
           />
 

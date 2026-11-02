@@ -177,7 +177,7 @@ export const InstagramReelsSection: React.FC = () => {
                 />
                 <Image
                   src={reel.posterUrl}
-                  alt=""
+                  alt={reel.title}
                   fill
                   sizes="(max-width: 720px) 50vw, (max-width: 1100px) 33vw, 16vw"
                   className="insta-cell-poster"

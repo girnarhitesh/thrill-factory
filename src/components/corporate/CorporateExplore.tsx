@@ -158,7 +158,7 @@ export const CorporateExplore: React.FC = () => {
               <motion.img
                 key={item.id}
                 src={item.image}
-                alt=""
+                alt={`${item.title} near Thrill Factory, Rishikesh`}
                 className={`corp-explore-img corp-explore-img--${item.id}${index === active ? ' is-on' : ''}`}
                 initial={false}
                 animate={{ opacity: index === active ? 1 : 0 }}

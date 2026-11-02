@@ -91,7 +91,7 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }
       >
         <Image
           src={combo.image}
-          alt=""
+          alt={combo.title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
           className="ride-card-img"

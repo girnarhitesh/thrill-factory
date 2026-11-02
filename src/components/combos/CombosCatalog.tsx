@@ -94,7 +94,7 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
     <section className="combos-page" aria-label="All thrill combos">
       <div className="combos-hero">
         <div className="combos-hero-bg" aria-hidden="true">
-          <img src="/images/giant-swing.jpg" alt="" />
+          <img src="/images/giant-swing.jpg" alt="Giant swing at Thrill Factory, Rishikesh" />
         </div>
         <div className="combos-hero-overlay" aria-hidden="true" />
         <span className="combos-hero-slash" aria-hidden="true" />
@@ -105,6 +105,7 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
             tag="The Shivpuri Thrill Factory"
             title="Save More with"
             highlightWord="Combos"
+            headingLevel="h1"
             description="Extreme packs and indoor game packs, listed by lane, so a full day costs less than buying each ticket alone."
           />
 

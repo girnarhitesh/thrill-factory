@@ -268,7 +268,7 @@ export const ReviewsSection: React.FC = () => {
                           >
                             <Image
                               src={photoUrl}
-                              alt=""
+                              alt={`Photo from ${rev.name} at Thrill Factory`}
                               width={160}
                               height={100}
                               className="review-card-photo-img"
@@ -286,7 +286,7 @@ export const ReviewsSection: React.FC = () => {
                     {rev.avatar ? (
                       <Image
                         src={rev.avatar}
-                        alt=""
+                        alt={`${rev.name} at Thrill Factory`}
                         width={36}
                         height={36}
                         className="review-card-avatar"
@@ -352,7 +352,7 @@ export const ReviewsSection: React.FC = () => {
           ) : null}
           <Image
             src={lightboxSrc}
-            alt=""
+            alt="Guest photo from Thrill Factory, Rishikesh"
             width={900}
             height={900}
             className="review-lightbox-img"

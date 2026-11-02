@@ -64,7 +64,7 @@ export const SafetyOverview: React.FC = () => {
             return (
               <div key={item.step} className="journey-step-card">
                 <div className="journey-step-photo" aria-hidden="true">
-                  <img src={item.image} alt="" />
+                  <img src={item.image} alt={item.title} />
                 </div>
                 <span className="journey-step-number-pill">
                   <span>Step</span>

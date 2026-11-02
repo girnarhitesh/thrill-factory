@@ -117,7 +117,7 @@ export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDeta
     <section className="kids-page" aria-label="Kids zone activities">
       <div className="kids-hero">
         <div className="kids-hero-bg" aria-hidden="true">
-          <img src="/images/soft-play-zone.jpg" alt="" />
+          <img src="/images/soft-play-zone.jpg" alt="Kids soft play zone at Thrill Factory, Rishikesh" />
         </div>
         <div className="kids-hero-overlay" aria-hidden="true" />
         <span className="kids-hero-slash" aria-hidden="true" />
@@ -128,6 +128,7 @@ export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDeta
             tag="The Shivpuri Thrill Factory"
             title="Kids Zone &"
             highlightWord="Family Fun"
+            headingLevel="h1"
             description="Padded soft play, electric rides, climbing, and supervised trampolines from ₹100, on the same Shivpuri day as the rest of the park."
           />
 

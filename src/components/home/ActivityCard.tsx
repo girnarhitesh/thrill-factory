@@ -110,7 +110,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
       >
         <Image
           src={activity.image}
-          alt=""
+          alt={activity.title}
           width={400}
           height={240}
           className="ride-card-img"

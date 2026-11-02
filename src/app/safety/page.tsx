@@ -22,6 +22,7 @@ export default function SafetyPage() {
             tag="Zero Compromise"
             title="Technical Safety &"
             highlightWord="Operating Protocols"
+            headingLevel="h1"
             description="Safety runs every lane at Thrill Factory — extreme rides, aerial lines, ground games, and the kids zone — with a 100% record across 1 Lakh+ successful jumps."
           />
 

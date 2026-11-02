@@ -86,7 +86,7 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
             >
               <Image
                 src={tab.image}
-                alt=""
+                alt={`${tab.label} at Thrill Factory, Rishikesh`}
                 fill
                 sizes="100vw"
                 className="ag-lane-img"

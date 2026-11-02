@@ -7,6 +7,7 @@ interface SectionHeaderProps {
   description?: string;
   align?: 'center' | 'left';
   className?: string;
+  headingLevel?: 'h1' | 'h2';
 }
 
 export const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -16,7 +17,9 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   description,
   align = 'center',
   className = '',
+  headingLevel = 'h2',
 }) => {
+  const Heading = headingLevel;
   return (
     <header
       className={`section-header${align === 'left' ? ' section-header--left text-left' : ''} ${className}`.trim()}
@@ -28,7 +31,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
         </span>
       ) : null}
 
-      <h2 className="section-title">
+      <Heading className="section-title">
         <span className="section-title-lead">{title}</span>
         {highlightWord ? (
           <>
@@ -36,7 +39,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
             <span className="section-title-accent">{highlightWord}</span>
           </>
         ) : null}
-      </h2>
+      </Heading>
 
       <span className="section-slash" aria-hidden="true" />
 

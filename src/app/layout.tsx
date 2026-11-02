@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from 'next';
+import { headers } from 'next/headers';
+import Script from 'next/script';
 import '@/styles/variables.css';
 import '@/styles/globals.css';
 import '@/styles/components.css';
@@ -26,6 +28,7 @@ import '@/styles/animations.css';
 import { ScrollRevealObserver } from '@/components/common/ScrollRevealObserver';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { SITE_CONFIG } from '@/constants/siteConfig';
+import { legacySeoPage } from '@/data/legacySeo';
 import { siteSchema } from '@/seo/schema';
 
 export const viewport: Viewport = {
@@ -42,9 +45,6 @@ export const metadata: Metadata = {
   },
   description: SITE_CONFIG.description,
   applicationName: SITE_CONFIG.shortName,
-  alternates: {
-    canonical: './',
-  },
   formatDetection: {
     telephone: false,
   },
@@ -60,6 +60,9 @@ export const metadata: Metadata = {
     'extreme sports uttarakhand',
   ],
   authors: [{ name: SITE_CONFIG.brandName }],
+  verification: {
+    google: 'YbyRR_SJ4sR170yXa4scY5aXwp17hd7ivGV98jf-Ku4',
+  },
   icons: {
     icon: [
       { url: '/favicon.png', type: 'image/png' },
@@ -74,7 +77,7 @@ export const metadata: Metadata = {
     title: `${SITE_CONFIG.tagline} | ${SITE_CONFIG.brandName}`,
     description: SITE_CONFIG.description,
     url: './',
-    siteName: SITE_CONFIG.shortName,
+    siteName: 'Thrill Factory',
     images: [
       {
         url: '/images/tf-og-share.jpg',
@@ -84,7 +87,6 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en_IN',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
@@ -98,14 +100,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const headerList = await headers();
+  const pathname = headerList.get('x-pathname') || '/';
+  const legacyPage = legacySeoPage(pathname);
+  const ogType = legacyPage?.ogType || 'website';
+  const canonical = legacyPage?.canonical
+    || `${SITE_CONFIG.domain}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`;
+
   return (
     <html lang="en">
       <head>
+        <meta property="og:type" content={ogType} />
+        <link rel="canonical" href={canonical} />
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/images/tf-favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -116,6 +127,13 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-JERYX5N04Z" strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JERYX5N04Z');`}
+        </Script>
         <JsonLd data={siteSchema} />
         <ScrollRevealObserver />
         {children}

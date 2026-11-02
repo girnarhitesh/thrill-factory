@@ -118,7 +118,7 @@ export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, on
     <section className="activities-page" aria-label="All adventure activities">
       <div className="activities-hero">
         <div className="activities-hero-bg" aria-hidden="true">
-          <img src="/images/activities-header-image.webp" alt="" />
+          <img src="/images/activities-header-image.webp" alt="Adventure activities at Thrill Factory in Shivpuri, Rishikesh" />
         </div>
         <div className="activities-hero-overlay" aria-hidden="true" />
         <span className="activities-hero-slash" aria-hidden="true" />
@@ -129,6 +129,7 @@ export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, on
             tag="The Shivpuri Thrill Factory"
             title="Adventures &"
             highlightWord="Attractions"
+            headingLevel="h1"
             description="Every lane on the Shivpuri strip — extreme drops, aerial park, entertainment arena, kids zone, and VR lab — so you can open the one you came for."
           />
 

@@ -1,40 +1,49 @@
 import type { MetadataRoute } from 'next';
 import { BLOG_POSTS } from '@/data/blogs';
+import { LEGACY_SEO_PAGES } from '@/data/legacySeo';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 
-const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }> = [
-  { path: '/', priority: 1, changeFrequency: 'weekly' },
-  { path: '/activities/', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/combos/', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/blogs/', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/packages/', priority: 0.8, changeFrequency: 'weekly' },
-  { path: '/kids-zone/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/corporate/', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/contact/', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/safety/', priority: 0.6, changeFrequency: 'monthly' },
+const EXTRA_ROUTES = [
+  '/activities/',
+  '/combos/',
+  '/kids-zone/',
+  '/safety/',
+  '/packages/',
 ];
-
-const publishedDate = (value: string) => {
-  const parsed = new Date(value);
-  return Number.isNaN(parsed.getTime()) ? undefined : parsed;
-};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const legacyUrls = new Set(LEGACY_SEO_PAGES.map((page) => page.canonical));
 
-  const pages: MetadataRoute.Sitemap = STATIC_ROUTES.map((route) => ({
-    url: `${SITE_CONFIG.domain}${route.path}`,
+  const legacy: MetadataRoute.Sitemap = LEGACY_SEO_PAGES.map((page) => ({
+    url: page.canonical,
     lastModified: now,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
+    changeFrequency: page.kind === 'article' ? 'monthly' : 'weekly',
+    priority: page.path === '/' ? 1 : page.kind === 'product' ? 0.8 : 0.7,
   }));
 
-  const guides: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
-    url: `${SITE_CONFIG.domain}/blogs/${post.slug}/`,
-    lastModified: publishedDate(post.date) ?? now,
-    changeFrequency: 'monthly',
-    priority: 0.7,
+  const extras: MetadataRoute.Sitemap = EXTRA_ROUTES.filter(
+    (path) => !legacyUrls.has(`${SITE_CONFIG.domain}${path.replace(/\/$/, '')}`) && !legacyUrls.has(`${SITE_CONFIG.domain}${path}`),
+  ).map((path) => ({
+    url: `${SITE_CONFIG.domain}${path}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.6,
   }));
 
-  return [...pages, ...guides];
+  const guides: MetadataRoute.Sitemap = BLOG_POSTS.flatMap((post) => {
+    const legacyPath = `/blogs/news/${post.slug}`;
+    const directPath = `/blogs/${post.slug}`;
+    if (LEGACY_SEO_PAGES.some((page) => page.path === legacyPath || page.path === directPath)) return [];
+    return [
+      {
+        url: `${SITE_CONFIG.domain}${directPath}/`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      },
+    ];
+  });
+
+  return [...legacy, ...extras, ...guides];
 }
