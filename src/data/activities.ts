@@ -1,22 +1,22 @@
 import { Activity } from '@/types';
 
 export const ALL_ADVENTURES_DATA: Activity[] = [
-  {
-    "id": "indias-highest-bungee-120m",
-    "slug": "indias-highest-bungee-120m",
-    "title": "India's Highest Bungee 120m",
-    "price": 0,
-    "category": "extreme",
-    "tag": "120 M",
-    "image": "/images/120m-heighest-bungee.webp",
-    "height": "120 M",
-    "shortDesc": "Coming soon.",
-    "fullDesc": "Coming soon.",
-    "features": ["Coming soon"],
-    "paragraphs": ["Coming soon."],
-    "comingSoon": true,
-    "includesDSLRVideo": false
-  },
+  // {
+  //   "id": "indias-highest-bungee-120m",
+  //   "slug": "indias-highest-bungee-120m",
+  //   "title": "India's Highest Bungee 120m",
+  //   "price": 0,
+  //   "category": "extreme",
+  //   "tag": "120 M",
+  //   "image": "/images/120m-heighest-bungee.webp",
+  //   "height": "120 M",
+  //   "shortDesc": "Coming soon.",
+  //   "fullDesc": "Coming soon.",
+  //   "features": ["Coming soon"],
+  //   "paragraphs": ["Coming soon."],
+  //   "comingSoon": true,
+  //   "includesDSLRVideo": false
+  // },
   {
     "id": "bungee-jumping",
     "slug": "bungee-jumping",
