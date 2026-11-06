@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import { Bebas_Neue, Outfit } from 'next/font/google';
-import { headers } from 'next/headers';
 import Script from 'next/script';
 import '@/styles/variables.css';
 import '@/styles/globals.css';
@@ -116,27 +115,13 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const headerList = await headers();
-  const pathname = headerList.get('x-pathname') || '/';
-  const legacyPage = legacySeoPage(pathname);
-  const ogType = legacyPage?.ogType || 'website';
-  const canonical = legacyPage?.canonical
-    || `${SITE_CONFIG.domain}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`;
-
   return (
     <html lang="en" className={`${outfit.variable} ${bebas.variable}`}>
-      <head>
-        <meta property="og:type" content={ogType} />
-        <link rel="canonical" href={canonical} />
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/images/tf-favicon.png" />
-      </head>
       <body>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-JERYX5N04Z" strategy="lazyOnload" />
         <Script id="ga4" strategy="lazyOnload">

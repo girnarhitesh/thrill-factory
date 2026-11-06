@@ -3,6 +3,8 @@ import { BLOG_POSTS } from '@/data/blogs';
 import { LEGACY_SEO_PAGES } from '@/data/legacySeo';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 
+export const dynamic = 'force-static';
+
 const EXTRA_ROUTES = [
   '/activities/',
   '/combos/',

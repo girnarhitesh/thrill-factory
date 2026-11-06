@@ -37,7 +37,9 @@ export const legacyMetadata = (page: LegacySeoPage): Metadata => {
   return {
     title: { absolute: page.title },
     description: page.description,
+    alternates: { canonical: page.canonical },
     openGraph: {
+      type: page.ogType === 'article' ? 'article' : 'website',
       title: page.ogTitle,
       description: page.ogDescription,
       url: page.canonical,

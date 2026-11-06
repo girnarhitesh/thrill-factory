@@ -53,7 +53,7 @@ export const CATALOG_TABS = catalog.category_tabs;
 export const CATALOG_ACTIVITIES = catalog.activities;
 
 export const catalogImageUrl = (localPath: string) =>
-  `/thrill_factory_activities/${localPath}`;
+  `/images/thrill_factory_activities/${localPath}`;
 
 const OTHER_POPULAR = /Other Popular(?: Adventure)? Activities at Thrill Factory:?/i;
 

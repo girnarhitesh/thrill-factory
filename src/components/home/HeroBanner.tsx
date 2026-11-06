@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   motion,
   useAnimationFrame,
@@ -231,56 +231,60 @@ const HeroBungeeJumper: React.FC = () => {
   );
 };
 
-const DeferredHeroVideo: React.FC<{ className: string }> = ({ className }) => {
-  const ref = useRef<HTMLVideoElement>(null);
+const useSyncedHeroFilm = () => {
+  const bgRef = useRef<HTMLVideoElement>(null);
+  const frameRef = useRef<HTMLVideoElement>(null);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const video = ref.current;
-    if (!video) return;
-    let idle = 0;
-    let timeout = 0;
+    const bg = bgRef.current;
+    const frame = frameRef.current;
+    if (!bg || !frame) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const start = () => {
-      if (video.querySelector('source')) return;
-      const mp4 = document.createElement('source');
-      mp4.src = HERO_MP4;
-      mp4.type = 'video/mp4';
-      video.append(mp4);
-      video.load();
-      void video.play().catch(() => undefined);
+    let bgReady = false;
+    let frameReady = false;
+    let started = false;
+
+    const begin = () => {
+      if (started || !bgReady || !frameReady) return;
+      started = true;
+      frame.currentTime = 0;
+      bg.currentTime = 0;
+      setReady(true);
+      void frame.play().catch(() => undefined);
+      void bg.play().catch(() => undefined);
     };
 
-    const schedule = () => {
-      const requestIdle = window.requestIdleCallback;
-      if (typeof requestIdle === 'function') {
-        idle = requestIdle(start, { timeout: 2500 });
-      } else {
-        timeout = window.setTimeout(start, 200);
+    const markFrame = () => {
+      frameReady = true;
+      begin();
+    };
+    const markBg = () => {
+      bgReady = true;
+      begin();
+    };
+    const sync = () => {
+      if (!started || !bg || !frame) return;
+      if (Math.abs(bg.currentTime - frame.currentTime) > 0.35) {
+        bg.currentTime = frame.currentTime;
       }
     };
 
-    if (document.readyState === 'complete') schedule();
-    else window.addEventListener('load', schedule, { once: true });
+    frame.addEventListener('loadeddata', markFrame);
+    bg.addEventListener('loadeddata', markBg);
+    frame.addEventListener('timeupdate', sync);
+    frame.src = HERO_MP4;
+    bg.src = HERO_MP4;
 
     return () => {
-      if (idle && 'cancelIdleCallback' in window) window.cancelIdleCallback(idle);
-      if (timeout) window.clearTimeout(timeout);
-      window.removeEventListener('load', schedule);
+      frame.removeEventListener('loadeddata', markFrame);
+      bg.removeEventListener('loadeddata', markBg);
+      frame.removeEventListener('timeupdate', sync);
     };
   }, []);
 
-  return (
-    <video
-      ref={ref}
-      className={className}
-      poster={HERO_POSTER}
-      muted
-      loop
-      playsInline
-      preload="none"
-      aria-hidden="true"
-    />
-  );
+  return { bgRef, frameRef, ready };
 };
 
 interface HeroBannerProps {
@@ -288,10 +292,21 @@ interface HeroBannerProps {
 }
 
 export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
+  const { bgRef, frameRef, ready } = useSyncedHeroFilm();
+
   return (
-    <section className="hero-adventure-banner">
+    <section className={`hero-adventure-banner${ready ? ' is-media-ready' : ''}`}>
       <div className="hero-banner-bg" aria-hidden="true">
-        <DeferredHeroVideo className="hero-banner-video" />
+        <img className="hero-banner-still" src={HERO_POSTER} alt="" />
+        <video
+          ref={bgRef}
+          className="hero-banner-video"
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        />
       </div>
       <div className="hero-banner-overlay" aria-hidden="true" />
 
@@ -302,7 +317,16 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
           </p>
 
           <div className="hero-window">
-            <DeferredHeroVideo className="hero-window-media" />
+            <img className="hero-window-still" src={HERO_POSTER} alt="" />
+            <video
+              ref={frameRef}
+              className="hero-window-media"
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-hidden="true"
+            />
           </div>
 
           <div className="hero-altimeter-scale" aria-hidden="true">
@@ -368,8 +392,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
                     end={stat.end}
                     suffix={stat.suffix}
                     decimals={'decimals' in stat ? stat.decimals : 0}
-                    duration={4}
-                    delay={0.2 + index * 0.08}
+                    duration={1.6}
+                    delay={0.15 + index * 0.06}
                   />
                   {'logo' in stat && stat.logo === 'google' ? <GoogleGLogo /> : null}
                 </div>

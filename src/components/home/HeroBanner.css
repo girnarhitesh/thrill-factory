@@ -33,6 +33,7 @@
   pointer-events: none;
 }
 
+.hero-banner-still,
 .hero-banner-video {
   position: absolute;
   inset: 0;
@@ -43,6 +44,28 @@
   transform: scale(1.12);
   filter: blur(14px) saturate(1.1);
   pointer-events: none;
+}
+
+.hero-banner-still,
+.hero-window-still,
+.hero-banner-video,
+.hero-window-media {
+  transition: opacity 0.9s ease;
+}
+
+.hero-banner-video,
+.hero-window-media {
+  opacity: 0;
+}
+
+.hero-adventure-banner.is-media-ready .hero-banner-video,
+.hero-adventure-banner.is-media-ready .hero-window-media {
+  opacity: 1;
+}
+
+.hero-adventure-banner.is-media-ready .hero-banner-still,
+.hero-adventure-banner.is-media-ready .hero-window-still {
+  opacity: 0;
 }
 
 .hero-banner-overlay {
