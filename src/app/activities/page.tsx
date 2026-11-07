@@ -4,28 +4,23 @@ import React, { useState } from 'react';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { ActivityDetailsModal } from '@/components/common/ActivityDetailsModal';
 import { ActivitiesCatalog } from '@/components/activities/ActivitiesCatalog';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { Activity } from '@/types';
 
 export default function ActivitiesPage() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedActivityForBooking, setSelectedActivityForBooking] = useState(
-    'Bungee Jumping in Rishikesh'
-  );
   const [selectedActivityForDetails, setSelectedActivityForDetails] = useState<Activity | null>(
     null
   );
 
-  const handleBook = (title: string) => {
-    setSelectedActivityForBooking(title);
-    setIsBookingOpen(true);
+  const handleBook = (_title: string) => {
+    openBookingFrame();
   };
 
   return (
     <>
-      <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
+      <Navbar />
 
       <main>
         <ActivitiesCatalog onBook={handleBook} onDetails={setSelectedActivityForDetails} />
@@ -33,12 +28,6 @@ export default function ActivitiesPage() {
 
       <Footer />
       <WhatsAppFloating />
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        preselectedItem={selectedActivityForBooking}
-      />
 
       <ActivityDetailsModal
         isOpen={!!selectedActivityForDetails}

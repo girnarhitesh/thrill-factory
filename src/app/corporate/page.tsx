@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { CorporateHero } from '@/components/corporate/CorporateHero';
 import { CorporateMix } from '@/components/corporate/CorporateMix';
@@ -86,8 +85,6 @@ const ADDITIONAL_ENTERPRISE_CLIENTS = [
 ];
 
 export default function CorporatePage() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedActivity, setSelectedActivity] = useState('Corporate Custom Offsite Package');
 
   const [corpForm, setCorpForm] = useState({
     companyName: '',
@@ -116,7 +113,7 @@ export default function CorporatePage() {
 
   return (
     <>
-      <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
+      <Navbar />
 
       <main style={{ backgroundColor: '#FFFFFF' }}>
         <CorporateHero />
@@ -531,11 +528,6 @@ export default function CorporatePage() {
       <Footer />
       <WhatsAppFloating />
 
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        preselectedItem={selectedActivity}
-      />
     </>
   );
 }

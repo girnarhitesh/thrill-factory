@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { KIDS_ZONE_DATA } from '@/data/kidsZone';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { ShieldCheck } from 'lucide-react';
 import './KidsZoneHighlight.css';
 
 interface KidsZoneHighlightProps {
-  onBook: (activityTitle: string) => void;
+  onBook?: (activityTitle: string) => void;
 }
 
 const compactDuration = (value?: string) => {
@@ -15,7 +16,7 @@ const compactDuration = (value?: string) => {
   return value.replace(/\s*Minutes? per session/i, ' MIN').replace(/\s*mins?/i, ' MIN');
 };
 
-export const KidsZoneHighlight: React.FC<KidsZoneHighlightProps> = ({ onBook }) => {
+export const KidsZoneHighlight: React.FC<KidsZoneHighlightProps> = () => {
   const featured = KIDS_ZONE_DATA.slice(0, 4);
 
   return (
@@ -47,11 +48,7 @@ export const KidsZoneHighlight: React.FC<KidsZoneHighlightProps> = ({ onBook }) 
             <ThemeButton href="/kids-zone" variant="solid" tone="on-dark" arrow>
               Explore Kids Zone
             </ThemeButton>
-            <ThemeButton
-              variant="ghost"
-              tone="on-dark"
-              onClick={() => onBook('Soft Play Zone For Kids')}
-            >
+            <ThemeButton variant="ghost" tone="on-dark" onClick={openBookingFrame}>
               Book a Pass
             </ThemeButton>
           </div>
@@ -63,11 +60,7 @@ export const KidsZoneHighlight: React.FC<KidsZoneHighlightProps> = ({ onBook }) 
           <ul className="kids-arena-list">
             {featured.map((item, index) => (
               <li key={item.id}>
-                <button
-                  type="button"
-                  className="kids-arena-ride"
-                  onClick={() => onBook(item.title)}
-                >
+                <button type="button" className="kids-arena-ride" onClick={openBookingFrame}>
                   <span className="kids-arena-ride-fill" aria-hidden="true" />
                   <span className="kids-arena-ride-idx">
                     {String(index + 1).padStart(2, '0')}

@@ -4,6 +4,7 @@ import React, { useMemo, useState } from 'react';
 import { ALL_PACKAGES, PackageCombo, sortCombosBySequence } from '@/data/packages';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ComboCard } from '@/components/home/ComboCard';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './CombosCatalog.css';
 
@@ -194,7 +195,7 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
               Shivpuri coordinators lock custom combo pricing, catering, and exclusive jump slots around one group window.
             </p>
           </div>
-          <ThemeButton variant="ghost" arrow onClick={() => onBook('Custom Group Booking (8+ Persons)')}>
+          <ThemeButton variant="ghost" arrow onClick={openBookingFrame}>
             Enquire Group Rates
           </ThemeButton>
         </div>

@@ -1,20 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { SAFETY_STANDARDS, MEDICAL_RESTRICTIONS } from '@/data/safetyRules';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ShieldCheck, Check, AlertOctagon } from 'lucide-react';
 
 export default function SafetyPage() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-
   return (
     <>
-      <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
+      <Navbar />
 
       <main style={{ paddingTop: 'var(--space-3xl)', paddingBottom: 'var(--space-4xl)', backgroundColor: '#FFFFFF' }}>
         <div className="container">
@@ -166,11 +163,6 @@ export default function SafetyPage() {
 
       <Footer />
       <WhatsAppFloating />
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
     </>
   );
 }

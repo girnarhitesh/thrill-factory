@@ -6,16 +6,13 @@ import { usePathname } from 'next/navigation';
 import { MAIN_NAV_ITEMS } from '@/constants/navigation';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 import { Phone, Menu, X } from 'lucide-react';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './Navbar.css';
 
-interface NavbarProps {
-  onOpenBooking: () => void;
-}
-
 const FILL_DISTANCE = 240;
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
+export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
@@ -141,7 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             size="sm"
             variant="ghost"
             tone={useDarkTone ? 'on-dark' : 'on-light'}
-            onClick={onOpenBooking}
+            onClick={openBookingFrame}
           >
             Book Now
           </ThemeButton>
@@ -185,7 +182,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             block
             onClick={() => {
               closeMobileMenu();
-              onOpenBooking();
+              openBookingFrame();
             }}
           >
             Book Now

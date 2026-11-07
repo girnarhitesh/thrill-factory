@@ -4,6 +4,7 @@ export const SITE_CONFIG = {
   tagline: 'India’s Only Adventure and Entertainment Destination',
   description: 'The Shivpuri Thrill Factory is India’s only adventure and entertainment destination — extreme rides, aerial thrills, ground games, VR, and a kids zone in Rishikesh.',
   domain: 'https://thrillfactory.in',
+  bookingUrl: 'https://okghumo.com/thrill-factory-bungee-more',
   
   // Contact & Booking Info
   phones: [

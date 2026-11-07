@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { PackageCombo } from '@/data/packages';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './ActivityCard.css';
 
@@ -21,7 +22,7 @@ const isRideName = (name: string) =>
     name
   );
 
-export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }) => {
+export const ComboCard: React.FC<ComboCardProps> = ({ combo, onDetails }) => {
   const cardRef = useRef<HTMLElement>(null);
   const previewRef = useRef<HTMLVideoElement>(null);
   const rideNames = combo.activitiesIncluded.filter(isRideName);
@@ -165,7 +166,7 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onBook, onDetails }
                 Details
               </button>
             ) : null}
-            <ThemeButton size="sm" variant="solid" arrow onClick={() => onBook(combo.title)}>
+            <ThemeButton size="sm" variant="solid" arrow onClick={openBookingFrame}>
               Book
             </ThemeButton>
           </div>

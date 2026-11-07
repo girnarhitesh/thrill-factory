@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { ThemeButton } from '@/components/common/ThemeButton';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { BLOG_POSTS } from '@/data/blogs';
 import { LegacySeoPage } from '@/data/legacySeo';
@@ -40,7 +40,6 @@ const POLICY_COPY: Record<string, string[]> = {
 };
 
 export function LegacyDocument({ page }: { page: LegacySeoPage }) {
-  const [bookingOpen, setBookingOpen] = useState(false);
   const image = legacyImagePath(page);
   const handle = page.path.split('/').filter(Boolean).pop() || '';
   const post = BLOG_POSTS.find((item) => item.slug === handle);
@@ -51,7 +50,7 @@ export function LegacyDocument({ page }: { page: LegacySeoPage }) {
   return (
     <>
       {schema ? <JsonLd data={schema} /> : null}
-      <Navbar onOpenBooking={() => setBookingOpen(true)} />
+      <Navbar />
       <main className="container" style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
         <h1 className="section-title">{page.h1}</h1>
         <p style={{ maxWidth: '42rem', margin: '1rem 0 1.5rem' }}>{page.description}</p>
@@ -93,13 +92,12 @@ export function LegacyDocument({ page }: { page: LegacySeoPage }) {
             ))}
           </ul>
         ) : null}
-        <ThemeButton onClick={() => setBookingOpen(true)} arrow>
+        <ThemeButton onClick={openBookingFrame} arrow>
           Book this adventure
         </ThemeButton>
       </main>
       <Footer />
       <WhatsAppFloating />
-      <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} preselectedItem={page.h1} />
     </>
   );
 }

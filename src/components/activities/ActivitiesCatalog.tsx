@@ -5,6 +5,7 @@ import { ActivityTabId, activitiesForTab } from '@/data/activities';
 import { Activity } from '@/types';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ActivityCard } from '@/components/home/ActivityCard';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './ActivitiesCatalog.css';
 
@@ -209,7 +210,7 @@ export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, on
               Shivpuri coordinators lock a mixed-lane schedule — extreme, kids, and entertainment — around one slot.
             </p>
           </div>
-          <ThemeButton variant="ghost" arrow onClick={() => onBook('Custom Multi-Activity Pass')}>
+          <ThemeButton variant="ghost" arrow onClick={openBookingFrame}>
             Enquire Custom Pass
           </ThemeButton>
         </div>

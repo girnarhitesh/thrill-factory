@@ -1,21 +1,19 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink } from 'lucide-react';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 
 export default function ContactPage() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-
   return (
     <>
-      <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
+      <Navbar />
 
       <main style={{ paddingTop: 'var(--space-3xl)', paddingBottom: 'var(--space-4xl)', backgroundColor: '#FFFFFF' }}>
         <div className="container">
@@ -181,7 +179,7 @@ export default function ContactPage() {
                   variant="ghost"
                   arrow
                   style={{ flex: 1 }}
-                  onClick={() => setIsBookingOpen(true)}
+                  onClick={openBookingFrame}
                 >
                   Book Slot
                 </ThemeButton>
@@ -241,11 +239,6 @@ export default function ContactPage() {
 
       <Footer />
       <WhatsAppFloating />
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
     </>
   );
 }

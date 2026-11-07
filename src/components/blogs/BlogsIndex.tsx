@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { BLOG_POSTS, BlogPost } from '@/data/blogs';
@@ -23,7 +22,6 @@ import {
 import '@/components/home/PackagesSection.css';
 
 export default function BlogsPage() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const categories = [
@@ -44,7 +42,7 @@ export default function BlogsPage() {
 
   return (
     <>
-      <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
+      <Navbar />
 
       <main style={{ paddingTop: 'var(--space-3xl)', paddingBottom: 'var(--space-4xl)', backgroundColor: '#FFFFFF' }}>
         <div className="container">
@@ -373,11 +371,6 @@ export default function BlogsPage() {
 
       <Footer />
       <WhatsAppFloating />
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
     </>
   );
 }

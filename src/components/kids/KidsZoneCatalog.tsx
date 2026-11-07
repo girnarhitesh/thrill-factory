@@ -5,6 +5,7 @@ import { KIDS_ZONE_DATA } from '@/data/kidsZone';
 import { Activity } from '@/types';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ActivityCard } from '@/components/home/ActivityCard';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './KidsZoneCatalog.css';
 
@@ -233,7 +234,7 @@ export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDeta
               Shivpuri coordinators lock mixed play, ride, and arcade sessions around one window while parents watch from the café.
             </p>
           </div>
-          <ThemeButton variant="ghost" arrow onClick={() => onBook('Kids Zone Family Pass')}>
+          <ThemeButton variant="ghost" arrow onClick={openBookingFrame}>
             Enquire Kids Pass
           </ThemeButton>
         </div>

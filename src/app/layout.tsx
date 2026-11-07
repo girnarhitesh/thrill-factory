@@ -25,6 +25,7 @@ import '@/components/corporate/CorporateMix.css';
 import '@/components/corporate/CorporateExplore.css';
 import '@/components/common/ComboDetailsModal.css';
 import '@/styles/animations.css';
+import { BookingFrame } from '@/components/common/BookingFrame';
 import { ScrollRevealObserver } from '@/components/common/ScrollRevealObserver';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { SITE_CONFIG } from '@/constants/siteConfig';
@@ -132,6 +133,7 @@ gtag('config', 'G-JERYX5N04Z');`}
         </Script>
         <JsonLd data={siteSchema} />
         <ScrollRevealObserver />
+        <BookingFrame />
         {children}
       </body>
     </html>

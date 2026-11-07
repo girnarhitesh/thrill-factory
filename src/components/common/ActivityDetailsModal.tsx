@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Activity } from '@/types';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 import { X, MessageCircle } from 'lucide-react';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { CATALOG_ACTIVITIES, activityDetailHtml, catalogImageUrl } from '@/data/catalogActivities';
 import './ComboDetailsModal.css';
@@ -20,7 +21,6 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
   isOpen,
   onClose,
   activity,
-  onBook
 }) => {
   useEffect(() => {
     if (!isOpen) return;
@@ -39,11 +39,6 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
   }, [isOpen, onClose]);
 
   if (!isOpen || !activity) return null;
-
-  const handleProceedBooking = () => {
-    onClose();
-    onBook(activity.title);
-  };
 
   const whatsappMessage = encodeURIComponent(
     activity.comingSoon
@@ -188,7 +183,7 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
             </ThemeButton>
 
             {activity.comingSoon ? null : (
-              <ThemeButton variant="ghost" arrow onClick={handleProceedBooking}>
+              <ThemeButton variant="ghost" arrow onClick={openBookingFrame}>
                 Book This Activity Now
               </ThemeButton>
             )}

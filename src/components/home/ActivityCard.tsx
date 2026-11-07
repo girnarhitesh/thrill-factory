@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Activity } from '@/types';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './ActivityCard.css';
 
@@ -49,7 +50,6 @@ const cardParagraphs = (activity: Activity) =>
 export const ActivityCard: React.FC<ActivityCardProps> = ({
   activity,
   index,
-  onBook,
   onDetails,
 }) => {
   const specs = rideSpecs(activity);
@@ -181,7 +181,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
               </button>
             ) : null}
             {activity.comingSoon ? null : (
-              <ThemeButton size="sm" variant="solid" arrow onClick={() => onBook(activity.title)}>
+              <ThemeButton size="sm" variant="solid" arrow onClick={openBookingFrame}>
                 Book
               </ThemeButton>
             )}

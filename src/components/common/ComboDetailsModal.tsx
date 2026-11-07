@@ -12,6 +12,7 @@ import {
   Sparkles,
   MessageCircle
 } from 'lucide-react';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './ComboDetailsModal.css';
 
@@ -26,7 +27,6 @@ export const ComboDetailsModal: React.FC<ComboDetailsModalProps> = ({
   isOpen,
   onClose,
   combo,
-  onBook
 }) => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -57,11 +57,6 @@ export const ComboDetailsModal: React.FC<ComboDetailsModalProps> = ({
   const galleryImages = combo.gallery && combo.gallery.length > 0 ? combo.gallery : [combo.image];
   const activeImage = galleryImages[activeImageIndex] || combo.image;
   const savings = combo.originalPrice ? combo.originalPrice - combo.price : 0;
-
-  const handleProceedBooking = () => {
-    onClose();
-    onBook(combo.title);
-  };
 
   const whatsappMessage = encodeURIComponent(
     `Hello The Shivpuri Thrill Factory, I want to inquire about ${combo.title} (Rs. ${combo.price.toLocaleString('en-IN')}). Please share slot availability.`
@@ -256,7 +251,7 @@ export const ComboDetailsModal: React.FC<ComboDetailsModalProps> = ({
               Ask on WhatsApp
             </ThemeButton>
 
-            <ThemeButton variant="ghost" arrow onClick={handleProceedBooking}>
+            <ThemeButton variant="ghost" arrow onClick={openBookingFrame}>
               Book This Combo Now
             </ThemeButton>
           </div>

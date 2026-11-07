@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { SITE_CONFIG } from '@/constants/siteConfig';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './BookingCtaBanner.css';
 
@@ -18,11 +19,7 @@ const SHOTS = [
   { src: '/images/journey-walk-platform.webp', alt: 'Walking the 165 FT deck', width: 1024, height: 768 },
 ] as const;
 
-interface BookingCtaBannerProps {
-  onOpenBooking: () => void;
-}
-
-export const BookingCtaBanner: React.FC<BookingCtaBannerProps> = ({ onOpenBooking }) => {
+export const BookingCtaBanner: React.FC = () => {
   return (
     <section className="cta-banner" aria-label="Book your adventure">
       <div className="container">
@@ -39,7 +36,7 @@ export const BookingCtaBanner: React.FC<BookingCtaBannerProps> = ({ onOpenBookin
               Extreme rides, aerial thrills, ground games, VR, and a kids zone — book direct and the desk confirms your slot.
             </p>
             <div className="cta-actions">
-              <ThemeButton variant="solid" arrow onClick={onOpenBooking}>
+              <ThemeButton variant="solid" arrow onClick={openBookingFrame}>
                 Book Your Adventure
               </ThemeButton>
               <ThemeButton

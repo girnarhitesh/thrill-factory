@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import {
   CatalogActivity,
@@ -22,7 +23,6 @@ interface CatalogActivityModalProps {
 export const CatalogActivityModal: React.FC<CatalogActivityModalProps> = ({
   activity,
   onClose,
-  onBook,
 }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -169,14 +169,7 @@ export const CatalogActivityModal: React.FC<CatalogActivityModalProps> = ({
               />
             ) : null}
 
-            <ThemeButton
-              variant="solid"
-              arrow
-              onClick={() => {
-                onClose();
-                onBook(activity.title);
-              }}
-            >
+            <ThemeButton variant="solid" arrow onClick={openBookingFrame}>
               Book Now
             </ThemeButton>
           </div>

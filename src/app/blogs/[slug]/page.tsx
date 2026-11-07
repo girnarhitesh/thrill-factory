@@ -1,14 +1,14 @@
 'use client';
 
-import React, { use, useState } from 'react';
+import React, { use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { ThemeButton } from '@/components/common/ThemeButton';
+import { openBookingFrame } from '@/components/common/BookingFrame';
 import { BLOG_POSTS, BlogPost } from '@/data/blogs';
 import { legacySeoPage } from '@/data/legacySeo';
 import { LegacyDocument } from '@/components/seo/LegacyDocument';
@@ -33,7 +33,6 @@ export default function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = use(params);
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   const legacy = legacySeoPage(`/blogs/${slug}`) || legacySeoPage(`/blogs/news/${slug}`);
 
@@ -49,7 +48,7 @@ export default function BlogPostPage({
   return (
     <>
       <JsonLd data={articleSchema} />
-      <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
+      <Navbar />
 
       <main style={{ paddingTop: 'var(--space-2xl)', paddingBottom: 'var(--space-4xl)', backgroundColor: '#FFFFFF' }}>
         <article className="container" style={{ maxWidth: '880px', margin: '0 auto' }}>
@@ -235,7 +234,7 @@ export default function BlogPostPage({
               </p>
             </div>
 
-            <ThemeButton href="/activities" variant="solid" tone="on-dark" arrow>
+            <ThemeButton onClick={openBookingFrame} variant="solid" tone="on-dark" arrow>
               Book Your Adventure
             </ThemeButton>
           </div>
@@ -333,11 +332,6 @@ export default function BlogPostPage({
 
       <Footer />
       <WhatsAppFloating />
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
     </>
   );
 }

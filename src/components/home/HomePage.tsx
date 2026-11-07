@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
-import { BookingModal } from '@/components/common/BookingModal';
 import { HeroBanner } from '@/components/home/HeroBanner';
 import { AdrenalineTicker } from '@/components/home/AdrenalineTicker';
 
@@ -26,48 +25,28 @@ const BookingCtaBanner = load(() => import('@/components/home/BookingCtaBanner')
 const FaqSection = load(() => import('@/components/home/FaqSection'), 'FaqSection');
 
 export default function HomePage() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedItemForBooking, setSelectedItemForBooking] = useState('Bungee Jumping (165 FT)');
-
-  const handleOpenBooking = (itemTitle?: string) => {
-    if (itemTitle) {
-      setSelectedItemForBooking(itemTitle);
-    }
-    setIsBookingOpen(true);
-  };
-
-  const handleCloseBooking = () => {
-    setIsBookingOpen(false);
-  };
-
   return (
     <>
-      <Navbar onOpenBooking={() => handleOpenBooking()} />
+      <Navbar />
 
       <main>
-        <HeroBanner onOpenBooking={() => handleOpenBooking()} />
+        <HeroBanner onOpenBooking={() => undefined} />
         <AdrenalineTicker />
-        <ActivitiesGrid onBook={(title: string) => handleOpenBooking(title)} />
-        <PackagesSection onBook={(title: string) => handleOpenBooking(title)} />
+        <ActivitiesGrid onBook={() => undefined} />
+        <PackagesSection onBook={() => undefined} />
         <QuickHighlights />
-        <KidsZoneHighlight onBook={(title: string) => handleOpenBooking(title)} />
+        <KidsZoneHighlight />
         <SafetyOverview />
         <ReviewsSection />
         <InstagramReelsSection />
         <LocationSection />
-        <BookingCtaBanner onOpenBooking={() => handleOpenBooking()} />
+        <BookingCtaBanner />
         <FaqSection />
       </main>
 
       <Footer />
 
       <WhatsAppFloating />
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={handleCloseBooking}
-        preselectedItem={selectedItemForBooking}
-      />
     </>
   );
 }
