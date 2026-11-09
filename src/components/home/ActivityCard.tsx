@@ -14,17 +14,6 @@ interface ActivityCardProps {
   onDetails?: (activity: Activity) => void;
 }
 
-const compactAge = (value?: string) => {
-  if (!value) return null;
-  const match = value.match(/\d+/);
-  return match ? `${match[0]}+` : value;
-};
-
-const compactDuration = (value?: string) => {
-  if (!value) return null;
-  return value.replace(/\s*mins?/i, ' MIN').replace(/\s*hours?/i, ' HR');
-};
-
 const compactHeight = (activity: Activity) => {
   if (activity.height) {
     return activity.height.replace(/feet/i, 'FT').replace(/\s+/g, ' ').trim();
@@ -32,16 +21,12 @@ const compactHeight = (activity: Activity) => {
   return activity.tag ?? null;
 };
 
-const rideSpecs = (activity: Activity) => {
-  const specs = [compactHeight(activity), compactDuration(activity.duration), compactAge(activity.ageLimit)].filter(
-    Boolean
-  ) as string[];
-
-  if (specs.length < 3 && activity.includesDSLRVideo) {
-    specs.push('4K VIDEO');
-  }
-
-  return specs.slice(0, 3);
+export const activityFacts = (activity: Activity) => {
+  const facts: { label: string; value: string }[] = [];
+  if (activity.ageLimit?.trim()) facts.push({ label: 'Age', value: activity.ageLimit.trim() });
+  if (activity.weightLimit?.trim()) facts.push({ label: 'Weight', value: activity.weightLimit.trim() });
+  if (activity.duration?.trim()) facts.push({ label: 'Time', value: activity.duration.trim() });
+  return facts;
 };
 
 const cardParagraphs = (activity: Activity) =>
@@ -52,7 +37,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
   index,
   onDetails,
 }) => {
-  const specs = rideSpecs(activity);
+  const facts = activityFacts(activity);
   const heightStamp = compactHeight(activity);
   const category = activity.category?.replace(/-/g, ' ');
   const previewCopy = cardParagraphs(activity);
@@ -141,14 +126,15 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
 
         {previewCopy ? <p className="ride-card-desc">{previewCopy}</p> : null}
 
-        {specs.length > 0 ? (
-          <div className="ride-card-specs" aria-label="Ride facts">
-            {specs.map((spec) => (
-              <span className="ride-card-spec" key={spec}>
-                {spec}
-              </span>
+        {facts.length > 0 ? (
+          <dl className="ride-card-facts">
+            {facts.map((fact) => (
+              <div className="ride-card-fact" key={fact.label}>
+                <dt>{fact.label}</dt>
+                <dd>{fact.value}</dd>
+              </div>
             ))}
-          </div>
+          </dl>
         ) : null}
 
         <div className="ride-card-foot">

@@ -1,22 +1,30 @@
 import { Activity } from '@/types';
 
 export const ALL_ADVENTURES_DATA: Activity[] = [
-  // {
-  //   "id": "indias-highest-bungee-120m",
-  //   "slug": "indias-highest-bungee-120m",
-  //   "title": "India's Highest Bungee 120m",
-  //   "price": 0,
-  //   "category": "extreme",
-  //   "tag": "120 M",
-  //   "image": "/images/120m-heighest-bungee.webp",
-  //   "height": "120 M",
-  //   "shortDesc": "Coming soon.",
-  //   "fullDesc": "Coming soon.",
-  //   "features": ["Coming soon"],
-  //   "paragraphs": ["Coming soon."],
-  //   "comingSoon": true,
-  //   "includesDSLRVideo": false
-  // },
+  {
+    "id": "indias-highest-bungee-120m",
+    "slug": "indias-highest-bungee-120m",
+    "title": "India’s Highest Bungee Jumping",
+    "price": 6000,
+    "category": "extreme",
+    "image": "/images/120m-heighest-bungee.webp",
+    "ageLimit": "Minimum 15+ years. Maximum 55 years. Safety team approval is final.",
+    "weightLimit": "Minimum 40 kg. Maximum 75 kg. 80 kg including harness.",
+    "shortDesc": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear!",
+    "fullDesc": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear!",
+    "features": [
+      "Minimum age 15+ years, maximum age 55 years",
+      "Minimum weight 40 kg, maximum weight 75 kg",
+      "Maximum weight including harness 80 kg",
+      "Blood pressure, pulse, and oxygen checked before the jump",
+      "Safety team approval is final"
+    ],
+    "paragraphs": [
+      "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear!"
+    ],
+    "detailHtml": "<p>Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear!</p><h3>Bungee Jumping – Rules &amp; Eligibility Criteria</h3><p>Before participating in India’s Highest Bungee Jumping experience, please carefully read and follow the eligibility criteria and safety guidelines.</p><h4>1. Age Criteria</h4><ul><li>Minimum age: 15+ years.</li><li>Maximum age: 55 years.</li><li>Participation is subject to the final approval of the safety team.</li></ul><h4>2. Weight Criteria</h4><ul><li>Minimum body weight: 40 kg.</li><li>Maximum body weight: 75 kg.</li><li>Maximum permissible weight, including harness: 80 kg.</li></ul><h4>3. Medical &amp; Health Conditions</h4><ul><li>Blood Pressure (BP), Pulse Rate and Oxygen (SpO₂) levels will be checked before the jump.</li><li>Participants must be physically fit and medically suitable for bungee jumping.</li><li>Individuals with any existing medical conditions must disclose them before participating.</li><li>Anyone who has undergone major surgery in the past must inform the safety team.</li><li>Hiding any medical history or health-related information is strictly prohibited.</li></ul><h4>4. Safety Guidelines</h4><ul><li>All participants must follow the instructions given by trained jump masters and safety personnel.</li><li>The safety team’s decision regarding eligibility will be final.</li><li>Participants must cooperate during the safety briefing and equipment checks.</li><li>Jumping is permitted only after completing all required safety procedures.</li></ul>",
+    "includesDSLRVideo": false
+  },
   {
     "id": "bungee-jumping",
     "slug": "bungee-jumping",
@@ -1115,6 +1123,7 @@ const ACTIVITY_VIDEOS: Record<string, string> = {
   'pool-table': '/images/ActivitiesVideos/pool-table.mp4',
   'wall-climbing': '/images/ActivitiesVideos/wall-climb.mp4',
   'bungee-jumping': '/images/ActivitiesVideos/freestyle-bungee.mp4',
+  'indias-highest-bungee-120m': '',
   'free-style-bungee': '/images/ActivitiesVideos/Free-Style-Bungee-in-Rishikesh.mp4',
   'scad-jumping-in-rishikesh': '/images/ActivitiesVideos/scad-jump-video-thrill.mp4',
   'sky-cycling': '/images/ActivitiesVideos/sky-cycle-video.mp4',

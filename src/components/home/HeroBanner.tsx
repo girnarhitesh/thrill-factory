@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   motion,
   useAnimationFrame,
@@ -13,7 +13,6 @@ import { ThemeButton } from '@/components/common/ThemeButton';
 import './HeroBanner.css';
 
 const HERO_MP4 = '/images/HeroHomeVideo.mp4';
-const HERO_POSTER = '/images/HeroBackground.jpg';
 
 const HERO_STATS = [
   { end: 150, suffix: ' FT', label: 'Free Fall Drop' },
@@ -234,57 +233,37 @@ const HeroBungeeJumper: React.FC = () => {
 const useSyncedHeroFilm = () => {
   const bgRef = useRef<HTMLVideoElement>(null);
   const frameRef = useRef<HTMLVideoElement>(null);
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const bg = bgRef.current;
     const frame = frameRef.current;
     if (!bg || !frame) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      bg.pause();
+      frame.pause();
+      return;
+    }
 
-    let bgReady = false;
-    let frameReady = false;
-    let started = false;
-
-    const begin = () => {
-      if (started || !bgReady || !frameReady) return;
-      started = true;
-      frame.currentTime = 0;
-      bg.currentTime = 0;
-      setReady(true);
-      void frame.play().catch(() => undefined);
-      void bg.play().catch(() => undefined);
+    const play = (video: HTMLVideoElement) => {
+      video.muted = true;
+      void video.play().catch(() => undefined);
     };
 
-    const markFrame = () => {
-      frameReady = true;
-      begin();
-    };
-    const markBg = () => {
-      bgReady = true;
-      begin();
-    };
+    play(bg);
+    play(frame);
+
     const sync = () => {
-      if (!started || !bg || !frame) return;
-      if (Math.abs(bg.currentTime - frame.currentTime) > 0.35) {
+      if (bg.readyState < 2 || frame.readyState < 2) return;
+      if (Math.abs(bg.currentTime - frame.currentTime) > 0.4) {
         bg.currentTime = frame.currentTime;
       }
     };
 
-    frame.addEventListener('loadeddata', markFrame);
-    bg.addEventListener('loadeddata', markBg);
     frame.addEventListener('timeupdate', sync);
-    frame.src = HERO_MP4;
-    bg.src = HERO_MP4;
-
-    return () => {
-      frame.removeEventListener('loadeddata', markFrame);
-      bg.removeEventListener('loadeddata', markBg);
-      frame.removeEventListener('timeupdate', sync);
-    };
+    return () => frame.removeEventListener('timeupdate', sync);
   }, []);
 
-  return { bgRef, frameRef, ready };
+  return { bgRef, frameRef };
 };
 
 interface HeroBannerProps {
@@ -292,19 +271,21 @@ interface HeroBannerProps {
 }
 
 export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
-  const { bgRef, frameRef, ready } = useSyncedHeroFilm();
+  const { bgRef, frameRef } = useSyncedHeroFilm();
 
   return (
-    <section className={`hero-adventure-banner${ready ? ' is-media-ready' : ''}`}>
+    <section className="hero-adventure-banner">
       <div className="hero-banner-bg" aria-hidden="true">
-        <img className="hero-banner-still" src={HERO_POSTER} alt="" />
         <video
           ref={bgRef}
           className="hero-banner-video"
+          src={HERO_MP4}
           muted
           loop
+          autoPlay
           playsInline
           preload="auto"
+          disablePictureInPicture
           aria-hidden="true"
         />
       </div>
@@ -317,14 +298,16 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
           </p>
 
           <div className="hero-window">
-            <img className="hero-window-still" src={HERO_POSTER} alt="" />
             <video
               ref={frameRef}
               className="hero-window-media"
+              src={HERO_MP4}
               muted
               loop
+              autoPlay
               playsInline
               preload="auto"
+              disablePictureInPicture
               aria-hidden="true"
             />
           </div>
@@ -353,8 +336,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
             </p>
 
             <h1 className="hero-adventure-title">
-              <span className="hero-title-kicker">Bungee Jumping</span>
-              <span className="hero-title-highlight">in Rishikesh</span>
+              <span className="hero-title-kicker">India’s Highest</span>
+              <span className="hero-title-highlight">Bungee Jumping</span>
             </h1>
           </div>
 

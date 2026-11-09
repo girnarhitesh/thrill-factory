@@ -34,15 +34,17 @@ const DigitColumn: React.FC<{
 }> = ({ digit, delay, duration, active }) => {
   const targetIndex = 10 + digit;
 
+  const settled = `${-targetIndex * SLOT}%`;
+
   return (
     <span className="rolling-digit">
       <motion.span
         className="rolling-digit__strip"
-        initial={{ y: '0%' }}
-        animate={{ y: active ? `${-targetIndex * SLOT}%` : '0%' }}
+        initial={{ y: settled }}
+        animate={{ y: settled }}
         transition={{
-          duration,
-          delay,
+          duration: active ? duration : 0,
+          delay: active ? delay : 0,
           ease: [0.16, 1, 0.3, 1],
         }}
       >

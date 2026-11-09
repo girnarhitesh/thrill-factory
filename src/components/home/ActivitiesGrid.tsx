@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ActivityTabId, activitiesForTab, ACTIVITY_TAB_ORDER } from '@/data/activities';
 import { Activity } from '@/types';
@@ -101,11 +100,11 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
               href={`/activities/#lane-${tab.id}`}
               className="ag-lane"
             >
-              <Image
+              <img
                 src={tab.image}
                 alt={`${tab.label} at Thrill Factory, Rishikesh`}
-                fill
-                sizes="(max-width: 640px) 100vw, 1px"
+                width={640}
+                height={360}
                 className="ag-lane-img"
               />
               <span className="ag-lane-scrim" aria-hidden="true" />

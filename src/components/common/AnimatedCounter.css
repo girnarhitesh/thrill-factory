@@ -10,6 +10,7 @@
   height: 1em;
   overflow: hidden;
   vertical-align: baseline;
+  line-height: 1;
 }
 
 .rolling-digit__strip {
@@ -24,8 +25,10 @@
   align-items: center;
   justify-content: center;
   height: 1em;
+  flex: 0 0 1em;
   width: 1ch;
   line-height: 1;
+  overflow: hidden;
 }
 
 .rolling-counter__symbol,

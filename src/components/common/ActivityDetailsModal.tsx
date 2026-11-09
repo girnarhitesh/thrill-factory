@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Activity } from '@/types';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 import { X, MessageCircle } from 'lucide-react';
+import { activityFacts } from '@/components/home/ActivityCard';
 import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { CATALOG_ACTIVITIES, activityDetailHtml, catalogImageUrl } from '@/data/catalogActivities';
@@ -60,6 +61,7 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
     !catalogGallery.some((image) => image.src === activity.image);
   const gallery = showCustomLead ? [lead, ...catalogGallery] : catalogGallery.length ? catalogGallery : [lead];
   const copyHtml = catalog?.description_html ? activityDetailHtml(catalog.description_html) : '';
+  const facts = activityFacts(activity);
 
   return (
     <div className="combo-modal-overlay" onClick={onClose}>
@@ -131,6 +133,17 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
             </div>
           </div>
 
+          {facts.length > 0 ? (
+            <dl className="activity-detail-facts">
+              {facts.map((fact) => (
+                <div className="activity-detail-fact" key={fact.label}>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          ) : null}
+
           <div className="activity-detail-gallery">
             {gallery.map((image) => (
               <div className="activity-detail-frame" key={image.src}>
@@ -145,10 +158,10 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
             ))}
           </div>
 
-          {copyHtml ? (
+          {copyHtml || activity.detailHtml ? (
             <article
               className="activity-detail-copy"
-              dangerouslySetInnerHTML={{ __html: copyHtml }}
+              dangerouslySetInnerHTML={{ __html: copyHtml || activity.detailHtml || '' }}
             />
           ) : activity.paragraphs && activity.paragraphs.length > 0 ? (
             <article className="activity-detail-copy">

@@ -24,6 +24,7 @@ export interface Activity {
   image: string;
   features: string[];
   paragraphs?: string[];
+  detailHtml?: string;
   includesDSLRVideo?: boolean;
   videoUrl?: string;
   featured?: boolean;

@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  isolation: isolate;
   background-color: var(--hero-bg);
   color: var(--hero-text);
   font-family: var(--font-family-sans);
@@ -33,52 +34,28 @@
   pointer-events: none;
 }
 
-.hero-banner-still,
 .hero-banner-video {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -6%;
+  width: 112%;
+  height: 112%;
   max-width: none;
   object-fit: cover;
-  transform: scale(1.12);
-  filter: blur(14px) saturate(1.1);
+  filter: blur(16px) saturate(1.1);
   pointer-events: none;
-}
-
-.hero-banner-still,
-.hero-window-still,
-.hero-banner-video,
-.hero-window-media {
-  transition: opacity 0.9s ease;
-}
-
-.hero-banner-video,
-.hero-window-media {
-  opacity: 0;
-}
-
-.hero-adventure-banner.is-media-ready .hero-banner-video,
-.hero-adventure-banner.is-media-ready .hero-window-media {
-  opacity: 1;
-}
-
-.hero-adventure-banner.is-media-ready .hero-banner-still,
-.hero-adventure-banner.is-media-ready .hero-window-still {
-  opacity: 0;
 }
 
 .hero-banner-overlay {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  background: rgba(11, 11, 12, 0.68);
+  z-index: 1;
+  background: rgba(11, 11, 12, 0.62);
   pointer-events: none;
 }
 
 .hero-stage {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   flex-grow: 1;
   display: flex;
   flex-direction: column;

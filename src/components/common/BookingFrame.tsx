@@ -39,20 +39,31 @@ export function BookingFrame() {
   if (!open) return null;
 
   return (
-    <div className="booking-frame" role="dialog" aria-modal="true" aria-label="Book your adventure">
-      <button
-        type="button"
-        className="booking-frame__close"
-        onClick={() => setOpen(false)}
-        aria-label="Close booking"
-      >
-        <X size={20} />
-      </button>
-      <iframe
-        className="booking-frame__view"
-        src={SITE_CONFIG.bookingUrl}
-        title="Book Thrill Factory"
-      />
+    <div
+      className="booking-frame"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Book your adventure"
+      onClick={() => setOpen(false)}
+    >
+      <div className="booking-frame__panel" onClick={(event) => event.stopPropagation()}>
+        <div className="booking-frame__bar">
+          <p>Book your adventure</p>
+          <button
+            type="button"
+            className="booking-frame__close"
+            onClick={() => setOpen(false)}
+            aria-label="Close booking"
+          >
+            <X size={18} />
+          </button>
+        </div>
+        <iframe
+          className="booking-frame__view"
+          src={SITE_CONFIG.bookingUrl}
+          title="Book Thrill Factory"
+        />
+      </div>
     </div>
   );
 }
