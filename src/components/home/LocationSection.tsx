@@ -44,6 +44,17 @@ export const LocationSection: React.FC = () => {
               ))}
             </ul>
 
+            <div className="location-notes">
+              <p>
+                <span>Transport</span>
+                Included for the person doing the activity.
+              </p>
+              <p>
+                <span>Extra participant</span>
+                If an extra person joins any activity, the charge is ₹1,000 per person.
+              </p>
+            </div>
+
             <div className="location-actions">
               <ThemeButton
                 href={SITE_CONFIG.location.googleMapsUrl}

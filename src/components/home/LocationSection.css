@@ -174,11 +174,38 @@
   white-space: nowrap;
 }
 
+.location-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--loc-line);
+}
+
+.location-notes p {
+  display: grid;
+  gap: 0.12rem;
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: var(--loc-ink);
+}
+
+.location-notes span {
+  font-family: var(--font-family-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
 .location-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
   margin-top: auto;
+  padding-top: 0.15rem;
 }
 
 .location-photo {
