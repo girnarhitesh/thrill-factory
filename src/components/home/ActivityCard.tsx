@@ -14,13 +14,6 @@ interface ActivityCardProps {
   onDetails?: (activity: Activity) => void;
 }
 
-const compactHeight = (activity: Activity) => {
-  if (activity.height) {
-    return activity.height.replace(/feet/i, 'FT').replace(/\s+/g, ' ').trim();
-  }
-  return activity.tag ?? null;
-};
-
 export const activityFacts = (activity: Activity) => {
   const facts: { label: string; value: string }[] = [];
   if (activity.ageLimit?.trim()) facts.push({ label: 'Age', value: activity.ageLimit.trim() });
@@ -38,8 +31,6 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
   onDetails,
 }) => {
   const facts = activityFacts(activity);
-  const heightStamp = compactHeight(activity);
-  const category = activity.category?.replace(/-/g, ' ');
   const previewCopy = cardParagraphs(activity);
   const cardRef = useRef<HTMLElement>(null);
   const previewRef = useRef<HTMLVideoElement>(null);
@@ -113,12 +104,11 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
         ) : null}
         <span className="ride-card-scrim" aria-hidden="true" />
 
-        <span className="ride-card-media-top">
-          {index ? <span className="ride-card-index">{index}</span> : null}
-          {category ? <span className="ride-card-cat">{category}</span> : null}
-        </span>
-
-        {heightStamp ? <span className="ride-card-height">{heightStamp}</span> : null}
+        {index ? (
+          <span className="ride-card-media-top">
+            <span className="ride-card-index">{index}</span>
+          </span>
+        ) : null}
       </button>
 
       <div className="ride-card-body">
