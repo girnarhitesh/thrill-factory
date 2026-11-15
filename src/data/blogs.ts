@@ -7,8 +7,12 @@ export type BlogBreak = { t: 'br' };
 export type BlogInline = BlogText | BlogLink | BlogBreak;
 
 export type BlogBlock =
-  | { type: 'p' | 'h2' | 'h3' | 'h4'; c: BlogInline[] }
-  | { type: 'ul' | 'ol'; items: BlogInline[][] }
+  | { type: 'p'; c: BlogInline[] }
+  | { type: 'h2'; c: BlogInline[] }
+  | { type: 'h3'; c: BlogInline[] }
+  | { type: 'h4'; c: BlogInline[] }
+  | { type: 'ul'; items: BlogInline[][] }
+  | { type: 'ol'; items: BlogInline[][] }
   | { type: 'table'; rows: BlogInline[][][][] }
   | { type: 'blank' };
 

@@ -114,11 +114,14 @@ export function BlogArticle({ post }: { post: BlogPost }) {
                 </div>
               );
             }
-            return (
-              <p key={index}>
-                <Inlines nodes={block.c} />
-              </p>
-            );
+            if (block.type === 'p') {
+              return (
+                <p key={index}>
+                  <Inlines nodes={block.c} />
+                </p>
+              );
+            }
+            return null;
           })}
         </div>
       </article>
