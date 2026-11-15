@@ -9,7 +9,6 @@ import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { openBookingFrame } from '@/components/common/BookingFrame';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { BLOG_POSTS } from '@/data/blogs';
 import { LegacySeoPage } from '@/data/legacySeo';
 import { articleSchema, collectionItems, faqSchema, legacyImagePath, productSchema } from '@/seo/legacyMetadata';
 import { ALL_ADVENTURES_DATA } from '@/data/activities';
@@ -43,7 +42,6 @@ const POLICY_COPY: Record<string, string[]> = {
 export function LegacyDocument({ page }: { page: LegacySeoPage }) {
   const image = legacyImagePath(page);
   const handle = page.path.split('/').filter(Boolean).pop() || '';
-  const post = BLOG_POSTS.find((item) => item.slug === handle);
   const items = page.kind === 'collection' ? collectionItems(page) : [];
   const policy = POLICY_COPY[handle];
   const schema = productSchema(page);
@@ -87,14 +85,6 @@ export function LegacyDocument({ page }: { page: LegacySeoPage }) {
           <p key={paragraph} style={{ maxWidth: '42rem', marginBottom: '0.8rem' }}>
             {paragraph}
           </p>
-        ))}
-        {post?.content.map((block) => (
-          <section key={block.heading} style={{ maxWidth: '42rem', marginBottom: '1.2rem' }}>
-            <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
-              {block.heading}
-            </h2>
-            <p>{block.text}</p>
-          </section>
         ))}
         {items.length > 0 ? (
           <ul style={{ display: 'grid', gap: '0.6rem', margin: '1rem 0 1.5rem' }}>

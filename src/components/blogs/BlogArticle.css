@@ -1,0 +1,95 @@
+.blog-article {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 8rem 1.25rem 4rem;
+  color: #1f2933;
+}
+
+.blog-featured {
+  display: block;
+  width: 100%;
+  margin: 0 0 1.5rem;
+}
+
+.blog-featured img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.blog-article h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+.blog-article time {
+  display: block;
+  margin-bottom: 1.75rem;
+  color: #667085;
+  font-size: 0.95rem;
+}
+
+.blog-body h2,
+.blog-body h3,
+.blog-body h4 {
+  line-height: 1.3;
+  margin: 1.75rem 0 0.7rem;
+}
+
+.blog-body h2 {
+  font-size: 1.55rem;
+}
+
+.blog-body h3 {
+  font-size: 1.25rem;
+}
+
+.blog-body h4 {
+  font-size: 1.05rem;
+}
+
+.blog-body p {
+  margin: 0 0 0.95rem;
+  line-height: 1.7;
+}
+
+.blog-body .blog-blank {
+  min-height: 0.5rem;
+}
+
+.blog-body ul,
+.blog-body ol {
+  margin: 0 0 1rem;
+  padding-left: 1.3rem;
+}
+
+.blog-body li {
+  margin: 0 0 0.4rem;
+  line-height: 1.65;
+}
+
+.blog-body a {
+  color: #1155cc;
+  text-decoration: underline;
+}
+
+.blog-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.25rem;
+}
+
+.blog-body table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blog-body td {
+  border: 1px solid #e5e7eb;
+  padding: 0.55rem 0.7rem;
+  vertical-align: top;
+}
+
+.blog-body td p {
+  margin: 0;
+}

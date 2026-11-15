@@ -23,8 +23,6 @@ export const legacyImagePath = (page: LegacySeoPage) => {
   if (activity?.image) return activity.image;
   const combo = ALL_PACKAGES.find((item) => item.id === handle);
   if (combo?.image) return combo.image;
-  const post = BLOG_POSTS.find((item) => item.slug === handle);
-  if (post?.image) return post.image;
   return COLLECTION_IMAGE[handle] || '/images/tf-og-share.jpg';
 };
 
@@ -96,7 +94,7 @@ export const articleSchema = (page: LegacySeoPage) => {
     headline: page.h1,
     description: page.description,
     image: absoluteSiteImage(legacyImagePath(page)),
-    author: { '@type': 'Person', name: post?.author || 'Thrill Factory' },
+    author: { '@type': 'Organization', name: 'Thrill Factory' },
     datePublished: post?.date,
     mainEntityOfPage: `${SITE_CONFIG.domain}${page.path}`,
   };

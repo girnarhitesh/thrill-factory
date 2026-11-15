@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { BLOG_POSTS } from '@/data/blogs';
 import { LEGACY_SEO_PAGES } from '@/data/legacySeo';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 
@@ -10,6 +11,7 @@ const EXTRA = ['/activities', '/combos', '/kids-zone', '/packages', '/safety', '
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const published = new Map(BLOG_POSTS.map((post) => [`/blogs/news/${post.slug}`, post.date]));
   const paths = new Set<string>();
 
   for (const page of LEGACY_SEO_PAGES) {
@@ -25,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...paths].map((path) => ({
     url: `${SITE_CONFIG.domain}${path === '/' ? '/' : path}`,
-    lastModified: now,
+    lastModified: published.get(path) ? new Date(`${published.get(path)}T00:00:00.000Z`) : now,
     changeFrequency: path.startsWith('/blogs/news/') ? 'monthly' : 'weekly',
     priority: path === '/' ? 1 : 0.7,
   }));

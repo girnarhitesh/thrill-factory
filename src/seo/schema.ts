@@ -1,5 +1,5 @@
 import { FAQS_DATA } from '@/data/faqs';
-import { BlogPost, blogNewsPath } from '@/data/blogs';
+import { BlogPost, blogImageSrc, blogNewsPath } from '@/data/blogs';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 
 const SITE = SITE_CONFIG.domain;
@@ -129,16 +129,13 @@ export const faqSchema = {
 };
 
 export const blogPostingSchema = (post: BlogPost) => {
-  const published = new Date(post.date);
-  const datePublished = Number.isNaN(published.getTime()) ? undefined : published.toISOString();
-
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
-    description: post.excerpt,
-    image: `${SITE}${post.image}`,
-    datePublished,
+    description: post.description,
+    image: post.image ? `${SITE}${blogImageSrc(post.image)}` : undefined,
+    datePublished: post.date,
     author: {
       '@type': 'Organization',
       name: SITE_CONFIG.brandName,
