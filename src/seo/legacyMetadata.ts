@@ -31,6 +31,12 @@ export const legacyImagePath = (page: LegacySeoPage) => {
 export const absoluteSiteImage = (path: string) =>
   path.startsWith('http') ? path : `${SITE_CONFIG.domain}${path}`;
 
+export const withCanonical = (metadata: Metadata, canonical: string): Metadata => ({
+  ...metadata,
+  alternates: { canonical },
+  openGraph: metadata.openGraph ? { ...metadata.openGraph, url: canonical } : { url: canonical },
+});
+
 export const legacyMetadata = (page: LegacySeoPage): Metadata => {
   const image = absoluteSiteImage(legacyImagePath(page));
 

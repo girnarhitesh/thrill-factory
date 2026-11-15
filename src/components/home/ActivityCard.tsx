@@ -127,6 +127,8 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
           </dl>
         ) : null}
 
+        {activity.holdNote ? <p className="ride-card-hold">{activity.holdNote}</p> : null}
+
         <div className="ride-card-foot">
           {activity.comingSoon ? (
             <div className="ride-card-price">
@@ -156,7 +158,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
                 Details
               </button>
             ) : null}
-            {activity.comingSoon ? null : (
+            {activity.comingSoon || activity.holdNote ? null : (
               <ThemeButton size="sm" variant="solid" arrow onClick={openBookingFrame}>
                 Book
               </ThemeButton>

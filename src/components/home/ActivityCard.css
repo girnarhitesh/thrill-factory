@@ -250,6 +250,14 @@
   text-decoration: line-through;
 }
 
+.ride-card-hold {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.35;
+  color: var(--color-primary);
+}
+
 .ride-card-soon {
   font-family: var(--font-family-display);
   font-size: 1.15rem;

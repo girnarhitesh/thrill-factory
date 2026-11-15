@@ -251,7 +251,7 @@ export const ComboDetailsModal: React.FC<ComboDetailsModalProps> = ({
               Ask on WhatsApp
             </ThemeButton>
 
-            <ThemeButton variant="ghost" arrow onClick={openBookingFrame}>
+            <ThemeButton variant="ghost" size="sm" arrow onClick={openBookingFrame}>
               Book This Combo Now
             </ThemeButton>
           </div>

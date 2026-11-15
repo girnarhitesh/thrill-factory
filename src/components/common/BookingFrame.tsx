@@ -13,9 +13,13 @@ export function openBookingFrame() {
 
 export function BookingFrame() {
   const [open, setOpen] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const listener = (next: boolean) => setOpen(next);
+    const listener = (next: boolean) => {
+      setOpen(next);
+      if (next) setReady(false);
+    };
     listeners.add(listener);
     return () => {
       listeners.delete(listener);
@@ -28,9 +32,11 @@ export function BookingFrame() {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setOpen(false);
     };
+    const reveal = window.setTimeout(() => setReady(true), 700);
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', onKey);
     return () => {
+      window.clearTimeout(reveal);
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', onKey);
     };
@@ -58,11 +64,19 @@ export function BookingFrame() {
             <X size={18} />
           </button>
         </div>
-        <iframe
-          className="booking-frame__view"
-          src={SITE_CONFIG.bookingUrl}
-          title="Book Thrill Factory"
-        />
+        <div className="booking-frame__stage">
+          <iframe
+            className={`booking-frame__view${ready ? ' is-ready' : ''}`}
+            src={SITE_CONFIG.bookingUrl}
+            title="Book Thrill Factory"
+          />
+          {ready ? null : (
+            <div className="booking-frame__loader" role="status" aria-live="polite">
+              <span className="booking-frame__spinner" aria-hidden="true" />
+              <p>Opening your booking</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

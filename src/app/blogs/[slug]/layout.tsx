@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import { SITE_CONFIG } from '@/constants/siteConfig';
 import { BLOG_POSTS } from '@/data/blogs';
 import { LEGACY_SEO_PAGES, legacySeoPage } from '@/data/legacySeo';
-import { legacyMetadata } from '@/seo/legacyMetadata';
+import { legacyMetadata, withCanonical } from '@/seo/legacyMetadata';
 
 type RouteParams = { params: Promise<{ slug: string }> };
 
@@ -16,13 +17,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
   const { slug } = await params;
+  const canonical = `${SITE_CONFIG.domain}/blogs/${slug}`;
   const page = legacySeoPage(`/blogs/${slug}`) || legacySeoPage(`/blogs/news/${slug}`);
-  if (page) return legacyMetadata(page);
+  if (page) return withCanonical(legacyMetadata(page), canonical);
   const post = BLOG_POSTS.find((item) => item.slug === slug);
   if (!post) return {};
   return {
     title: { absolute: post.title },
     description: post.excerpt,
+    alternates: { canonical },
   };
 }
 

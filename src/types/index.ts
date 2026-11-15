@@ -29,6 +29,7 @@ export interface Activity {
   videoUrl?: string;
   featured?: boolean;
   comingSoon?: boolean;
+  holdNote?: string;
   options?: ActivityOption[];
 }
 

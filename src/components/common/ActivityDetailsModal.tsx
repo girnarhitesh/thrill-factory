@@ -106,6 +106,7 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
           <div className="combo-header-section">
             <div className="combo-header-left">
               <h2 className="combo-modal-title">{activity.title}</h2>
+              {activity.holdNote ? <p className="activity-hold-note">{activity.holdNote}</p> : null}
             </div>
 
             <div className="combo-header-pricing">
@@ -179,7 +180,11 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
               {activity.comingSoon ? 'Coming Soon' : `Rs. ${activity.price.toLocaleString('en-IN')}.00`}
             </span>
             <span className="combo-footer-price-sub">
-              {activity.comingSoon ? 'Opening at Thrill Factory' : 'Instant online slot confirmation'}
+              {activity.holdNote
+                ? activity.holdNote
+                : activity.comingSoon
+                  ? 'Opening at Thrill Factory'
+                  : 'Instant online slot confirmation'}
             </span>
           </div>
 
@@ -195,8 +200,8 @@ export const ActivityDetailsModal: React.FC<ActivityDetailsModalProps> = ({
               Ask on WhatsApp
             </ThemeButton>
 
-            {activity.comingSoon ? null : (
-              <ThemeButton variant="ghost" arrow onClick={openBookingFrame}>
+            {activity.comingSoon || activity.holdNote ? null : (
+              <ThemeButton variant="ghost" size="sm" arrow onClick={openBookingFrame}>
                 Book This Activity Now
               </ThemeButton>
             )}

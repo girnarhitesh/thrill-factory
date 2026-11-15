@@ -10,6 +10,18 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Old Shopify URLs. The trailing ? drops ?page=N so it is not forwarded.
+  RewriteRule ^collections/kids-zone/?$ /kids-zone? [R=301,L]
+  RewriteRule ^collections/save-more/?$ /combos? [R=301,L]
+  RewriteRule ^collections/rope-bungee-combo/?$ /combos? [R=301,L]
+  RewriteCond %{REQUEST_URI} !^/collections/(extreme-adventure|all-adventures|all)/?$
+  RewriteRule ^collections/[^/]+/?$ /activities? [R=301,L]
+  RewriteCond %{REQUEST_URI} !^/products/(bungee-jumping|giant-swing)/?$
+  RewriteRule ^products/[^/]+/?$ /activities? [R=301,L]
+  RewriteRule ^pages/corporate/?$ /corporate? [R=301,L]
+  RewriteCond %{REQUEST_URI} !^/pages/contact/?$
+  RewriteRule ^pages/[^/]+/?$ /? [R=301,L]
+
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]

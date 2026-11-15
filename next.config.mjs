@@ -13,6 +13,20 @@ const nextConfig = {
     ],
   },
   trailingSlash: false,
+  async redirects() {
+    return [
+      { source: '/collections/moderate-adventure', destination: '/activities', statusCode: 301 },
+      { source: '/collections/entertainment-adventure', destination: '/activities', statusCode: 301 },
+      { source: '/collections/vr-zone', destination: '/activities', statusCode: 301 },
+      { source: '/collections/kids-zone', destination: '/kids-zone', statusCode: 301 },
+      { source: '/collections/save-more', destination: '/combos', statusCode: 301 },
+      { source: '/collections/rope-bungee-combo', destination: '/combos', statusCode: 301 },
+      { source: '/pages/corporate', destination: '/corporate', statusCode: 301 },
+      { source: '/products/:slug((?!bungee-jumping$|giant-swing$).*)', destination: '/activities', statusCode: 301 },
+      { source: '/collections/:slug((?!extreme-adventure$|all-adventures$|all$).*)', destination: '/activities', statusCode: 301 },
+      { source: '/pages/:slug((?!contact$).*)', destination: '/', statusCode: 301 },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -52,11 +52,70 @@
   cursor: pointer;
 }
 
-.booking-frame__view {
+.booking-frame__stage {
+  position: relative;
   flex: 1;
+  min-height: 0;
+  background: #f7f7f5;
+}
+
+.booking-frame__view {
   width: 100%;
+  height: 100%;
   border: 0;
   background: #ffffff;
+  opacity: 0;
+}
+
+.booking-frame__view.is-ready {
+  opacity: 1;
+  transition: opacity 280ms ease;
+}
+
+.booking-frame__loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #f7f7f5;
+}
+
+.booking-frame__loader p {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1c1c1c;
+}
+
+.booking-frame__spinner {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgb(28 28 28 / 0.14);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: booking-frame-spin 0.7s linear infinite;
+}
+
+@keyframes booking-frame-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booking-frame__spinner {
+    animation: none;
+    border-top-color: var(--color-primary);
+  }
+
+  .booking-frame__view.is-ready {
+    transition: none;
+  }
 }
 
 @media (max-width: 640px) {

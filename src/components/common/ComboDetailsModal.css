@@ -127,6 +127,14 @@
   line-height: 1.2;
 }
 
+.activity-hold-note {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-primary);
+}
+
 .combo-modal-formula-banner {
   display: inline-flex;
   align-items: center;
@@ -605,8 +613,15 @@
 
 .combo-modal-footer-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
+  min-width: 0;
+}
+
+.combo-modal-footer-actions .btn {
+  max-width: 100%;
 }
 
 /* ==========================================================================
@@ -731,9 +746,9 @@
 
   .combo-modal-footer-price {
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
     width: 100%;
   }
 
@@ -741,9 +756,14 @@
     font-size: 1.45rem;
   }
 
+  .combo-footer-price-sub {
+    line-height: 1.35;
+  }
+
   .combo-modal-footer-actions {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
     gap: 8px;
     width: 100%;
   }

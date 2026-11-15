@@ -1,30 +1,26 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ContactPage from '@/app/contact/page';
-import CorporatePage from '@/app/corporate/page';
-import { LegacyDocument } from '@/components/seo/LegacyDocument';
-import { LEGACY_SEO_PAGES, legacySeoPage } from '@/data/legacySeo';
-import { legacyMetadata } from '@/seo/legacyMetadata';
+import { SITE_CONFIG } from '@/constants/siteConfig';
+import { legacySeoPage } from '@/data/legacySeo';
+import { legacyMetadata, withCanonical } from '@/seo/legacyMetadata';
 
 type RouteParams = { params: Promise<{ handle: string }> };
 
 export function generateStaticParams() {
-  return LEGACY_SEO_PAGES.filter((page) => page.path.startsWith('/pages/')).map((page) => ({
-    handle: page.path.split('/').pop() || '',
-  }));
+  return [{ handle: 'contact' }];
 }
 
 export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
   const { handle } = await params;
-  const page = legacySeoPage(`/pages/${handle}`);
-  return page ? legacyMetadata(page) : {};
+  if (handle !== 'contact') return {};
+  const page = legacySeoPage('/pages/contact');
+  const canonical = `${SITE_CONFIG.domain}/pages/contact`;
+  return page ? withCanonical(legacyMetadata(page), canonical) : { alternates: { canonical } };
 }
 
 export default async function StaticPage({ params }: RouteParams) {
   const { handle } = await params;
-  const page = legacySeoPage(`/pages/${handle}`);
-  if (!page) notFound();
   if (handle === 'contact') return <ContactPage />;
-  if (handle === 'corporate') return <CorporatePage />;
-  return <LegacyDocument page={page} />;
+  notFound();
 }
