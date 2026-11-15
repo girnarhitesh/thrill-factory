@@ -1,0 +1,28 @@
+{
+  "name": "The Shivpuri Thrill Factory",
+  "short_name": "Thrill Factory",
+  "description": "The Shivpuri Thrill Factory is India’s only adventure and entertainment destination — extreme rides, aerial thrills, ground games, VR, and a kids zone in Rishikesh.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#282828",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["travel", "sports"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/tf-favicon.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

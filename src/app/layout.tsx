@@ -69,6 +69,7 @@ export const metadata: Metadata = {
   },
   description: SITE_CONFIG.description,
   applicationName: SITE_CONFIG.shortName,
+  manifest: '/site.webmanifest',
   formatDetection: {
     telephone: false,
   },
