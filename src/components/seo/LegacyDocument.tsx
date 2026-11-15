@@ -11,7 +11,8 @@ import { openBookingFrame } from '@/components/common/BookingFrame';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { BLOG_POSTS } from '@/data/blogs';
 import { LegacySeoPage } from '@/data/legacySeo';
-import { collectionItems, legacyImagePath, productSchema } from '@/seo/legacyMetadata';
+import { articleSchema, collectionItems, faqSchema, legacyImagePath, productSchema } from '@/seo/legacyMetadata';
+import { ALL_ADVENTURES_DATA } from '@/data/activities';
 
 const POLICY_COPY: Record<string, string[]> = {
   'terms-and-condition': [
@@ -46,10 +47,16 @@ export function LegacyDocument({ page }: { page: LegacySeoPage }) {
   const items = page.kind === 'collection' ? collectionItems(page) : [];
   const policy = POLICY_COPY[handle];
   const schema = productSchema(page);
+  const article = articleSchema(page);
+  const faqs = faqSchema(page);
+  const activity = ALL_ADVENTURES_DATA.find((item) => item.slug === handle || item.id === handle);
 
   return (
     <>
       {schema ? <JsonLd data={schema} /> : null}
+      {article ? <JsonLd data={article} /> : null}
+      {faqs ? <JsonLd data={faqs} /> : null}
+      {page.kind === 'product' ? <meta property="og:type" content="product" /> : null}
       <Navbar />
       <main className="container" style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
         <h1 className="section-title">{page.h1}</h1>
@@ -59,9 +66,18 @@ export function LegacyDocument({ page }: { page: LegacySeoPage }) {
           alt={page.h1}
           width={960}
           height={540}
+          priority
           sizes="(max-width: 768px) 100vw, 960px"
           style={{ width: '100%', height: 'auto', maxHeight: '28rem', objectFit: 'cover', marginBottom: '1.5rem' }}
         />
+        {activity?.holdNote ? <p>{activity.holdNote}</p> : null}
+        {activity?.features?.length ? (
+          <ul style={{ margin: '0 0 1.25rem', paddingLeft: '1.1rem' }}>
+            {activity.features.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+        ) : null}
         {page.price != null ? (
           <p style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>
             ₹{page.price.toLocaleString('en-IN')} per person

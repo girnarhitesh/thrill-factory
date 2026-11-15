@@ -1,4 +1,5 @@
 DirectoryIndex index.html
+DirectorySlash Off
 ErrorDocument 404 /404.html
 
 <IfModule mod_headers.c>
@@ -10,17 +11,14 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Old Shopify URLs. The trailing ? drops ?page=N so it is not forwarded.
-  RewriteRule ^collections/kids-zone/?$ /kids-zone? [R=301,L]
-  RewriteRule ^collections/save-more/?$ /combos? [R=301,L]
-  RewriteRule ^collections/rope-bungee-combo/?$ /combos? [R=301,L]
-  RewriteCond %{REQUEST_URI} !^/collections/(extreme-adventure|all-adventures|all)/?$
-  RewriteRule ^collections/[^/]+/?$ /activities? [R=301,L]
-  RewriteCond %{REQUEST_URI} !^/products/(bungee-jumping|giant-swing)/?$
-  RewriteRule ^products/[^/]+/?$ /activities? [R=301,L]
+  # One hop. Internal rewrites use [L] so the browser stays on the same URL.
+  RewriteRule ^contact/?$ /pages/contact? [R=301,L]
   RewriteRule ^pages/corporate/?$ /corporate? [R=301,L]
-  RewriteCond %{REQUEST_URI} !^/pages/contact/?$
-  RewriteRule ^pages/[^/]+/?$ /? [R=301,L]
+  RewriteRule ^blogs/?$ /blogs/news? [R=301,L]
+  RewriteRule ^blogs/ziplining-in-uttarakhand-every-zipline-worth-doing-in-rishikesh/?$ /blogs/news/ziplining-in-uttarakhand-2026-every-zipline-worth-doing? [R=301,L]
+  # /blogs/news is also a directory of article HTML. Serve the index file, no redirect.
+  RewriteRule ^blogs/news/?$ /blogs/news.html [L]
+  RewriteRule ^blogs/([^/]+)/?$ /blogs/news/$1? [R=301,L]
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d

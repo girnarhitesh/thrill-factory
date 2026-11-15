@@ -8,7 +8,7 @@ import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ThemeButton } from '@/components/common/ThemeButton';
-import { BLOG_POSTS, BlogPost } from '@/data/blogs';
+import { BLOG_POSTS, BlogPost, blogNewsPath } from '@/data/blogs';
 import {
   Calendar,
   Clock,
@@ -149,7 +149,7 @@ export default function BlogsPage() {
                   }}
                 >
                   <Link
-                    href={`/blogs/${featuredPost.slug}`}
+                    href={blogNewsPath(featuredPost.slug)}
                     style={{ color: '#FFFFFF', textDecoration: 'none' }}
                   >
                     {featuredPost.title}
@@ -185,7 +185,7 @@ export default function BlogsPage() {
                   </div>
 
                   <ThemeButton
-                    href={`/blogs/${featuredPost.slug}`}
+                    href={blogNewsPath(featuredPost.slug)}
                     size="sm"
                     variant="solid"
                     tone="on-dark"
@@ -275,7 +275,7 @@ export default function BlogsPage() {
                     }}
                   >
                     <Link
-                      href={`/blogs/${post.slug}`}
+                      href={blogNewsPath(post.slug)}
                       style={{ color: 'var(--color-text-primary)', textDecoration: 'none' }}
                     >
                       {post.title}
@@ -312,7 +312,7 @@ export default function BlogsPage() {
                     </span>
 
                     <Link
-                      href={`/blogs/${post.slug}`}
+                      href={blogNewsPath(post.slug)}
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',

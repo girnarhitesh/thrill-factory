@@ -33,6 +33,7 @@ import '@/components/common/ComboDetailsModal.css';
 import '@/styles/animations.css';
 import { BookingFrame } from '@/components/common/BookingFrame';
 import { ScrollRevealObserver } from '@/components/common/ScrollRevealObserver';
+import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 import { legacySeoPage } from '@/data/legacySeo';
@@ -138,6 +139,7 @@ gtag('js', new Date());
 gtag('config', 'G-JERYX5N04Z');`}
         </Script>
         <JsonLd data={siteSchema} />
+        <BreadcrumbJsonLd />
         <ScrollRevealObserver />
         <BookingFrame />
         {children}

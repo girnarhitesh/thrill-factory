@@ -39,25 +39,66 @@ export const withCanonical = (metadata: Metadata, canonical: string): Metadata =
 
 export const legacyMetadata = (page: LegacySeoPage): Metadata => {
   const image = absoluteSiteImage(legacyImagePath(page));
+  const canonical = `${SITE_CONFIG.domain}${page.path === '/' ? '/' : page.path}`;
+  const ogType = page.ogType === 'article' ? 'article' : page.ogType === 'product' ? 'product' : 'website';
 
   return {
     title: { absolute: page.title },
     description: page.description,
-    alternates: { canonical: page.canonical },
+    alternates: { canonical },
     openGraph: {
-      type: page.ogType === 'article' ? 'article' : 'website',
-      title: page.ogTitle,
-      description: page.ogDescription,
-      url: page.canonical,
+      ...(ogType === 'article' ? { type: 'article' as const } : ogType === 'product' ? {} : { type: 'website' as const }),
+      title: page.title,
+      description: page.description,
+      url: canonical,
       siteName: 'Thrill Factory',
       images: [{ url: image, alt: page.h1 }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: page.ogTitle,
-      description: page.ogDescription,
+      title: page.title,
+      description: page.description,
       images: [image],
     },
+  };
+};
+
+export const breadcrumbSchema = (page: LegacySeoPage) => {
+  const parts = page.path.split('/').filter(Boolean);
+  const crumbs = [{ name: 'Home', path: '/' }];
+  let built = '';
+  parts.forEach((part, index) => {
+    built += `/${part}`;
+    crumbs.push({
+      name: index === parts.length - 1 ? page.h1 : part.replace(/-/g, ' '),
+      path: built,
+    });
+  });
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: `${SITE_CONFIG.domain}${crumb.path === '/' ? '/' : crumb.path}`,
+    })),
+  };
+};
+
+export const articleSchema = (page: LegacySeoPage) => {
+  if (page.kind !== 'article') return null;
+  const handle = page.path.split('/').filter(Boolean).pop() || '';
+  const post = BLOG_POSTS.find((item) => item.slug === handle);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: page.h1,
+    description: page.description,
+    image: absoluteSiteImage(legacyImagePath(page)),
+    author: { '@type': 'Person', name: post?.author || 'Thrill Factory' },
+    datePublished: post?.date,
+    mainEntityOfPage: `${SITE_CONFIG.domain}${page.path}`,
   };
 };
 
@@ -76,8 +117,35 @@ export const productSchema = (page: LegacySeoPage) => {
       priceCurrency: 'INR',
       price: page.price,
       availability: 'https://schema.org/InStock',
-      url: page.canonical,
+      url: `${SITE_CONFIG.domain}${page.path === '/' ? '/' : page.path}`,
     },
+  };
+};
+
+export const faqSchema = (page: LegacySeoPage) => {
+  const handle = page.path.split('/').filter(Boolean).pop() || '';
+  const activity = ALL_ADVENTURES_DATA.find((item) => item.slug === handle || item.id === handle);
+  const paragraphs = activity?.paragraphs || [];
+  const pairs: { question: string; answer: string }[] = [];
+  paragraphs.forEach((paragraph, index) => {
+    const question = paragraph.replace(/^✅\s*/, '').trim();
+    if (!/^Q\d+\s*[:.]/i.test(question)) return;
+    const answer = paragraphs[index + 1]?.trim();
+    if (!answer || /^✅?\s*Q\d+\s*[:.]/i.test(answer) || /FAQ/i.test(answer)) return;
+    pairs.push({
+      question: question.replace(/^Q\d+\s*[:.]?\s*/i, ''),
+      answer,
+    });
+  });
+  if (!pairs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: pairs.map((pair) => ({
+      '@type': 'Question',
+      name: pair.question,
+      acceptedAnswer: { '@type': 'Answer', text: pair.answer },
+    })),
   };
 };
 

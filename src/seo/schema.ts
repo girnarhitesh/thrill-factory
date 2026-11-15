@@ -1,5 +1,5 @@
 import { FAQS_DATA } from '@/data/faqs';
-import { BlogPost } from '@/data/blogs';
+import { BlogPost, blogNewsPath } from '@/data/blogs';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 
 const SITE = SITE_CONFIG.domain;
@@ -20,7 +20,7 @@ export const siteSchema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['TouristAttraction', 'AmusementPark'],
+      '@type': ['LocalBusiness', 'TouristAttraction', 'AmusementPark'],
       '@id': PARK_ID,
       name: SITE_CONFIG.brandName,
       alternateName: SITE_CONFIG.shortName,
@@ -152,7 +152,7 @@ export const blogPostingSchema = (post: BlogPost) => {
         url: `${SITE}/images/thrill-factory-logo.png`,
       },
     },
-    mainEntityOfPage: `${SITE}/blogs/${post.slug}/`,
+    mainEntityOfPage: `${SITE}${blogNewsPath(post.slug)}`,
     isPartOf: { '@id': WEBSITE_ID },
   };
 };

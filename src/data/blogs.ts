@@ -19,6 +19,13 @@ export interface BlogPost {
   relatedActivityTitle?: string;
 }
 
+export const blogNewsPath = (slug: string) => {
+  if (slug === 'ziplining-in-uttarakhand-every-zipline-worth-doing-in-rishikesh') {
+    return '/blogs/news/ziplining-in-uttarakhand-2026-every-zipline-worth-doing';
+  }
+  return `/blogs/news/${slug}`;
+};
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'adventure-safety-at-thrill-factory',

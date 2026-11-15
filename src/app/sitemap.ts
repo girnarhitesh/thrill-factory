@@ -1,52 +1,32 @@
 import type { MetadataRoute } from 'next';
-import { BLOG_POSTS } from '@/data/blogs';
 import { LEGACY_SEO_PAGES } from '@/data/legacySeo';
 import { SITE_CONFIG } from '@/constants/siteConfig';
 
 export const dynamic = 'force-static';
 
-const ROUTES = [
-  '/',
-  '/activities',
-  '/combos',
-  '/kids-zone',
-  '/packages',
-  '/safety',
-  '/contact',
-  '/corporate',
-  '/blogs',
-  '/products/bungee-jumping',
-  '/products/giant-swing',
-  '/collections/extreme-adventure',
-  '/collections/all-adventures',
-  '/collections/all',
-  '/pages/contact',
-];
+const SKIP = new Set(['/pages/test', '/pages/corporate']);
+
+const EXTRA = ['/activities', '/combos', '/kids-zone', '/packages', '/safety', '/corporate'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const paths = new Set<string>();
 
-  const pages: MetadataRoute.Sitemap = ROUTES.map((path) => ({
-    url: `${SITE_CONFIG.domain}${path}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: path === '/' ? 1 : 0.7,
-  }));
-
-  const guideSlugs = new Set(BLOG_POSTS.map((post) => post.slug));
   for (const page of LEGACY_SEO_PAGES) {
-    const parts = page.path.split('/').filter(Boolean);
-    if (parts[0] === 'blogs' && parts.length === 2 && parts[1] !== 'news') {
-      guideSlugs.add(parts[1]);
+    if (SKIP.has(page.path)) continue;
+    if (page.path.startsWith('/blogs/') && !page.path.startsWith('/blogs/news')) {
+      paths.add(`/blogs/news/${page.path.split('/').pop()}`);
+      continue;
     }
+    paths.add(page.path);
   }
 
-  const guides: MetadataRoute.Sitemap = [...guideSlugs].map((slug) => ({
-    url: `${SITE_CONFIG.domain}/blogs/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
+  for (const path of EXTRA) paths.add(path);
 
-  return [...pages, ...guides];
+  return [...paths].map((path) => ({
+    url: `${SITE_CONFIG.domain}${path === '/' ? '/' : path}`,
+    lastModified: now,
+    changeFrequency: path.startsWith('/blogs/news/') ? 'monthly' : 'weekly',
+    priority: path === '/' ? 1 : 0.7,
+  }));
 }

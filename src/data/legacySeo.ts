@@ -22,7 +22,7 @@ export const LEGACY_SEO_PAGES: LegacySeoPage[] = [
     "ogType": "website",
     "canonical": "https://thrillfactory.in/",
     "price": null,
-    "h1": "Bungee Jumping in Rishikesh",
+    "h1": "India’s Highest Bungee Jumping in Rishikesh",
     "kind": "home"
   },
   {
@@ -255,7 +255,7 @@ export const LEGACY_SEO_PAGES: LegacySeoPage[] = [
   },
   {
     "path": "/products/sky-cycling",
-    "title": "Best Sky Cycling in Rishikesh | Thrill Factor – Thrill Factory",
+    "title": "Best Sky Cycling in Rishikesh | Thrill Factory",
     "description": "Looking for Sky Cycling in Rishikesh? Visit Thrill Factory in Shivpuri for an exciting high-wire cycling adventure that adds real thrill to your day.",
     "ogTitle": "Sky Cycling",
     "ogDescription": "Looking for Sky Cycling in Rishikesh? Visit Thrill Factory in Shivpuri for an exciting high-wire cycling adventure that adds real thrill to your day.",
@@ -315,7 +315,7 @@ export const LEGACY_SEO_PAGES: LegacySeoPage[] = [
   },
   {
     "path": "/products/archery",
-    "title": "Indoor Archery in Rishiskesh | Thrill Factory",
+    "title": "Indoor Archery in Rishikesh | Thrill Factory",
     "description": "Looking for indoor archery in Rishikesh? Visit Thrill Factory for a thrilling target-shooting experience that is fun for friends and families.",
     "ogTitle": "AI Archery",
     "ogDescription": "Looking for indoor archery in Rishikesh? Visit Thrill Factory for a thrilling target-shooting experience that is fun for friends and families.",
@@ -363,7 +363,7 @@ export const LEGACY_SEO_PAGES: LegacySeoPage[] = [
   },
   {
     "path": "/products/ai-photobooth",
-    "title": "AI Photobooth in Rishikesh | Instant Fun Photos at Thrill Factor – Thrill Factory",
+    "title": "AI Photobooth in Rishikesh | Instant Fun Photos at Thrill Factory",
     "description": "Try the AI Photobooth in Shivpuri, Rishikesh at Thrill Factory. Capture instant photos with creative effects, stylish filters, and fun group formats for friends and families.",
     "ogTitle": "AI Photobooth",
     "ogDescription": "Try the AI Photobooth in Shivpuri, Rishikesh at Thrill Factory. Capture instant photos with creative effects, stylish filters, and fun group formats for friends and families.",
@@ -928,9 +928,9 @@ export const LEGACY_SEO_PAGES: LegacySeoPage[] = [
   {
     "path": "/blogs/news/best-things-to-do-in-rishikesh-the-ultimate-adventure-travel-guide",
     "title": "Best Things to Do in Rishikesh: The Ultimate Adventure & Travel Guide – Thrill Factory",
-    "description": "Discover the best things to do in Rishikesh — from white-water rafting and bungee jumping to ziplining, yoga, and Ganga Aarti. Complete 2025 travel guide by ThrilFactory.in, Uttarakhand's premier adventure destination.",
+    "description": "Discover the best things to do in Rishikesh — from white-water rafting and bungee jumping to ziplining, yoga, and Ganga Aarti. Complete 2026 travel guide by Thrill Factory, Uttarakhand's premier adventure destination.",
     "ogTitle": "Best Things to Do in Rishikesh: The Ultimate Adventure & Travel Guide",
-    "ogDescription": "Discover the best things to do in Rishikesh — from white-water rafting and bungee jumping to ziplining, yoga, and Ganga Aarti. Complete 2025 travel guide by ThrilFactory.in, Uttarakhand's premier adventure destination.",
+    "ogDescription": "Discover the best things to do in Rishikesh — from white-water rafting and bungee jumping to ziplining, yoga, and Ganga Aarti. Complete 2026 travel guide by Thrill Factory, Uttarakhand's premier adventure destination.",
     "ogType": "article",
     "canonical": "https://thrillfactory.in/blogs/news/best-things-to-do-in-rishikesh-the-ultimate-adventure-travel-guide",
     "price": null,

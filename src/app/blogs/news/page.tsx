@@ -5,7 +5,7 @@ import { legacySeoPage } from '@/data/legacySeo';
 import { legacyMetadata, withCanonical } from '@/seo/legacyMetadata';
 
 const news = legacySeoPage('/blogs/news');
-const canonical = `${SITE_CONFIG.domain}/blogs`;
+const canonical = `${SITE_CONFIG.domain}/blogs/news`;
 
 export const metadata: Metadata = news
   ? withCanonical(legacyMetadata(news), canonical)

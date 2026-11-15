@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
+import fs from 'fs';
+
+const legacySource = fs.readFileSync(new URL('./src/data/legacySeo.ts', import.meta.url), 'utf8');
+const oldBlogRedirects = [...legacySource.matchAll(/"path": "\/blogs\/(?!news\/|news")([^"]+)"/g)].map((match) => ({
+  source: `/blogs/${match[1]}`,
+  destination: `/blogs/news/${match[1]}`,
+  statusCode: 301,
+}));
+
 const nextConfig = {
   output: 'export',
   productionBrowserSourceMaps: true,
@@ -13,19 +22,24 @@ const nextConfig = {
     ],
   },
   trailingSlash: false,
+  skipTrailingSlashRedirect: true,
   async redirects() {
     return [
-      { source: '/collections/moderate-adventure', destination: '/activities', statusCode: 301 },
-      { source: '/collections/entertainment-adventure', destination: '/activities', statusCode: 301 },
-      { source: '/collections/vr-zone', destination: '/activities', statusCode: 301 },
-      { source: '/collections/kids-zone', destination: '/kids-zone', statusCode: 301 },
-      { source: '/collections/save-more', destination: '/combos', statusCode: 301 },
-      { source: '/collections/rope-bungee-combo', destination: '/combos', statusCode: 301 },
+      { source: '/contact', destination: '/pages/contact', statusCode: 301 },
       { source: '/pages/corporate', destination: '/corporate', statusCode: 301 },
-      { source: '/products/:slug((?!bungee-jumping$|giant-swing$).*)', destination: '/activities', statusCode: 301 },
-      { source: '/collections/:slug((?!extreme-adventure$|all-adventures$|all$).*)', destination: '/activities', statusCode: 301 },
-      { source: '/pages/:slug((?!contact$).*)', destination: '/', statusCode: 301 },
+      { source: '/blogs', destination: '/blogs/news', statusCode: 301 },
+      {
+        source: '/blogs/ziplining-in-uttarakhand-every-zipline-worth-doing-in-rishikesh',
+        destination: '/blogs/news/ziplining-in-uttarakhand-2026-every-zipline-worth-doing',
+        statusCode: 301,
+      },
+      ...oldBlogRedirects,
     ];
+  },
+  async rewrites() {
+    return {
+      beforeFiles: [{ source: '/:path+/', destination: '/:path+' }],
+    };
   },
 };
 

@@ -336,8 +336,9 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
             </p>
 
             <h1 className="hero-adventure-title">
-              <span className="hero-title-kicker">India’s Highest</span>
+              <span className="hero-title-kicker">India’s Highest </span>
               <span className="hero-title-highlight">Bungee Jumping</span>
+              <span className="hero-title-rest"> in Rishikesh</span>
             </h1>
           </div>
 
