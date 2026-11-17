@@ -105,7 +105,7 @@ export const LEGACY_SEO_PAGES: LegacySeoPage[] = [
     "ogDescription": "Book the Bungee Jump and Giant Swing combo in Rishikesh at Thrill Factory for a high-thrill adventure experience in Shivpuri.",
     "ogType": "product",
     "canonical": "https://thrillfactory.in/products/bungee-jump-and-giant-swing-combo",
-    "price": 5500,
+    "price": 6500,
     "h1": "Bungee Jump Giant Swing Combo in Rishikesh",
     "kind": "product"
   },

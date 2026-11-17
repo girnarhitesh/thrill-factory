@@ -146,7 +146,7 @@ export const FEATURED_PACKAGES: PackageCombo[] = [
     "id": "bungee-jump-and-giant-swing-combo",
     "title": "Thrill Combo 1",
     "subtitle": "Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump",
-    "price": 5500,
+    "price": 6500,
     "originalPrice": 9000,
     "badge": "Most Popular",
     "popular": true,
@@ -408,7 +408,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "id": "bungee-jump-and-giant-swing-combo",
     "title": "Thrill Combo 1",
     "subtitle": "Bungee Jump +Giant Swing +Reverse Bungee+ SCAD Jump",
-    "price": 5500,
+    "price": 6500,
     "originalPrice": 9000,
     "badge": "Most Popular",
     "popular": true,
@@ -599,6 +599,149 @@ export const ALL_PACKAGES: PackageCombo[] = [
         "title": "Reverse Bungee Jumping in Rishikesh",
         "heightOrSpec": "180 FT Launch (0-100 km/h in 3s)",
         "text": "Experience the Thrill of Reverse Bungee Jumping in Rishikesh Reverse bungee jumping in Rishikesh offers a heart-racing adventure that will leave you exhilarated and craving for more. At Thrill Factory, you'll have the opportunity to engage in this unique and thrilling activity that takes bungee jumping to new heights. Prepare yourself for an adrenaline-fueled experience as you are catapulted into the sky with incredible force. The anticipation builds as you reach the pinnacle of the jump, and then the sudden release sends you soaring through the air, defying gravity. Reverse bungee jumping provides an extraordinary sensation of weightlessness and an unparalleled rush of excitement."
+      }
+    ]
+  },
+  {
+    "id": "indias-highest-bungee-any-one-combo",
+    "title": "Thrill Combo 1.4",
+    "subtitle": "India’s Highest Bungy + any one of Giant Swing / Reverse Bungee / SCAD Jump",
+    "price": 8000,
+    "badge": "Highest + One",
+    "popular": false,
+    "featured": false,
+    "image": "/images/indias-highest-crane-bungee.jpeg",
+    "gallery": [
+      "/images/indias-highest-crane-bungee.jpeg",
+      "/images/giant-swing.jpg",
+      "/images/reverse-bungee.jpg",
+      "/images/scad-jump.jpg"
+    ],
+    "formula": "India’s Highest Bungy + any one of Giant Swing / Reverse Bungee / SCAD Jump",
+    "cardDesc": "Combo Activity : (India’s Highest Bungy + any one activity) Choose one from Giant Swing, Reverse Bungee, or SCAD Jump.",
+    "activitiesIncluded": [
+      "India’s Highest Bungee Jumping (120 m)",
+      "Any one: Giant Swing, Reverse Bungee, or SCAD Jump"
+    ],
+    "highlights": [
+      "Official combo at The Shivpuri Thrill Factory",
+      "India’s Highest Bungee plus one extra ride",
+      "Includes personalized completion certificate",
+      "Certified jump masters and EN/CE safety protocol"
+    ],
+    "suitableFor": "Adventure Seekers & Bucket-Listers",
+    "safetySpecs": {
+      "weightLimit": "Minimum 40 kg. Maximum as per site conditions.",
+      "ageLimit": "15+ to 55 years",
+      "duration": "45 – 90 Minutes total",
+      "gear": "EN/CE Certified Harness, Dynamic Cord & Safety Net"
+    },
+    "rideDetails": [
+      {
+        "title": "India’s Highest Bungee Jumping",
+        "heightOrSpec": "120 m",
+        "text": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear. Age 15 to 55, minimum weight 40 kg, and the safety team’s approval is final."
+      },
+      {
+        "title": "Choose one extra ride",
+        "heightOrSpec": "Giant Swing, Reverse Bungee, or SCAD Jump",
+        "text": "Add any one activity with the 120 m jump: Giant Swing, Reverse Bungee, or SCAD Jump. The combo price stays ₹8,000 per person whichever ride you pick."
+      }
+    ]
+  },
+  {
+    "id": "indias-highest-bungee-any-two-combo",
+    "title": "Thrill Combo 1.5",
+    "subtitle": "India’s Highest Bungy + any two of Giant Swing / Reverse Bungee / SCAD Jump",
+    "price": 9000,
+    "badge": "Highest + Two",
+    "popular": false,
+    "featured": false,
+    "image": "/images/indias-highest-crane-bungee.jpeg",
+    "gallery": [
+      "/images/indias-highest-crane-bungee.jpeg",
+      "/images/giant-swing.jpg",
+      "/images/reverse-bungee.jpg",
+      "/images/scad-jump.jpg"
+    ],
+    "formula": "India’s Highest Bungy + any two of Giant Swing / Reverse Bungee / SCAD Jump",
+    "cardDesc": "Combo Activity : (India’s Highest Bungy + any two activities) Choose two from Giant Swing, Reverse Bungee, or SCAD Jump.",
+    "activitiesIncluded": [
+      "India’s Highest Bungee Jumping (120 m)",
+      "Any two: Giant Swing, Reverse Bungee, or SCAD Jump"
+    ],
+    "highlights": [
+      "Official combo at The Shivpuri Thrill Factory",
+      "India’s Highest Bungee plus two extra rides",
+      "Includes personalized completion certificate",
+      "Certified jump masters and EN/CE safety protocol"
+    ],
+    "suitableFor": "Adventure Seekers & Bucket-Listers",
+    "safetySpecs": {
+      "weightLimit": "Minimum 40 kg. Maximum as per site conditions.",
+      "ageLimit": "15+ to 55 years",
+      "duration": "60 – 120 Minutes total",
+      "gear": "EN/CE Certified Harness, Dynamic Cord & Safety Net"
+    },
+    "rideDetails": [
+      {
+        "title": "India’s Highest Bungee Jumping",
+        "heightOrSpec": "120 m",
+        "text": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear. Age 15 to 55, minimum weight 40 kg, and the safety team’s approval is final."
+      },
+      {
+        "title": "Choose two extra rides",
+        "heightOrSpec": "Giant Swing, Reverse Bungee, or SCAD Jump",
+        "text": "Add any two activities with the 120 m jump: Giant Swing, Reverse Bungee, and SCAD Jump. The combo price stays ₹9,000 per person for any pair."
+      }
+    ]
+  },
+  {
+    "id": "indias-highest-bungee-full-combo",
+    "title": "Thrill Combo 1.6",
+    "subtitle": "India’s Highest Bungy + Giant Swing + Reverse Bungee + SCAD Jump",
+    "price": 9500,
+    "badge": "Highest Full Combo",
+    "popular": false,
+    "featured": false,
+    "image": "/images/indias-highest-crane-bungee.jpeg",
+    "gallery": [
+      "/images/indias-highest-crane-bungee.jpeg",
+      "/images/giant-swing.jpg",
+      "/images/reverse-bungee.jpg",
+      "/images/scad-jump.jpg"
+    ],
+    "formula": "India’s Highest Bungy + Giant Swing + Reverse Bungee + SCAD Jump",
+    "cardDesc": "Combo Activity : (India’s Highest Bungy + Giant Swing + Reverse Bungee + SCAD Jump).",
+    "activitiesIncluded": [
+      "India’s Highest Bungee Jumping (120 m)",
+      "Giant Swing",
+      "Reverse Bungee",
+      "SCAD Jump"
+    ],
+    "highlights": [
+      "Official combo at The Shivpuri Thrill Factory",
+      "India’s Highest Bungee plus Giant Swing, Reverse Bungee, and SCAD Jump",
+      "Includes personalized completion certificate",
+      "Certified jump masters and EN/CE safety protocol"
+    ],
+    "suitableFor": "Adventure Seekers & Bucket-Listers",
+    "safetySpecs": {
+      "weightLimit": "Minimum 40 kg. Maximum as per site conditions.",
+      "ageLimit": "15+ to 55 years",
+      "duration": "90 – 150 Minutes total",
+      "gear": "EN/CE Certified Harness, Dynamic Cord & Safety Net"
+    },
+    "rideDetails": [
+      {
+        "title": "India’s Highest Bungee Jumping",
+        "heightOrSpec": "120 m",
+        "text": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear. Age 15 to 55, minimum weight 40 kg, and the safety team’s approval is final."
+      },
+      {
+        "title": "Giant Swing, Reverse Bungee, and SCAD Jump",
+        "heightOrSpec": "Three extra rides",
+        "text": "This combo adds Giant Swing, Reverse Bungee, and SCAD Jump with India’s Highest Bungee. The full set is ₹9,500 per person."
       }
     ]
   },
