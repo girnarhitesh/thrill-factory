@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { WhatsAppFloating } from '@/components/common/WhatsAppFloating';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ActivityCard } from '@/components/home/ActivityCard';
-import { ActivityDetailsModal } from '@/components/common/ActivityDetailsModal';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { openBookingFrame } from '@/components/common/BookingFrame';
 import { Activity } from '@/types';
@@ -26,8 +25,6 @@ export const LegacyActivityLanding: React.FC<LegacyActivityLandingProps> = ({
   description,
   activities,
 }) => {
-  const [selected, setSelected] = useState<Activity | null>(null);
-
   return (
     <>
       <Navbar />
@@ -55,14 +52,13 @@ export const LegacyActivityLanding: React.FC<LegacyActivityLandingProps> = ({
                     activity={activity}
                     index={String(index + 1).padStart(2, '0')}
                     onBook={() => openBookingFrame()}
-                    onDetails={setSelected}
                   />
                 </div>
               ))}
             </div>
 
             <div className="packages-action-footer">
-              <ThemeButton href="/activities" variant="ghost" arrow>
+              <ThemeButton href="/collections" variant="ghost" arrow>
                 View All Activities
               </ThemeButton>
             </div>
@@ -71,12 +67,6 @@ export const LegacyActivityLanding: React.FC<LegacyActivityLandingProps> = ({
       </main>
       <Footer />
       <WhatsAppFloating />
-      <ActivityDetailsModal
-        isOpen={!!selected}
-        activity={selected}
-        onClose={() => setSelected(null)}
-        onBook={() => openBookingFrame()}
-      />
     </>
   );
 };

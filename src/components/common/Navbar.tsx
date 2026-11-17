@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
   const isOverMedia =
     cleanPath === '/' ||
     cleanPath === '/corporate' ||
-    cleanPath === '/activities' ||
+    cleanPath === '/collections' ||
     cleanPath === '/combos' ||
     cleanPath === '/kids-zone';
 

@@ -53,10 +53,9 @@ const isIndoorCombo = (combo: PackageCombo) => INDOOR_COMBO_IDS.has(combo.id);
 
 interface CombosCatalogProps {
   onBook: (title: string) => void;
-  onDetails: (combo: PackageCombo) => void;
 }
 
-export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails }) => {
+export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook }) => {
   const [activeLane, setActiveLane] = useState<ComboLaneId>('all');
 
   const gravityCombos = useMemo(
@@ -116,7 +115,7 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
               Save more
             </span>
             <p>Official bundles save up to ₹5,000 versus buying each ride on its own.</p>
-            <ThemeButton href="/activities" size="sm" variant="ghost" tone="on-dark" arrow>
+            <ThemeButton href="/collections" size="sm" variant="ghost" tone="on-dark" arrow>
               View Rides
             </ThemeButton>
           </div>
@@ -170,12 +169,7 @@ export const CombosCatalog: React.FC<CombosCatalogProps> = ({ onBook, onDetails 
 
               <div className="combos-grid">
                 {lane.items.map((combo) => (
-                  <ComboCard
-                    key={combo.id}
-                    combo={combo}
-                    onBook={onBook}
-                    onDetails={onDetails}
-                  />
+                  <ComboCard key={combo.id} combo={combo} onBook={onBook} />
                 ))}
               </div>
             </div>

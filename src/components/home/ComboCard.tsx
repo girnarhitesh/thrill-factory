@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PackageCombo } from '@/data/packages';
 import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
@@ -10,7 +11,6 @@ import './ActivityCard.css';
 interface ComboCardProps {
   combo: PackageCombo;
   onBook: (comboTitle: string) => void;
-  onDetails?: (combo: PackageCombo) => void;
 }
 
 const shortRide = (name: string) =>
@@ -22,7 +22,7 @@ const isRideName = (name: string) =>
     name
   );
 
-export const ComboCard: React.FC<ComboCardProps> = ({ combo, onDetails }) => {
+export const ComboCard: React.FC<ComboCardProps> = ({ combo }) => {
   const cardRef = useRef<HTMLElement>(null);
   const previewRef = useRef<HTMLVideoElement>(null);
   const rideNames = combo.activitiesIncluded.filter(isRideName);
@@ -84,10 +84,9 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onDetails }) => {
       ref={cardRef}
       className={`ride-card ride-card--combo${combo.popular ? ' is-popular' : ''}`}
     >
-      <button
-        type="button"
+      <Link
+        href={`/products/${combo.id}`}
         className="ride-card-media"
-        onClick={() => onDetails?.(combo)}
         aria-label={`View details for ${combo.title}`}
       >
         <Image
@@ -118,7 +117,7 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onDetails }) => {
         </span>
 
         <span className="ride-card-height">{photoNote}</span>
-      </button>
+      </Link>
 
       <div className="ride-card-body">
         <h3 className="ride-card-title">{combo.title}</h3>
@@ -157,15 +156,9 @@ export const ComboCard: React.FC<ComboCardProps> = ({ combo, onDetails }) => {
           </div>
 
           <div className="ride-card-actions">
-            {onDetails ? (
-              <button
-                type="button"
-                className="ride-card-details"
-                onClick={() => onDetails(combo)}
-              >
-                Details
-              </button>
-            ) : null}
+            <Link href={`/products/${combo.id}`} className="ride-card-details">
+              Details
+            </Link>
             <ThemeButton size="sm" variant="solid" arrow onClick={openBookingFrame}>
               Book
             </ThemeButton>

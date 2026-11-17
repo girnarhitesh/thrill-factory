@@ -70,7 +70,7 @@ export function ProductSpotlight({ activity }: { activity: Activity }) {
               <ThemeButton variant="solid" arrow onClick={openBookingFrame}>
                 Book
               </ThemeButton>
-              <ThemeButton href="/activities" variant="ghost" arrow>
+              <ThemeButton href="/collections" variant="ghost" arrow>
                 View All Activities
               </ThemeButton>
             </div>

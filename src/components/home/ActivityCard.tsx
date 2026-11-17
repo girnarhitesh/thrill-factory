@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Activity } from '@/types';
 import { openBookingFrame } from '@/components/common/BookingFrame';
 import { ThemeButton } from '@/components/common/ThemeButton';
@@ -11,7 +12,6 @@ interface ActivityCardProps {
   activity: Activity;
   index?: string;
   onBook: (activityTitle: string) => void;
-  onDetails?: (activity: Activity) => void;
 }
 
 export const activityFacts = (activity: Activity) => {
@@ -28,7 +28,6 @@ const cardParagraphs = (activity: Activity) =>
 export const ActivityCard: React.FC<ActivityCardProps> = ({
   activity,
   index,
-  onDetails,
 }) => {
   const facts = activityFacts(activity);
   const previewCopy = cardParagraphs(activity);
@@ -78,10 +77,9 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
 
   return (
     <article ref={cardRef} className="ride-card">
-      <button
-        type="button"
+      <Link
+        href={`/products/${activity.slug}`}
         className="ride-card-media"
-        onClick={() => onDetails?.(activity)}
         aria-label={`View details for ${activity.title}`}
       >
         <Image
@@ -109,7 +107,7 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
             <span className="ride-card-index">{index}</span>
           </span>
         ) : null}
-      </button>
+      </Link>
 
       <div className="ride-card-body">
         <h3 className="ride-card-title">{activity.title}</h3>
@@ -149,15 +147,9 @@ export const ActivityCard: React.FC<ActivityCardProps> = ({
           )}
 
           <div className="ride-card-actions">
-            {onDetails ? (
-              <button
-                type="button"
-                className="ride-card-details"
-                onClick={() => onDetails(activity)}
-              >
-                Details
-              </button>
-            ) : null}
+            <Link href={`/products/${activity.slug}`} className="ride-card-details">
+              Details
+            </Link>
             {activity.comingSoon || activity.holdNote ? null : (
               <ThemeButton size="sm" variant="solid" arrow onClick={openBookingFrame}>
                 Book

@@ -2,7 +2,6 @@
 
 import React, { useMemo, useState } from 'react';
 import { KIDS_ZONE_DATA } from '@/data/kidsZone';
-import { Activity } from '@/types';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ActivityCard } from '@/components/home/ActivityCard';
 import { openBookingFrame } from '@/components/common/BookingFrame';
@@ -77,10 +76,9 @@ const SAFETY_NOTES = [
 
 interface KidsZoneCatalogProps {
   onBook: (title: string) => void;
-  onDetails: (activity: Activity) => void;
 }
 
-export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDetails }) => {
+export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook }) => {
   const [activeLane, setActiveLane] = useState<KidsLaneId>('all');
 
   const playItems = useMemo(
@@ -139,7 +137,7 @@ export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDeta
               Family deck
             </span>
             <p>Looking for the other lanes and combo packs on the same visit?</p>
-            <ThemeButton href="/activities" size="sm" variant="ghost" tone="on-dark" arrow>
+            <ThemeButton href="/collections" size="sm" variant="ghost" tone="on-dark" arrow>
               View Adventures
             </ThemeButton>
           </div>
@@ -200,7 +198,6 @@ export const KidsZoneCatalog: React.FC<KidsZoneCatalogProps> = ({ onBook, onDeta
                     activity={activity}
                     index={String(index + 1).padStart(2, '0')}
                     onBook={onBook}
-                    onDetails={onDetails}
                   />
                 ))}
               </div>

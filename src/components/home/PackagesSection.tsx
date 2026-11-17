@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ALL_PACKAGES, PackageCombo, sortCombosBySequence } from '@/data/packages';
+import React from 'react';
+import { ALL_PACKAGES, sortCombosBySequence } from '@/data/packages';
 import { SectionHeader } from '@/components/common/SectionHeader';
-import { ComboDetailsModal } from '@/components/common/ComboDetailsModal';
 import { ComboCard } from '@/components/home/ComboCard';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import './PackagesSection.css';
@@ -13,7 +12,6 @@ interface PackagesSectionProps {
 }
 
 export const PackagesSection: React.FC<PackagesSectionProps> = ({ onBook }) => {
-  const [selectedComboForDetails, setSelectedComboForDetails] = useState<PackageCombo | null>(null);
   const packages = sortCombosBySequence(ALL_PACKAGES);
 
   return (
@@ -28,12 +26,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onBook }) => {
 
         <div className="packages-grid-4">
           {packages.map((pkg) => (
-            <ComboCard
-              key={pkg.id}
-              combo={pkg}
-              onBook={onBook}
-              onDetails={setSelectedComboForDetails}
-            />
+            <ComboCard key={pkg.id} combo={pkg} onBook={onBook} />
           ))}
         </div>
 
@@ -43,13 +36,6 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onBook }) => {
           </ThemeButton>
         </div>
       </div>
-
-      <ComboDetailsModal
-        isOpen={!!selectedComboForDetails}
-        combo={selectedComboForDetails}
-        onClose={() => setSelectedComboForDetails(null)}
-        onBook={(title) => onBook(title)}
-      />
     </section>
   );
 };

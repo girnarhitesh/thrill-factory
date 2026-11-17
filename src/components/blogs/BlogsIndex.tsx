@@ -66,7 +66,7 @@ export default function BlogsIndex() {
               </p>
             </div>
             <div className="blogs-cta-actions">
-              <ThemeButton href="/activities" variant="ghost" arrow>
+              <ThemeButton href="/collections" variant="ghost" arrow>
                 Explore Activities
               </ThemeButton>
               <ThemeButton href="/combos" variant="ghost">

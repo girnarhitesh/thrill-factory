@@ -1,4 +1,7 @@
 import type { MetadataRoute } from 'next';
+import { ALL_ADVENTURES_DATA } from '@/data/activities';
+import { KIDS_ZONE_DATA } from '@/data/kidsZone';
+import { ALL_PACKAGES } from '@/data/packages';
 import { BLOG_POSTS } from '@/data/blogs';
 import { LEGACY_SEO_PAGES } from '@/data/legacySeo';
 import { SITE_CONFIG } from '@/constants/siteConfig';
@@ -7,7 +10,7 @@ export const dynamic = 'force-static';
 
 const SKIP = new Set(['/pages/test', '/pages/corporate']);
 
-const EXTRA = ['/activities', '/combos', '/kids-zone', '/packages', '/safety', '/corporate'];
+const EXTRA = ['/collections', '/combos', '/kids-zone', '/packages', '/safety', '/corporate'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -24,6 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const path of EXTRA) paths.add(path);
+  for (const activity of ALL_ADVENTURES_DATA) paths.add(`/products/${activity.slug}`);
+  for (const activity of KIDS_ZONE_DATA) paths.add(`/products/${activity.slug}`);
+  for (const combo of ALL_PACKAGES) paths.add(`/products/${combo.id}`);
 
   return [...paths].map((path) => ({
     url: `${SITE_CONFIG.domain}${path === '/' ? '/' : path}`,

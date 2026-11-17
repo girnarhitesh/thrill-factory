@@ -2,7 +2,6 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { ActivityTabId, activitiesForTab } from '@/data/activities';
-import { Activity } from '@/types';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { ActivityCard } from '@/components/home/ActivityCard';
 import { openBookingFrame } from '@/components/common/BookingFrame';
@@ -63,10 +62,9 @@ const GROUPS: Array<{
 
 interface ActivitiesCatalogProps {
   onBook: (title: string) => void;
-  onDetails: (activity: Activity) => void;
 }
 
-export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, onDetails }) => {
+export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook }) => {
   const [activeLane, setActiveLane] = useState<ActivityGroupId>('extreme');
 
   const grouped = useMemo(
@@ -189,7 +187,6 @@ export const ActivitiesCatalog: React.FC<ActivitiesCatalogProps> = ({ onBook, on
                     activity={activity}
                     index={String(index + 1).padStart(2, '0')}
                     onBook={onBook}
-                    onDetails={onDetails}
                   />
                 </div>
               ))}

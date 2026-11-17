@@ -6,7 +6,7 @@ export interface NavItem {
 
 export const MAIN_NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Activities', href: '/activities' },
+  { label: 'Activities', href: '/collections' },
   { label: 'Combos', href: '/combos' },
   { label: 'Kids Zone', href: '/kids-zone' },
   { label: 'Corporate', href: '/corporate' },
@@ -17,12 +17,12 @@ export const MAIN_NAV_ITEMS: NavItem[] = [
 
 export const FOOTER_LINKS = {
   activities: [
-    { label: 'Bungee Jumping (165 ft)', href: '/activities#bungee-jumping' },
-    { label: 'Reverse Bungee (180 ft)', href: '/activities#reverse-bungee' },
-    { label: 'SCAD Jump', href: '/activities#scad-jump' },
-    { label: 'Giant Swing', href: '/activities#giant-swing' },
-    { label: 'Zip Lining / Flying Fox', href: '/activities#zipline' },
-    { label: 'Rope Bungee (160 ft)', href: '/activities#rope-bungee' },
+    { label: 'Bungee Jumping (165 ft)', href: '/collections#bungee-jumping' },
+    { label: 'Reverse Bungee (180 ft)', href: '/collections#reverse-bungee' },
+    { label: 'SCAD Jump', href: '/collections#scad-jump' },
+    { label: 'Giant Swing', href: '/collections#giant-swing' },
+    { label: 'Zip Lining / Flying Fox', href: '/collections#zipline' },
+    { label: 'Rope Bungee (160 ft)', href: '/collections#rope-bungee' },
   ],
   company: [
     { label: 'About Thrill Factory', href: '/contact#about' },

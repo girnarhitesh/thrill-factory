@@ -3,9 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { ActivityTabId, activitiesForTab, ACTIVITY_TAB_ORDER } from '@/data/activities';
-import { Activity } from '@/types';
 import { SectionHeader } from '@/components/common/SectionHeader';
-import { ActivityDetailsModal } from '@/components/common/ActivityDetailsModal';
 import { ThemeButton } from '@/components/common/ThemeButton';
 import { ActivityCard } from '@/components/home/ActivityCard';
 import './ActivitiesGrid.css';
@@ -32,7 +30,6 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
   }, []);
 
   const [activeTab, setActiveTab] = useState<ActivityTabId>('extreme');
-  const [detailsActivity, setDetailsActivity] = useState<Activity | null>(null);
 
   useEffect(() => {
     const hash = window.location.hash.replace('#', '');
@@ -97,7 +94,7 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
           {TABS.map((tab) => (
             <Link
               key={tab.id}
-              href={`/activities/#lane-${tab.id}`}
+              href={`/collections/#lane-${tab.id}`}
               className="ag-lane"
             >
               <img
@@ -125,24 +122,16 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({ onBook }) => {
               activity={activity}
               index={String(index + 1).padStart(2, '0')}
               onBook={onBook}
-              onDetails={setDetailsActivity}
             />
           ))}
         </div>
 
         <div className="packages-action-footer">
-          <ThemeButton href="/activities" variant="ghost" arrow>
+          <ThemeButton href="/collections" variant="ghost" arrow>
             View All Activities
           </ThemeButton>
         </div>
       </div>
-
-      <ActivityDetailsModal
-        isOpen={!!detailsActivity}
-        activity={detailsActivity}
-        onClose={() => setDetailsActivity(null)}
-        onBook={(title) => onBook(title)}
-      />
     </section>
   );
 };
