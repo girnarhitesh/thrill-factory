@@ -57,6 +57,32 @@
   position: relative;
   z-index: 2;
   flex-grow: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, min(520px, 46%));
+  align-items: center;
+  column-gap: 56px;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 24px var(--container-padding) 48px;
+}
+
+.hero-window-wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
+  margin: 0;
+}
+
+/* OLD DESIGN: centered video above the copy. Uncomment and remove the grid rules above to restore.
+.hero-stage {
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +98,9 @@
   max-width: 500px;
   margin: 40px 0;
 }
+*/
 
+/* OLD DESIGN: giant 150 FT background. Uncomment with the JSX to restore.
 .hero-altimeter-giant {
   position: absolute;
   left: 50%;
@@ -93,6 +121,7 @@
   pointer-events: none;
   user-select: none;
 }
+*/
 
 .hero-window {
   position: relative;
@@ -115,6 +144,7 @@
   pointer-events: none;
 }
 
+/* OLD DESIGN: 0–150 FT height line. Uncomment with the scale JSX to restore.
 .hero-altimeter-scale {
   position: absolute;
   left: calc(100% + 20px);
@@ -158,6 +188,17 @@
   color: var(--hero-muted);
   white-space: nowrap;
 }
+*/
+
+.hero-window-wrap > .hero-altimeter-fall {
+  display: block;
+  right: 28px;
+  left: auto;
+  top: 0;
+  bottom: 88px;
+  height: auto;
+  z-index: 3;
+}
 
 .hero-altimeter-fall {
   position: absolute;
@@ -173,8 +214,9 @@
 
 .hero-altimeter-marker {
   position: absolute;
-  left: 0;
+  left: 31px;
   top: 0;
+  z-index: 3;
   height: 88px;
   display: flex;
   align-items: flex-start;
@@ -196,12 +238,24 @@
 .hero-band {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+  min-width: 0;
+}
+
+/* OLD DESIGN: title, copy, and stats in one bottom row. Uncomment to restore.
+.hero-band {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(0, 0.9fr);
   grid-template-areas: "head copy stats";
   align-items: end;
   column-gap: 48px;
 }
+*/
 
 .hero-band-head {
   grid-area: head;
@@ -212,13 +266,15 @@
 
 .hero-adventure-badge {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   margin: 0;
   font-size: 11px;
   font-weight: 500;
+  line-height: 1.45;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-align: left;
   color: var(--hero-accent);
   white-space: nowrap;
 }
@@ -227,7 +283,13 @@
   width: 24px;
   height: 2px;
   flex-shrink: 0;
+  margin-top: calc((1.45em - 2px) / 2);
   background-color: var(--hero-accent);
+}
+
+.hero-adventure-badge > span:last-child {
+  min-width: 0;
+  text-align: left;
 }
 
 .hero-adventure-title {
@@ -411,7 +473,7 @@
 }
 
 .hero-altimeter-stats {
-  grid-area: stats;
+  width: min(100%, 420px);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 24px;
@@ -472,6 +534,11 @@
    ========================================================================== */
 
 @media (max-width: 1080px) {
+  .hero-stage {
+    column-gap: 32px;
+  }
+
+  /* OLD DESIGN: stacked title row on tablet. Uncomment with the old band grid to restore.
   .hero-band {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas:
@@ -480,6 +547,7 @@
     row-gap: 28px;
     column-gap: 48px;
   }
+  */
 }
 
 /* ==========================================================================
@@ -494,6 +562,43 @@
     padding-top: 60px;
   }
 
+  .hero-stage {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+    padding-top: 16px;
+    padding-bottom: 4.75rem;
+  }
+
+  .hero-band {
+    order: 1;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .hero-window-wrap {
+    order: 2;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    margin: 0;
+  }
+
+  .hero-adventure-badge {
+    justify-content: flex-start;
+    white-space: normal;
+  }
+
+  .hero-window-wrap > .hero-altimeter-fall {
+    display: block;
+    right: 28px;
+    left: auto;
+    top: 0;
+    bottom: 88px;
+    height: auto;
+    z-index: 3;
+  }
+
+  /* OLD DESIGN: centered mobile stack, height line hidden.
   .hero-stage {
     padding: 12px 20px 28px;
     gap: 24px;
@@ -526,6 +631,7 @@
     justify-content: center;
     white-space: normal;
   }
+  */
 
   .hero-adventure-subtitle {
     margin-left: auto;
@@ -545,9 +651,12 @@
   .hero-altimeter-stats {
     text-align: left;
   }
+}
 
+@media (max-width: 640px) {
   .hero-stage {
-    padding-bottom: 4.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

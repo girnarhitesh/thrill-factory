@@ -21,6 +21,7 @@ const HERO_STATS = [
   { end: 4.5, decimals: 1, suffix: '', label: 'Google Rated', logo: 'google' },
 ] as const;
 
+/* OLD DESIGN: 0–150 FT height scale labels. Uncomment with the scale markup below to restore.
 const SCALE_LABELS = [
   { ft: '150 FT', top: '0%' },
   { ft: '120 FT', top: '27.3%' },
@@ -28,6 +29,7 @@ const SCALE_LABELS = [
   { ft: '40 FT', top: '75.8%' },
   { ft: '0 FT', top: '100%' },
 ] as const;
+*/
 
 const GoogleGLogo = () => (
   <svg className="glass-stat-google google-g-live" viewBox="0 0 24 24" aria-hidden="true">
@@ -206,11 +208,11 @@ const HeroBungeeJumper: React.FC = () => {
   });
 
   return (
-    <span className="hero-altimeter-fall">
-      <motion.span
-        className="hero-altimeter-marker"
-        style={{ ['--fall' as string]: fall, opacity }}
-      >
+    <motion.span
+      className="hero-altimeter-fall"
+      style={{ ['--fall' as string]: fall, opacity }}
+    >
+      <motion.span className="hero-altimeter-marker">
         <motion.img
           className="hero-altimeter-jumper"
           src="/images/bungee-jumping.png"
@@ -226,7 +228,7 @@ const HeroBungeeJumper: React.FC = () => {
           }}
         />
       </motion.span>
-    </span>
+    </motion.span>
   );
 };
 
@@ -292,42 +294,6 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
       <div className="hero-banner-overlay" aria-hidden="true" />
 
       <div className="hero-stage">
-        <div className="hero-window-wrap">
-          <p className="hero-altimeter-giant" aria-hidden="true">
-            150 FT
-          </p>
-
-          <div className="hero-window">
-            <video
-              ref={frameRef}
-              className="hero-window-media"
-              src={HERO_MP4}
-              muted
-              loop
-              autoPlay
-              playsInline
-              preload="auto"
-              disablePictureInPicture
-              aria-hidden="true"
-            />
-          </div>
-
-          <div className="hero-altimeter-scale" aria-hidden="true">
-            <span className="hero-altimeter-rail" />
-            <span className="hero-altimeter-ticks" />
-            {SCALE_LABELS.map((label) => (
-              <span
-                key={label.ft}
-                className="hero-altimeter-label"
-                style={{ top: label.top }}
-              >
-                {label.ft}
-              </span>
-            ))}
-            <HeroBungeeJumper />
-          </div>
-        </div>
-
         <div className="hero-band">
           <div className="hero-band-head">
             <p className="hero-adventure-badge">
@@ -385,6 +351,48 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="hero-window-wrap">
+          {/* OLD DESIGN: giant 150 FT background. Uncomment with .hero-altimeter-giant to restore.
+          <p className="hero-altimeter-giant" aria-hidden="true">
+            150 FT
+          </p>
+          */}
+
+          <div className="hero-window">
+            <video
+              ref={frameRef}
+              className="hero-window-media"
+              src={HERO_MP4}
+              muted
+              loop
+              autoPlay
+              playsInline
+              preload="auto"
+              disablePictureInPicture
+              aria-hidden="true"
+            />
+          </div>
+
+          {/* OLD DESIGN: 0–150 FT height line on the right of the video.
+              Uncomment SCALE_LABELS, this block, and the scale CSS to restore.
+          <div className="hero-altimeter-scale" aria-hidden="true">
+            <span className="hero-altimeter-rail" />
+            <span className="hero-altimeter-ticks" />
+            {SCALE_LABELS.map((label) => (
+              <span
+                key={label.ft}
+                className="hero-altimeter-label"
+                style={{ top: label.top }}
+              >
+                {label.ft}
+              </span>
+            ))}
+          </div>
+          */}
+
+          <HeroBungeeJumper />
         </div>
       </div>
     </section>
