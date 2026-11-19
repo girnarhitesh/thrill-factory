@@ -13,7 +13,8 @@
 
   position: relative;
   width: 100%;
-  min-height: 900px;
+  /* OLD DESIGN: min-height: 900px; */
+  min-height: max(560px, 70vh);
   margin-top: calc(var(--header-height) * -1);
   padding-top: var(--header-height);
   box-sizing: border-box;
@@ -66,7 +67,8 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  padding: 24px var(--container-padding) 48px;
+  /* OLD DESIGN: padding: 24px var(--container-padding) 48px; */
+  padding: 12px var(--container-padding) 32px;
 }
 
 .hero-window-wrap {
@@ -241,7 +243,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 36px;
+  gap: 32px;
   min-width: 0;
 }
 
@@ -320,6 +322,40 @@
 
 .hero-title-kicker {
   color: var(--hero-text);
+}
+
+.hero-adventure-title {
+  gap: 10px;
+}
+
+.hero-title-kicker {
+  align-self: flex-start;
+  padding: 0.1em 0.32em 0.02em;
+  font-size: clamp(30px, 2.8vw, 42px);
+  color: var(--hero-text);
+  background: var(--hero-accent);
+  transform: skewX(-8deg);
+  transform-origin: left center;
+  animation: hero-tape-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both;
+}
+
+.hero-title-highlight {
+  font-size: clamp(56px, 6vw, 92px);
+  line-height: 0.88;
+}
+
+.hero-title-white {
+  color: var(--hero-text);
+}
+
+@keyframes hero-tape-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .hero-title-rest {
@@ -529,6 +565,34 @@
   color: var(--hero-muted);
 }
 
+.hero-altimeter-stats {
+  width: min(100%, 460px);
+  column-gap: 16px;
+}
+
+.hero-glass-stat.hero-stat-box {
+  position: relative;
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(245, 242, 238, 0.16);
+  background: rgba(245, 242, 238, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-glass-stat.hero-stat-box::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 32px;
+  height: 3px;
+  background: var(--hero-accent);
+}
+
+.hero-stat-box .glass-stat-value {
+  font-size: 40px;
+}
+
 /* ==========================================================================
    TABLET  ≤ 1080
    ========================================================================== */
@@ -556,8 +620,8 @@
 
 @media (max-width: 760px) {
   .hero-adventure-banner {
-    min-height: 100svh;
-    min-height: 100dvh;
+    /* OLD DESIGN: min-height: 100svh; min-height: 100dvh; */
+    min-height: 0;
     margin-top: -60px;
     padding-top: 60px;
   }
@@ -565,8 +629,21 @@
   .hero-stage {
     grid-template-columns: 1fr;
     row-gap: 28px;
-    padding-top: 16px;
-    padding-bottom: 4.75rem;
+    padding-top: 20px;
+    /* OLD DESIGN: padding-bottom: 4.75rem; */
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-title-highlight {
+    font-size: clamp(48px, 13vw, 64px);
+  }
+
+  .hero-glass-stat.hero-stat-box {
+    padding: 16px 14px 14px;
+  }
+
+  .hero-stat-box .glass-stat-value {
+    font-size: 32px;
   }
 
   .hero-band {
@@ -665,6 +742,10 @@
   .hero-title-highlight::after {
     animation: none;
     opacity: 0;
+  }
+
+  .hero-title-kicker {
+    animation: none;
   }
 }
 

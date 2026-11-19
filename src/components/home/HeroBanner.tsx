@@ -15,8 +15,10 @@ import './HeroBanner.css';
 const HERO_MP4 = '/images/HeroHomeVideo.mp4';
 
 const HERO_STATS = [
+  /* OLD DESIGN: height stats. Uncomment to restore the 2×2 grid.
   { end: 150, suffix: ' FT', label: 'Free Fall Drop' },
   { end: 180, suffix: ' FT', label: 'Reverse Bungee' },
+  */
   { end: 1, suffix: ' Lakh+', label: 'Successful Jumps' },
   { end: 4.5, decimals: 1, suffix: '', label: 'Google Rated', logo: 'google' },
 ] as const;
@@ -303,7 +305,9 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
 
             <h1 className="hero-adventure-title">
               <span className="hero-title-kicker">India’s Highest </span>
-              <span className="hero-title-highlight">Bungee Jumping</span>
+              <span className="hero-title-highlight">
+                <span className="hero-title-white">Bungee</span> Jumping
+              </span>
               <span className="hero-title-rest"> in Rishikesh</span>
             </h1>
           </div>
@@ -336,7 +340,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ onOpenBooking }) => {
 
           <div className="hero-altimeter-stats">
             {HERO_STATS.map((stat, index) => (
-              <div className="hero-glass-stat" key={stat.label}>
+              <div className="hero-glass-stat hero-stat-box" key={stat.label}>
                 <div className="glass-stat-value">
                   <AnimatedCounter
                     end={stat.end}
