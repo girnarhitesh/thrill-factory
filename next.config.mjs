@@ -26,6 +26,11 @@ const nextConfig = {
   async redirects() {
     return [
       { source: '/contact', destination: '/pages/contact', statusCode: 301 },
+      {
+        source: '/products/indias-highest-bungee-120m',
+        destination: '/products/indias-highest-bungee',
+        statusCode: 301,
+      },
       { source: '/pages/corporate', destination: '/corporate', statusCode: 301 },
       { source: '/blogs', destination: '/blogs/news', statusCode: 301 },
       {

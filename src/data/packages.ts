@@ -620,7 +620,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "formula": "India’s Highest Bungy + any one of Giant Swing / Reverse Bungee / SCAD Jump",
     "cardDesc": "Combo Activity : (India’s Highest Bungy + any one activity) Choose one from Giant Swing, Reverse Bungee, or SCAD Jump.",
     "activitiesIncluded": [
-      "India’s Highest Bungee Jumping (120 m)",
+      "India’s Highest Bungee Jumping",
       "Any one: Giant Swing, Reverse Bungee, or SCAD Jump"
     ],
     "highlights": [
@@ -639,13 +639,13 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "rideDetails": [
       {
         "title": "India’s Highest Bungee Jumping",
-        "heightOrSpec": "120 m",
+        "heightOrSpec": "",
         "text": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear. Age 15 to 55, minimum weight 40 kg, and the safety team’s approval is final."
       },
       {
         "title": "Choose one extra ride",
         "heightOrSpec": "Giant Swing, Reverse Bungee, or SCAD Jump",
-        "text": "Add any one activity with the 120 m jump: Giant Swing, Reverse Bungee, or SCAD Jump. The combo price stays ₹8,000 per person whichever ride you pick."
+        "text": "Add any one activity with India’s Highest Bungee: Giant Swing, Reverse Bungee, or SCAD Jump. The combo price stays ₹8,000 per person whichever ride you pick."
       }
     ]
   },
@@ -667,7 +667,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "formula": "India’s Highest Bungy + any two of Giant Swing / Reverse Bungee / SCAD Jump",
     "cardDesc": "Combo Activity : (India’s Highest Bungy + any two activities) Choose two from Giant Swing, Reverse Bungee, or SCAD Jump.",
     "activitiesIncluded": [
-      "India’s Highest Bungee Jumping (120 m)",
+      "India’s Highest Bungee Jumping",
       "Any two: Giant Swing, Reverse Bungee, or SCAD Jump"
     ],
     "highlights": [
@@ -686,13 +686,13 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "rideDetails": [
       {
         "title": "India’s Highest Bungee Jumping",
-        "heightOrSpec": "120 m",
+        "heightOrSpec": "",
         "text": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear. Age 15 to 55, minimum weight 40 kg, and the safety team’s approval is final."
       },
       {
         "title": "Choose two extra rides",
         "heightOrSpec": "Giant Swing, Reverse Bungee, or SCAD Jump",
-        "text": "Add any two activities with the 120 m jump: Giant Swing, Reverse Bungee, and SCAD Jump. The combo price stays ₹9,000 per person for any pair."
+        "text": "Add any two activities with India’s Highest Bungee: Giant Swing, Reverse Bungee, and SCAD Jump. The combo price stays ₹9,000 per person for any pair."
       }
     ]
   },
@@ -714,7 +714,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "formula": "India’s Highest Bungy + Giant Swing + Reverse Bungee + SCAD Jump",
     "cardDesc": "Combo Activity : (India’s Highest Bungy + Giant Swing + Reverse Bungee + SCAD Jump).",
     "activitiesIncluded": [
-      "India’s Highest Bungee Jumping (120 m)",
+      "India’s Highest Bungee Jumping",
       "Giant Swing",
       "Reverse Bungee",
       "SCAD Jump"
@@ -735,7 +735,7 @@ export const ALL_PACKAGES: PackageCombo[] = [
     "rideDetails": [
       {
         "title": "India’s Highest Bungee Jumping",
-        "heightOrSpec": "120 m",
+        "heightOrSpec": "",
         "text": "Experience India’s Highest bungee jump in Rishikesh. The ultimate adventure destination to conquer fear. Age 15 to 55, minimum weight 40 kg, and the safety team’s approval is final."
       },
       {

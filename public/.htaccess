@@ -13,6 +13,7 @@ ErrorDocument 404 /404.html
 
   # One hop. Internal rewrites use [L] so the browser stays on the same URL.
   RewriteRule ^contact/?$ /pages/contact? [R=301,L]
+  RewriteRule ^products/indias-highest-bungee-120m/?$ /products/indias-highest-bungee? [R=301,L]
   RewriteRule ^pages/corporate/?$ /corporate? [R=301,L]
   RewriteRule ^blogs/?$ /blogs/news? [R=301,L]
   RewriteRule ^blogs/ziplining-in-uttarakhand-every-zipline-worth-doing-in-rishikesh/?$ /blogs/news/ziplining-in-uttarakhand-2026-every-zipline-worth-doing? [R=301,L]
